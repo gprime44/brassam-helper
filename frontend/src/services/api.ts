@@ -37,8 +37,15 @@ export interface Page<T> {
   first: boolean;
 }
 
-// @ts-ignore
-const API_BASE_URL = window.ENV?.API_URL || import.meta.env.VITE_API_URL || "";
+const getApiBaseUrl = () => {
+  const envUrl = window.ENV?.API_URL;
+  if (envUrl && !envUrl.includes('${')) {
+    return envUrl;
+  }
+  return import.meta.env.VITE_API_URL || "";
+};
+
+const API_BASE_URL = getApiBaseUrl();
 
 const fetchApi = async <T>(endpoint: string, params?: Record<string, string>): Promise<Page<T>> => {
   const url = new URL(endpoint, API_BASE_URL);
