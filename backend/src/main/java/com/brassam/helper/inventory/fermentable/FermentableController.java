@@ -1,7 +1,9 @@
 package com.brassam.helper.brew.fermentable;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/fermentables")
@@ -13,7 +15,14 @@ public class FermentableController {
     }
 
     @GetMapping
-    public List<FermentableDto> search(@RequestParam(required = false) String name) {
-        return service.search(name);
+    public Page<FermentableDto> search(
+            @RequestParam(required = false) String name,
+            @PageableDefault(size = 20) Pageable pageable) {
+        return service.search(name, pageable);
+    }
+
+    @GetMapping("/{id}")
+    public FermentableDto getById(@PathVariable Long id) {
+        return service.findById(id);
     }
 }

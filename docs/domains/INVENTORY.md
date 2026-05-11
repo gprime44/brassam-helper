@@ -31,3 +31,25 @@ Used for calculating Final Gravity (FG) and Alcohol Content (ABV).
 The inventory is pre-populated with standard data from [beerproto/dataset](https://github.com/beerproto/dataset).
 - Files: `backend/src/main/resources/db/data/{fermentables,hops,yeasts}.csv`
 - Implementation: Automated via Liquibase `loadData`.
+
+## 5. Frontend Features
+The inventory screen is designed with a **mobile-first** approach.
+
+### Key Features:
+- **Search:** Real-time search with a 300ms debounce to filter ingredients by name.
+- **Categorization:** Tabs to switch between Fermentables (Grain), Hops, and Yeasts.
+- **Details View:** Clicking on an item navigates to a dedicated details page showing all ingredient characteristics.
+- **API Integration:** Connects to the Spring Boot backend via a Vite proxy.
+- **Responsive Layout:** Optimized for mobile with a fixed bottom navigation bar and centered view on desktop.
+
+### API Endpoints:
+- `GET /api/fermentables?name={query}`: List and search fermentables.
+- `GET /api/fermentables/{id}`: Get details of a specific fermentable.
+- `GET /api/hops?name={query}`: List and search hops.
+- `GET /api/hops/{id}`: Get details of a specific hop.
+- `GET /api/yeasts?name={query}`: List and search yeasts.
+- `GET /api/yeasts/{id}`: Get details of a specific yeast.
+
+## 6. Implementation Notes
+- **Data Cleaning:** The yeast dataset was cleaned to convert complex JSON strings (e.g., `{'value': 76, 'unit': 'PERCENT_SIGN'}`) into plain numeric values for database compatibility.
+- **Proxy Configuration:** Vite is configured to proxy `/api` requests to `http://localhost:8080`.

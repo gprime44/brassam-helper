@@ -11,7 +11,8 @@ public class Fermentable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String type;
+    @Enumerated(EnumType.STRING)
+    private FermentableType type;
     private Double colorEbc;
     private Double yieldPercentage;
     private Double protein;

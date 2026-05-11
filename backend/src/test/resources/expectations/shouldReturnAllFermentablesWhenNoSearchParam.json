@@ -1,26 +1,53 @@
-[
-  {
-    "id": 1,
-    "name": "Pilsner",
-    "type": "GRAIN",
-    "colorEbc": 3.0,
-    "yieldPercentage": 80.0,
-    "protein": 11.5
+{
+  "content": [
+    {
+      "colorEbc": 3.0,
+      "id": 1,
+      "name": "Pilsner",
+      "protein": 11.5,
+      "type": "GRAIN",
+      "yieldPercentage": 80.0
+    },
+    {
+      "colorEbc": 6.0,
+      "id": 2,
+      "name": "Maris Otter",
+      "protein": 10.5,
+      "type": "GRAIN",
+      "yieldPercentage": 81.0
+    },
+    {
+      "colorEbc": 150.0,
+      "id": 3,
+      "name": "Crystal 150",
+      "protein": 12.0,
+      "type": "GRAIN",
+      "yieldPercentage": 75.0
+    }
+  ],
+  "empty": false,
+  "first": true,
+  "last": true,
+  "number": 0,
+  "numberOfElements": 3,
+  "pageable": {
+    "offset": 0,
+    "pageNumber": 0,
+    "pageSize": 20,
+    "paged": true,
+    "sort": {
+      "empty": true,
+      "sorted": false,
+      "unsorted": true
+    },
+    "unpaged": false
   },
-  {
-    "id": 2,
-    "name": "Maris Otter",
-    "type": "GRAIN",
-    "colorEbc": 6.0,
-    "yieldPercentage": 81.0,
-    "protein": 10.5
+  "size": 20,
+  "sort": {
+    "empty": true,
+    "sorted": false,
+    "unsorted": true
   },
-  {
-    "id": 3,
-    "name": "Crystal 150",
-    "type": "GRAIN",
-    "colorEbc": 150.0,
-    "yieldPercentage": 75.0,
-    "protein": 12.0
-  }
-]
+  "totalElements": 3,
+  "totalPages": 1
+}

@@ -1,447 +1,447 @@
 name,attenuation_min,attenuation_max,type,alcohol_tolerance
-AURORA,"{'value': 76, 'unit': 'PERCENT_SIGN'}","{'value': 86, 'unit': 'PERCENT_SIGN'}",KVEIK,23.0769
-Classic American,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,11
-Classic English,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Funk Weapon #1,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 95, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Funk Weapon #2 ,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 95, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Funk Weapon #3,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 95, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-NEEPAH Blend,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",ALE,7.69231
-OSLO,"{'value': 76, 'unit': 'PERCENT_SIGN'}","{'value': 86, 'unit': 'PERCENT_SIGN'}",KVEIK,23.0769
-S. arlingtonesis™,"{'value': 88, 'unit': 'PERCENT_SIGN'}","{'value': 93, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Saison Parfait™: New World Saison Blend,"{'value': 90, 'unit': 'PERCENT_SIGN'}","{'value': 100, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Sour Solera Blend,"{'value': 96, 'unit': 'PERCENT_SIGN'}","{'value': 100, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Sour Weapon L,{'unit': 'PERCENT_SIGN'},{'unit': 'PERCENT_SIGN'},BACTERIA,7.69231
-Sour Weapon P,{'unit': 'PERCENT_SIGN'},{'unit': 'PERCENT_SIGN'},BACTERIA,23.0769
-The Mad Fermentationist Saison Blend,"{'value': 90, 'unit': 'PERCENT_SIGN'}","{'value': 100, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Berliner blend ,{'unit': 'PERCENT_SIGN'},{'unit': 'PERCENT_SIGN'},ALE,0.0
-BugFarm,{'unit': 'PERCENT_SIGN'},{'unit': 'PERCENT_SIGN'},ALE,0.0
-Farmhouse ,"{'value': 80, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,0.0
-Flemish Ale,{'unit': 'PERCENT_SIGN'},{'unit': 'PERCENT_SIGN'},ALE,0.0
-Kellerbier,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",LAGER,0.0
-Kölschbier,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Nordic Farmhouse,"{'value': 78, 'unit': 'PERCENT_SIGN'}","{'value': 83, 'unit': 'PERCENT_SIGN'}",KVEIK,0.0
-Old Newark Ale,"{'value': 76, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Saison Brasserie,"{'value': 80, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,0.0
-Scottish Heavy,"{'value': 77, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Belgian Abbaye,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Belgian Abbaye 2,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Saison,"{'value': 76, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Dour Saison,"{'value': 77, 'unit': 'PERCENT_SIGN'}","{'value': 83, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-American Ale,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Anchorman Ale,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Ardennes Belgian Ale,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Arset Kveik Blend,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",KVEIK,53.8462
-Belgian Sour Blend,"{'value': 80, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,7.69231
-Berliner Brett Blend,{'unit': 'PERCENT_SIGN'},{'unit': 'PERCENT_SIGN'},ALE,0.0
-Berliner Brett I,"{'value': 57, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,53.8462
-Berliner Brett II,"{'value': 57, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,23.0769
-Biergarten Lager,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",LAGER,23.0769
-Brett B,"{'value': 80, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,38.4615
-Brett D,"{'value': 80, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,53.8462
-Brett M,"{'value': 80, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,53.8462
-Brett Q,"{'value': 80, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,53.8462
-Brussels Brett,"{'value': 80, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,53.8462
-Brut Ale,"{'value': 80, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,23.0769
-Cali Ale,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Cerberus,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Classic Witbier,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Copenhagen Lager,"{'value': 71, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",LAGER,38.4615
-Czech Lager,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",LAGER,23.0769
-Dry Belgian Ale,"{'value': 85, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,23.0769
-Ebbegarden Kveik Blend,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",KVEIK,53.8462
-English Ale I,"{'value': 63, 'unit': 'PERCENT_SIGN'}","{'value': 71, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-English Ale II,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-English Ale III,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Foggy London Ale,"{'value': 71, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-French Saison,"{'value': 90, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,53.8462
-Fruity Wit,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Fruit Bomb Saison Blend,"{'value': 85, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,53.8462
-Hornindal Kveik Blend,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",KVEIK,53.8462
-Irish Ale,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Jötunn,"{'value': 80, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,53.8462
-Isar Lager,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",LAGER,38.4615
-Kolsch,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Krispy,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",KVEIK,53.8462
-Lactobacillus Blend,{'unit': 'PERCENT_SIGN'},{'unit': 'PERCENT_SIGN'},ALE,0.0
-Lactobacillus Blend 2.0,{'unit': 'PERCENT_SIGN'},{'unit': 'PERCENT_SIGN'},ALE,0.0
-Lactobacillus brevis,{'unit': 'PERCENT_SIGN'},{'unit': 'PERCENT_SIGN'},ALE,0.0
-Lactobacillus Delbrueckii,{'unit': 'PERCENT_SIGN'},{'unit': 'PERCENT_SIGN'},ALE,0.0
-Laerdal Kveik,"{'value': 68, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",KVEIK,53.8462
-Mexican Lager,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 70, 'unit': 'PERCENT_SIGN'}",LAGER,23.0769
-Mothership Brett Blend,"{'value': 80, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,53.8462
-New World Saison Blend,"{'value': 85, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,53.8462
-Northwest Ale,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Old World Saison Blend,"{'value': 85, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,53.8462
-Ontario Farmhouse Ale Blend,"{'value': 80, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,23.0769
-Pine Tree Wit,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Premium Pils,{'unit': 'PERCENT_SIGN'},{'unit': 'PERCENT_SIGN'},LAGER,0.0
-Saison Maison,"{'value': 80, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,38.4615
-Saison Nouveau,"{'value': 80, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,53.8462
-St. Remy Abbey Ale,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-St. Lucifer,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Stirling Ale,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-The Kveik Ring: Midtbust,"{'value': 77, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},KVEIK,0.0
-Uberweizen,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Vermont Ale,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 83, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Voss Kveik ,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",KVEIK,53.8462
-Weizen I,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-West Abbey Ale,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 86, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Wild Thing,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-SafAle BE-134,"{'value': 89, 'unit': 'PERCENT_SIGN'}","{'value': 93, 'unit': 'PERCENT_SIGN'}",ALE,10
-SafAle BE-256,"{'value': 82, 'unit': 'PERCENT_SIGN'}","{'value': 86, 'unit': 'PERCENT_SIGN'}",ALE,10
-SafAle F-2,{'unit': 'PERCENT_SIGN'},{'unit': 'PERCENT_SIGN'},ALE,10
-SafAle K-97,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 84, 'unit': 'PERCENT_SIGN'}",ALE,10
-SafAle S-04,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",ALE,10
-SafAle S-33,"{'value': 68, 'unit': 'PERCENT_SIGN'}","{'value': 72, 'unit': 'PERCENT_SIGN'}",ALE,10
-SafAle T-58,"{'value': 66.6667, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,11.5
-SafAle US-05,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,10
-SafAle WB-06,"{'value': 86, 'unit': 'PERCENT_SIGN'}","{'value': 90, 'unit': 'PERCENT_SIGN'}",ALE,10
-SafBrew DA-16,"{'value': 98, 'unit': 'PERCENT_SIGN'}","{'value': 102, 'unit': 'PERCENT_SIGN'}",ALE,16
-SafBrew HA-18,"{'value': 98, 'unit': 'PERCENT_SIGN'}","{'value': 102, 'unit': 'PERCENT_SIGN'}",ALE,18
-SafBrew LA-01,"{'value': 15, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,0.0
-SafLager S-189,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 84, 'unit': 'PERCENT_SIGN'}",LAGER,10
-SafLager S-23,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 84, 'unit': 'PERCENT_SIGN'}",LAGER,10
-SafLager W-34/70,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 84, 'unit': 'PERCENT_SIGN'}",LAGER,10
-SafSour LP 652,{'unit': 'PERCENT_SIGN'},{'unit': 'PERCENT_SIGN'},BACTERIA,0.0
-A Touch Of Spice Belgian Ale,"{'value': 81, 'unit': 'PERCENT_SIGN'}","{'value': 84, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Altstadt Ale,"{'value': 77, 'unit': 'PERCENT_SIGN'}","{'value': 81, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-American Lager,"{'value': 79, 'unit': 'PERCENT_SIGN'}","{'value': 83, 'unit': 'PERCENT_SIGN'}",LAGER,0.0
-Bavarian Hefe,"{'value': 77, 'unit': 'PERCENT_SIGN'}","{'value': 81, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Belgian Abbey Ale,"{'value': 79, 'unit': 'PERCENT_SIGN'}","{'value': 81, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Belgian Mix,"{'value': 79, 'unit': 'PERCENT_SIGN'}","{'value': 81, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Belgian Tripel,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Belgian Wit,"{'value': 76, 'unit': 'PERCENT_SIGN'}","{'value': 79, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Berliner Blend,"{'value': 89, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,0.0
-British Ale #1,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 79, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-British Ale #2,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Brussels Bruxellensis,"{'value': 58, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,10
-Brux Blend,"{'value': 79, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,0.0
-Czech Pilsner,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 79, 'unit': 'PERCENT_SIGN'}",LAGER,0.0
-Farmhouse Sour,"{'value': 89, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,0.0
-German Ale Yeast,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-German Lager,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",LAGER,0.0
-Gigayeast Lacto,"{'value': 15, 'unit': 'PERCENT_SIGN'}","{'value': 40, 'unit': 'PERCENT_SIGN'}",BACTERIA,0.0
-Golden Gate Lager,"{'value': 79, 'unit': 'PERCENT_SIGN'}","{'value': 83, 'unit': 'PERCENT_SIGN'}",LAGER,0.0
-Golden Pear Belgian,"{'value': 83, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Hornindal Kveik #5,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",KVEIK,13
-Irish Stout,"{'value': 82, 'unit': 'PERCENT_SIGN'}","{'value': 86, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Kolsch Bier,"{'value': 79, 'unit': 'PERCENT_SIGN'}","{'value': 83, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Kveik #1,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",KVEIK,0.0
-Norcal Ale #1,"{'value': 76, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,11
-Norcal Ale #5,"{'value': 69, 'unit': 'PERCENT_SIGN'}","{'value': 73, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Portland Hefe,"{'value': 76, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Quebec Abbey Ale,"{'value': 79, 'unit': 'PERCENT_SIGN'}","{'value': 83, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Saison #1,"{'value': 81, 'unit': 'PERCENT_SIGN'}","{'value': 83, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Saison #2,"{'value': 79, 'unit': 'PERCENT_SIGN'}","{'value': 83, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Saison Blend,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 83, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Saison Sour,"{'value': 78, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,0.0
-Scotch Ale #1,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Sour Cherry Funk,"{'value': 51, 'unit': 'PERCENT_SIGN'}","{'value': 89, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Sour Plum Belgian,"{'value': 77, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,0.0
-Sweet Flemish Brett,"{'value': 84, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,10
-Tart Cherry Brett,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,10
-Vermont Ipa,"{'value': 78, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",ALE,11
-Barbarian,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 74, 'unit': 'PERCENT_SIGN'}",ALE,10
-Bartleby,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",KVEIK,10
-Cablecar,"{'value': 71, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",LAGER,10
-Citrus,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,10
-Darkness,"{'value': 71, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,12
-Dieter,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,10
-Dry Hop,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,10
-Flagship,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,12
-Global,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",LAGER,10
-Gnome,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,12
-Harvest,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 74, 'unit': 'PERCENT_SIGN'}",LAGER,10
-House,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,10
-Independence,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,12
-Joystick,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,12
-Juice,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,10
-Kaiser,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,10
-Kveiking,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",KVEIK,12
-Loki,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",KVEIK,10
-Napoleon,"{'value': 77, 'unit': 'PERCENT_SIGN'}","{'value': 83, 'unit': 'PERCENT_SIGN'}",ALE,12
-POG,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",KVEIK,10
-Pub,"{'value': 64, 'unit': 'PERCENT_SIGN'}","{'value': 70, 'unit': 'PERCENT_SIGN'}",ALE,10
-Rustic,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,12
-Sour Batch Kidz,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 95, 'unit': 'PERCENT_SIGN'}",ALE,12
-Stefon,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,10
-Suburban Brett,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",BRETT,12
-Tartan,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,10
-Triple Double,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,12
-Urkel,"{'value': 71, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",LAGER,10
-Whiteout,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,10
-Voyager,{'unit': 'PERCENT_SIGN'},{'unit': 'PERCENT_SIGN'},ALE,0.0
-Julius,{'unit': 'PERCENT_SIGN'},{'unit': 'PERCENT_SIGN'},ALE,0.0
-LalBrew Abbaye,"{'value': 74.7127, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,0.0
-LalBrew Belle Saison,"{'value': 74.7127, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,0.0
-LalBrew BRY-97,"{'value': 68.9655, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,11
-LalBrew CBC-1,{'unit': 'PERCENT_SIGN'},{'unit': 'PERCENT_SIGN'},ALE,0.0
-LalBrew Diamond Lager,"{'value': 74.7127, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,0.0
-LalBrew Koln,"{'value': 66.6667, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,0.0
-LalBrew London,"{'value': 74.7127, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,0.0
-LalBrew Munich Classic,"{'value': 68.9655, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,0.0
-LalBrew New England,"{'value': 66.6667, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,11
-LalBrew Nottingham,"{'value': 74.7127, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,0.0
-LalBrew Voss,"{'value': 68.9655, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},KVEIK,0.0
-LalBrew Windsor,"{'value': 66.6667, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,0.0
-LalBrew Wit,"{'value': 57.4713, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,0.0
-Prise de Mousse Wine Yeast,"{'value': 74.7127, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,18
-Sourvisiae,"{'value': 68.9655, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,0.0
-WildBrew Philly Sour,"{'value': 74.7127, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,0.0
-Bavarian Wheat,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Belgian Ale,"{'value': 82, 'unit': 'PERCENT_SIGN'}","{'value': 88, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Belgian Wit,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Bohemian Lager,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-California Lager,"{'value': 77, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-Empire Ale,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-French Saison Ale,"{'value': 85, 'unit': 'PERCENT_SIGN'}","{'value': 90, 'unit': 'PERCENT_SIGN'}",ALE,14
-Liberty Bell Ale,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-New World Strong Ale,"{'value': 77, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",ALE,0.0
-US West Coast,"{'value': 74.7127, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,11
-Workhorse,"{'value': 74.7127, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,0.0
-Muntons Premium Gold,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,8
-Muntons Standard Ale,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,8
-ABBEY ALE C,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,12
-ALL THE BRETTS,"{'value': 85, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,11
-ALT,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,11
-AMERICAN LAGER,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,9
-AMERICAN PILSNER,"{'value': 71, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,9
-AMERICAN WHEAT,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,10
-Bavarian Wheat I,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,10
-Bavarian Wheat II,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,10
-BAYERN LAGER,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,9
-BELGIAN ALE A,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,12
-BELGIAN ALE D,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,11
-BELGIAN ALE DK,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,10
-BELGIAN ALE O,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,12
-BELGIAN ALE R,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",ALE,12
-BELGIAN ALE W,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,11
-BELGIAN GOLDEN STRONG,"{'value': 90, 'unit': 'PERCENT_SIGN'}","{'value': 95, 'unit': 'PERCENT_SIGN'}",ALE,14
-BELGIAN SAISON I,"{'value': 76, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,12
-BELGIAN SAISON II,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 79, 'unit': 'PERCENT_SIGN'}",ALE,12
-Belgian Wheat,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,12
-BIERE DE GARDE,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 79, 'unit': 'PERCENT_SIGN'}",ALE,9
-BRETT BLEND #1 WHERE DA FUNK?,"{'value': 78, 'unit': 'PERCENT_SIGN'}","{'value': 88, 'unit': 'PERCENT_SIGN'}",ALE,11
-BRETT BLEND #2 BIT O'FUNK,"{'value': 85, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,11
-BRETT BLEND #3 BRING ON DA FUNK,"{'value': 85, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,11
-BRETTANOMYCES BRUXELLENSIS,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,10
-BRETTANOMYCES CLAUSSENII,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,10
-BRETTANOMYCES LAMBICUS,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,10
-BRITISH ALE I,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,10
-BRITISH ALE II,"{'value': 68, 'unit': 'PERCENT_SIGN'}","{'value': 72, 'unit': 'PERCENT_SIGN'}",ALE,10
-BRITISH ALE III,"{'value': 67, 'unit': 'PERCENT_SIGN'}","{'value': 74, 'unit': 'PERCENT_SIGN'}",ALE,10
-BRITISH ALE IV,"{'value': 69, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,10
-BRITISH ALE V,"{'value': 71, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,10
-BRITISH ALE VI,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,10
-BRITISH ALE VII,"{'value': 67, 'unit': 'PERCENT_SIGN'}","{'value': 71, 'unit': 'PERCENT_SIGN'}",ALE,9
-BRITISH ALE VIII,"{'value': 67, 'unit': 'PERCENT_SIGN'}","{'value': 71, 'unit': 'PERCENT_SIGN'}",ALE,9
-C2C AMERICAN FARMHOUSE,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,10
-CL-50 ALE,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,10
-DANISH LAGER,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,9
-DIPA ALE,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,11
-EAST COAST ALE,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,10
-ESPE KVEIK,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",KVEIK,12
-FRENCH SAISON,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 90, 'unit': 'PERCENT_SIGN'}",ALE,12
-GERMAN BOCK,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,10
-GERMAN LAGER I,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,9
-GERMAN LAGER II,"{'value': 68, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,9
-GRAND CRU,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,12
-GULO ALE,"{'value': 85, 'unit': 'PERCENT_SIGN'}","{'value': 90, 'unit': 'PERCENT_SIGN'}",ALE,12
-Hefeweizen Ale I,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,10
-Hefeweizen Ale II,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,10
-Hornindal Kveik,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",KVEIK,16
-HOTHEAD ALE,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",KVEIK,11
-IRISH ALE,"{'value': 69, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,12
-JOVARU LITHUANIAN FARMHOUSE,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,10
-KOLSCH I,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,10
-KOLSCH II,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,10
-LACTOBACILLUS BLEND,{'unit': 'PERCENT_SIGN'},{'unit': 'PERCENT_SIGN'},ALE,0.0
-LAGER I,"{'value': 71, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,9
-LONDON ALE,"{'value': 67, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,11
-Lutra Kveik,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",KVEIK,11
-MEXICAN LAGER,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,9
-NORTHWEST FARMHOUSE BRETT,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,10
-Oktoberfest,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,9
-PACIFIC NW ALE,"{'value': 67, 'unit': 'PERCENT_SIGN'}","{'value': 71, 'unit': 'PERCENT_SIGN'}",ALE,10
-PEDIOCOCCUS,{'unit': 'PERCENT_SIGN'},{'unit': 'PERCENT_SIGN'},ALE,0.0
-PILSNER I,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,9
-PILSNER II,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 74, 'unit': 'PERCENT_SIGN'}",ALE,9
-SAISONSTEIN'S MONSTER,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 90, 'unit': 'PERCENT_SIGN'}",ALE,11
-SCOTTISH ALE,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,10
-TROPICAL IPA,"{'value': 82, 'unit': 'PERCENT_SIGN'}","{'value': 90, 'unit': 'PERCENT_SIGN'}",ALE,10
-VOSS KVEIK,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",KVEIK,12
-West Coast Ale I,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,11
-WEST COAST ALE II,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,10
-WEST COAST ALE III,"{'value': 76, 'unit': 'PERCENT_SIGN'}","{'value': 83, 'unit': 'PERCENT_SIGN'}",ALE,11
-WEST COAST ALE IV,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,10
-WEST COAST LAGER,"{'value': 67, 'unit': 'PERCENT_SIGN'}","{'value': 71, 'unit': 'PERCENT_SIGN'}",ALE,9
-WIT,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,11
-Chico Ale,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 81, 'unit': 'PERCENT_SIGN'}",ALE,11
-Chiswick Ale,"{'value': 65, 'unit': 'PERCENT_SIGN'}","{'value': 72, 'unit': 'PERCENT_SIGN'}",ALE,8
-Hoptopper Ale,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,11
-Manchester Ale,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,10
-Oktoberfest Lager,"{'value': 65, 'unit': 'PERCENT_SIGN'}","{'value': 73, 'unit': 'PERCENT_SIGN'}",ALE,12
-Pacman Ale,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,12
-Amalgamation - Brett Super Blend,"{'value': 85, 'unit': 'PERCENT_SIGN'}","{'value': 95, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Amalgamation II - Brett Super Blend,"{'value': 82, 'unit': 'PERCENT_SIGN'}","{'value': 86, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Beersel Brettanomyces Blend,"{'value': 82, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Brettanomyces Bruxellenis TYB261,"{'value': 82, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-BRETTANOMYCES BRUXELLENSIS - STRAIN TYB184,"{'value': 82, 'unit': 'PERCENT_SIGN'}","{'value': 88, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Brettanomyces Bruxellensis - Strain TYB207,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Brettanomyces Bruxellensis - Strain TYB307,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 84, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Brettanomyces bruxellensis - Strain TYB415,"{'value': 82, 'unit': 'PERCENT_SIGN'}","{'value': 86, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Brussels Brettanomyces Blend,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 90, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Dark Belgian Cask,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Dry Belgian Ale,"{'value': 85, 'unit': 'PERCENT_SIGN'}","{'value': 100, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Farmhouse Sour Ale,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 100, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Flanders Specialty Ale,"{'value': 78, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Framgarden Kveik,"{'value': 78, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",KVEIK,53.8462
-Franconian Dark Lager,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Funktown Pale Ale,"{'value': 78, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Hazy Daze,"{'value': 79, 'unit': 'PERCENT_SIGN'}","{'value': 83, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Hazy Daze II,"{'value': 81, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Hessian Pils,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,7.69231
-Hornindal Kveik,"{'value': 77, 'unit': 'PERCENT_SIGN'}","{'value': 81, 'unit': 'PERCENT_SIGN'}",KVEIK,53.8462
-Lactobacillus Blend,"{'value': 57.4713, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},BACTERIA,0.0
-Lactobacillus brevis - Strain TYB282,"{'value': 4, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},BACTERIA,0.0
-Lida Kveik,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",KVEIK,53.8462
-Lochristi Brettanomyces Blend,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 88, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Metschnikowia reukaufii ,"{'value': 20, 'unit': 'PERCENT_SIGN'}","{'value': 25, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Midtbust Kveik,"{'value': 76, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",KVEIK,53.8462
-Midwestern Ale,"{'value': 76, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Northeastern Abbey,"{'value': 77, 'unit': 'PERCENT_SIGN'}","{'value': 81, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Pakruojis Lithuanian Farmhouse,"{'value': 90, 'unit': 'PERCENT_SIGN'}","{'value': 100, 'unit': 'PERCENT_SIGN'}",KVEIK,53.8462
-Saison Blend,"{'value': 78, 'unit': 'PERCENT_SIGN'}","{'value': 84, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Saison Blend II,"{'value': 85, 'unit': 'PERCENT_SIGN'}","{'value': 100, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Saison/Brettanomyces Blend,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 100, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Saison/Brettanomyces Blend II,"{'value': 85, 'unit': 'PERCENT_SIGN'}","{'value': 90, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Simonaitis Lithuanian Farmhouse,"{'value': 76, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",KVEIK,53.8462
-Transatlantic Berliner Blend,"{'value': 85, 'unit': 'PERCENT_SIGN'}","{'value': 100, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Vermont Ale,"{'value': 78, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Wallonian Farmhouse,"{'value': 81, 'unit': 'PERCENT_SIGN'}","{'value': 100, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Wallonian Farmhouse II,"{'value': 86, 'unit': 'PERCENT_SIGN'}","{'value': 94, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Wallonian III Farmhouse,"{'value': 86, 'unit': 'PERCENT_SIGN'}","{'value': 94, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Abbey Ale Yeast,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Abbey IV Ale Yeast,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-American Ale Yeast Blend,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-American Hefeweizen Ale Yeast,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-American Lager Yeast,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Bastogne Belgian Ale Yeast,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Bavarian Weizen Ale Yeast,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Belgian Ale Yeast,"{'value': 78, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Belgian Golden Ale Yeast,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Belgian Saison I Ale Yeast,"{'value': 65, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Belgian Saison II Ale Yeast,"{'value': 78, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Belgian Strong Ale Yeast,"{'value': 78, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Belgian Wit Ale Yeast,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Belgian Wit II Ale Yeast,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Belgian-Style Ale Yeast Blend,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Belgian-Style Saison Ale Yeast Blend,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Brettanomyces Claussenii,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,10
-British Ale Yeast,"{'value': 67, 'unit': 'PERCENT_SIGN'}","{'value': 74, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Burlington Ale Yeast,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Burton Ale Yeast,"{'value': 69, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-California Ale Yeast,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-California V Ale Yeast,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Charlie's Fist Bump Yeast,"{'value': 66, 'unit': 'PERCENT_SIGN'}","{'value': 70, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Coastal Haze Ale Yeast Blend,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Copenhagen Lager Yeast,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Cream Ale Yeast Blend,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Czech Budejovice Lager Yeast,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Dry English Ale Yeast,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-East Coast Ale Yeast,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Edinburgh Scottish Ale Yeast,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-English Ale Yeast,"{'value': 63, 'unit': 'PERCENT_SIGN'}","{'value': 70, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-French Saison Ale Yeast,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-German Bock Lager Yeast,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-German Lager Yeast,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 79, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-German/Kolsch Ale Yeast,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Hefeweizen Ale Yeast,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Hefeweizen IV Ale Yeast,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-High Pressure Lager Yeast,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Hornindal Kveik,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",KVEIK,12.5
-Irish Ale Yeast,"{'value': 69, 'unit': 'PERCENT_SIGN'}","{'value': 74, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-London Ale Yeast,"{'value': 67, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-London Fog Ale Yeast,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 82, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Mexican Lager Yeast,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Monastery Ale Yeast,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-Oktoberfest/Märzen Lager Yeast,"{'value': 65, 'unit': 'PERCENT_SIGN'}","{'value': 73, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Old Bavarian Lager Yeast,"{'value': 66, 'unit': 'PERCENT_SIGN'}","{'value': 73, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Opshaug Kveik Ale Yeast,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",KVEIK,38.4615
-Pacific Ale Yeast,"{'value': 65, 'unit': 'PERCENT_SIGN'}","{'value': 70, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Pilsner Lager Yeast,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Saccharomyces Bruxellensis Trois,"{'value': 85, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,38.4615
-San Diego Super Ale Yeast,"{'value': 76, 'unit': 'PERCENT_SIGN'}","{'value': 83, 'unit': 'PERCENT_SIGN'}",ALE,53.8462
-San Francisco Lager Yeast,"{'value': 65, 'unit': 'PERCENT_SIGN'}","{'value': 70, 'unit': 'PERCENT_SIGN'}",ALE,38.4615
-Southern German Lager Yeast,"{'value': 68, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,23.0769
-Super High Gravity Ale Yeast,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 100, 'unit': 'PERCENT_SIGN'}",ALE,76.9231
-American Ale,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,11
-American Ale II,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,10
-American Lager,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,9
-American Wheat,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,10
-Bavarian Lager,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,9
-Bavarian Wheat Blend,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,10
-Belgian Abbey Style Ale,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,12
-Belgian Abbey Style Ale II,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,12
-Belgian Ardennes,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,12
-Belgian Dark Ale,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 79, 'unit': 'PERCENT_SIGN'}",ALE,12
-Belgian High Gravity,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,11
-Belgian Lambic Blend,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,11
-Belgian Saison,"{'value': 76, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,12
-Belgian Schelde Ale,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,11
-Belgian Stout,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 85, 'unit': 'PERCENT_SIGN'}",ALE,12
-Belgian Strong Ale,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,12
-Belgian Style Blend,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,12
-Belgian Wheat,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,12
-Belgian Witbier,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,11
-Berliner Weisse Blend,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,6
-Bohemian Lager,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,9
-British Ale,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,10
-British Ale II,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,10
-British Cask Ale,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,9
-Budvar Lager,"{'value': 71, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,9
-Burton IPA Blend,"{'value': 71, 'unit': 'PERCENT_SIGN'}","{'value': 74, 'unit': 'PERCENT_SIGN'}",ALE,10
-California Lager,"{'value': 67, 'unit': 'PERCENT_SIGN'}","{'value': 71, 'unit': 'PERCENT_SIGN'}",ALE,9
-Canadian/Belgian Ale,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 79, 'unit': 'PERCENT_SIGN'}",ALE,12
-Czech Pils,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 74, 'unit': 'PERCENT_SIGN'}",ALE,9
-Danish Lager,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,9
-Denny's Favorite 50 Ale,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,10
-English Special Bitter,"{'value': 68, 'unit': 'PERCENT_SIGN'}","{'value': 72, 'unit': 'PERCENT_SIGN'}",ALE,9
-European Lager,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,10
-Farmhouse Ale,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 79, 'unit': 'PERCENT_SIGN'}",ALE,12
-Flanders Golden Ale,"{'value': 74, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,12
-Forbidden Fruit,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,12
-French Saison,"{'value': 77, 'unit': 'PERCENT_SIGN'}","{'value': 83, 'unit': 'PERCENT_SIGN'}",ALE,12
-Gambrinus Style Lager,"{'value': 71, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,9
-German Ale,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,11
-German Wheat,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,10
-Hella Bock Lager,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 74, 'unit': 'PERCENT_SIGN'}",ALE,12
-Irish Ale,"{'value': 71, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,12
-Kolsch,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,10
-Kolsch II,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,10
-London Ale,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,11
-London Ale III,"{'value': 71, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,10
-London ESB Ale,"{'value': 67, 'unit': 'PERCENT_SIGN'}","{'value': 71, 'unit': 'PERCENT_SIGN'}",ALE,9
-Munich Lager,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 74, 'unit': 'PERCENT_SIGN'}",ALE,9
-Munich Lager II,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 74, 'unit': 'PERCENT_SIGN'}",ALE,10
-North American Lager,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,9
-Northwest Ale,"{'value': 67, 'unit': 'PERCENT_SIGN'}","{'value': 71, 'unit': 'PERCENT_SIGN'}",ALE,10
-Octoberfest Lager Blend,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,9
-Old Ale Blend,"{'value': 75, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,14
-Oud Bruin Ale Blend,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,10
-Pacman,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,12
-Pilsen Lager,"{'value': 71, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,9
-Pilsner Urquell H-Strain,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,9
-Ringwood Ale,"{'value': 68, 'unit': 'PERCENT_SIGN'}","{'value': 72, 'unit': 'PERCENT_SIGN'}",ALE,10
-Rocky Mountain Lager,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 74, 'unit': 'PERCENT_SIGN'}",ALE,9
-Roeselare Ale Blend,"{'value': 80, 'unit': 'PERCENT_SIGN'}",{'unit': 'PERCENT_SIGN'},ALE,11
-Saison-Brett Blend,"{'value': 80, 'unit': 'PERCENT_SIGN'}","{'value': 90, 'unit': 'PERCENT_SIGN'}",ALE,12
-Scottish Ale,"{'value': 69, 'unit': 'PERCENT_SIGN'}","{'value': 73, 'unit': 'PERCENT_SIGN'}",ALE,12
-Staro Prague Lager,"{'value': 70, 'unit': 'PERCENT_SIGN'}","{'value': 74, 'unit': 'PERCENT_SIGN'}",ALE,11
-Thames Valley Ale,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 76, 'unit': 'PERCENT_SIGN'}",ALE,10
-Thames Valley Ale II,"{'value': 72, 'unit': 'PERCENT_SIGN'}","{'value': 78, 'unit': 'PERCENT_SIGN'}",ALE,10
-Weihenstephan Weizen,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 77, 'unit': 'PERCENT_SIGN'}",ALE,10
-West Coast IPA,"{'value': 73, 'unit': 'PERCENT_SIGN'}","{'value': 80, 'unit': 'PERCENT_SIGN'}",ALE,10
-West Yorkshire Ale,"{'value': 67, 'unit': 'PERCENT_SIGN'}","{'value': 71, 'unit': 'PERCENT_SIGN'}",ALE,9
-Whitbread Ale,"{'value': 68, 'unit': 'PERCENT_SIGN'}","{'value': 72, 'unit': 'PERCENT_SIGN'}",ALE,10
-Wyeast Bohemian Ale Blend,"{'value': 71, 'unit': 'PERCENT_SIGN'}","{'value': 75, 'unit': 'PERCENT_SIGN'}",ALE,11
+AURORA,76,86,KVEIK,23.0769
+Classic American,73,78,ALE,11
+Classic English,72,76,ALE,23.0769
+Funk Weapon #1,80,95,ALE,23.0769
+Funk Weapon #2 ,80,95,ALE,23.0769
+Funk Weapon #3,80,95,ALE,23.0769
+NEEPAH Blend,75,82,ALE,7.69231
+OSLO,76,86,KVEIK,23.0769
+S. arlingtonesis™,88,93,ALE,23.0769
+Saison Parfait™: New World Saison Blend,90,100,ALE,23.0769
+Sour Solera Blend,96,100,ALE,23.0769
+Sour Weapon L,,,BACTERIA,7.69231
+Sour Weapon P,,,BACTERIA,23.0769
+The Mad Fermentationist Saison Blend,90,100,ALE,23.0769
+Berliner blend ,,,ALE,0.0
+BugFarm,,,ALE,0.0
+Farmhouse ,80,,ALE,0.0
+Flemish Ale,,,ALE,0.0
+Kellerbier,74,76,LAGER,0.0
+Kölschbier,75,78,ALE,0.0
+Nordic Farmhouse,78,83,KVEIK,0.0
+Old Newark Ale,76,78,ALE,0.0
+Saison Brasserie,80,,ALE,0.0
+Scottish Heavy,77,80,ALE,0.0
+Belgian Abbaye,74,76,ALE,0.0
+Belgian Abbaye 2,74,76,ALE,0.0
+Saison,76,78,ALE,0.0
+Dour Saison,77,83,ALE,0.0
+American Ale,72,76,ALE,38.4615
+Anchorman Ale,75,85,ALE,53.8462
+Ardennes Belgian Ale,72,80,ALE,53.8462
+Arset Kveik Blend,70,80,KVEIK,53.8462
+Belgian Sour Blend,80,,ALE,7.69231
+Berliner Brett Blend,,,ALE,0.0
+Berliner Brett I,57,,ALE,53.8462
+Berliner Brett II,57,,ALE,23.0769
+Biergarten Lager,70,75,LAGER,23.0769
+Brett B,80,,ALE,38.4615
+Brett D,80,,ALE,53.8462
+Brett M,80,,ALE,53.8462
+Brett Q,80,,ALE,53.8462
+Brussels Brett,80,,ALE,53.8462
+Brut Ale,80,,ALE,23.0769
+Cali Ale,75,80,ALE,53.8462
+Cerberus,70,80,ALE,38.4615
+Classic Witbier,72,78,ALE,23.0769
+Copenhagen Lager,71,77,LAGER,38.4615
+Czech Lager,70,78,LAGER,23.0769
+Dry Belgian Ale,85,,ALE,23.0769
+Ebbegarden Kveik Blend,70,80,KVEIK,53.8462
+English Ale I,63,71,ALE,23.0769
+English Ale II,72,80,ALE,23.0769
+English Ale III,72,80,ALE,23.0769
+Foggy London Ale,71,78,ALE,38.4615
+French Saison,90,,ALE,53.8462
+Fruity Wit,70,75,ALE,23.0769
+Fruit Bomb Saison Blend,85,,ALE,53.8462
+Hornindal Kveik Blend,70,80,KVEIK,53.8462
+Irish Ale,70,75,ALE,23.0769
+Jötunn,80,,ALE,53.8462
+Isar Lager,72,82,LAGER,38.4615
+Kolsch,72,78,ALE,23.0769
+Krispy,70,82,KVEIK,53.8462
+Lactobacillus Blend,,,ALE,0.0
+Lactobacillus Blend 2.0,,,ALE,0.0
+Lactobacillus brevis,,,ALE,0.0
+Lactobacillus Delbrueckii,,,ALE,0.0
+Laerdal Kveik,68,78,KVEIK,53.8462
+Mexican Lager,70,70,LAGER,23.0769
+Mothership Brett Blend,80,,ALE,53.8462
+New World Saison Blend,85,,ALE,53.8462
+Northwest Ale,72,78,ALE,38.4615
+Old World Saison Blend,85,,ALE,53.8462
+Ontario Farmhouse Ale Blend,80,,ALE,23.0769
+Pine Tree Wit,72,82,ALE,23.0769
+Premium Pils,,,LAGER,0.0
+Saison Maison,80,,ALE,38.4615
+Saison Nouveau,80,,ALE,53.8462
+St. Remy Abbey Ale,72,80,ALE,23.0769
+St. Lucifer,75,80,ALE,53.8462
+Stirling Ale,70,85,ALE,53.8462
+The Kveik Ring: Midtbust,77,,KVEIK,0.0
+Uberweizen,72,80,ALE,38.4615
+Vermont Ale,73,83,ALE,53.8462
+Voss Kveik ,70,75,KVEIK,53.8462
+Weizen I,70,75,ALE,38.4615
+West Abbey Ale,74,86,ALE,53.8462
+Wild Thing,75,85,ALE,23.0769
+SafAle BE-134,89,93,ALE,10
+SafAle BE-256,82,86,ALE,10
+SafAle F-2,,,ALE,10
+SafAle K-97,80,84,ALE,10
+SafAle S-04,74,82,ALE,10
+SafAle S-33,68,72,ALE,10
+SafAle T-58,66.6667,,ALE,11.5
+SafAle US-05,72,78,ALE,10
+SafAle WB-06,86,90,ALE,10
+SafBrew DA-16,98,102,ALE,16
+SafBrew HA-18,98,102,ALE,18
+SafBrew LA-01,15,,ALE,0.0
+SafLager S-189,80,84,LAGER,10
+SafLager S-23,80,84,LAGER,10
+SafLager W-34/70,80,84,LAGER,10
+SafSour LP 652,,,BACTERIA,0.0
+A Touch Of Spice Belgian Ale,81,84,ALE,0.0
+Altstadt Ale,77,81,ALE,0.0
+American Lager,79,83,LAGER,0.0
+Bavarian Hefe,77,81,ALE,23.0769
+Belgian Abbey Ale,79,81,ALE,0.0
+Belgian Mix,79,81,ALE,0.0
+Belgian Tripel,74,76,ALE,0.0
+Belgian Wit,76,79,ALE,0.0
+Berliner Blend,89,,ALE,0.0
+British Ale #1,75,79,ALE,0.0
+British Ale #2,80,82,ALE,0.0
+Brussels Bruxellensis,58,,ALE,10
+Brux Blend,79,,ALE,0.0
+Czech Pilsner,75,79,LAGER,0.0
+Farmhouse Sour,89,,ALE,0.0
+German Ale Yeast,75,77,ALE,0.0
+German Lager,74,78,LAGER,0.0
+Gigayeast Lacto,15,40,BACTERIA,0.0
+Golden Gate Lager,79,83,LAGER,0.0
+Golden Pear Belgian,83,85,ALE,0.0
+Hornindal Kveik #5,72,75,KVEIK,13
+Irish Stout,82,86,ALE,0.0
+Kolsch Bier,79,83,ALE,0.0
+Kveik #1,74,78,KVEIK,0.0
+Norcal Ale #1,76,80,ALE,11
+Norcal Ale #5,69,73,ALE,0.0
+Portland Hefe,76,80,ALE,23.0769
+Quebec Abbey Ale,79,83,ALE,0.0
+Saison #1,81,83,ALE,0.0
+Saison #2,79,83,ALE,0.0
+Saison Blend,80,83,ALE,0.0
+Saison Sour,78,,ALE,0.0
+Scotch Ale #1,80,82,ALE,0.0
+Sour Cherry Funk,51,89,ALE,0.0
+Sour Plum Belgian,77,,ALE,0.0
+Sweet Flemish Brett,84,85,ALE,10
+Tart Cherry Brett,70,85,ALE,10
+Vermont Ipa,78,82,ALE,11
+Barbarian,73,74,ALE,10
+Bartleby,75,85,KVEIK,10
+Cablecar,71,75,LAGER,10
+Citrus,74,78,ALE,10
+Darkness,71,75,ALE,12
+Dieter,73,77,ALE,10
+Dry Hop,74,78,ALE,10
+Flagship,73,77,ALE,12
+Global,73,77,LAGER,10
+Gnome,74,78,ALE,12
+Harvest,70,74,LAGER,10
+House,73,75,ALE,10
+Independence,72,76,ALE,12
+Joystick,73,77,ALE,12
+Juice,72,76,ALE,10
+Kaiser,73,77,ALE,10
+Kveiking,75,85,KVEIK,12
+Loki,75,85,KVEIK,10
+Napoleon,77,83,ALE,12
+POG,75,85,KVEIK,10
+Pub,64,70,ALE,10
+Rustic,72,76,ALE,12
+Sour Batch Kidz,80,95,ALE,12
+Stefon,73,77,ALE,10
+Suburban Brett,75,80,BRETT,12
+Tartan,70,75,ALE,10
+Triple Double,74,78,ALE,12
+Urkel,71,75,LAGER,10
+Whiteout,72,76,ALE,10
+Voyager,,,ALE,0.0
+Julius,,,ALE,0.0
+LalBrew Abbaye,74.7127,,ALE,0.0
+LalBrew Belle Saison,74.7127,,ALE,0.0
+LalBrew BRY-97,68.9655,,ALE,11
+LalBrew CBC-1,,,ALE,0.0
+LalBrew Diamond Lager,74.7127,,ALE,0.0
+LalBrew Koln,66.6667,,ALE,0.0
+LalBrew London,74.7127,,ALE,0.0
+LalBrew Munich Classic,68.9655,,ALE,0.0
+LalBrew New England,66.6667,,ALE,11
+LalBrew Nottingham,74.7127,,ALE,0.0
+LalBrew Voss,68.9655,,KVEIK,0.0
+LalBrew Windsor,66.6667,,ALE,0.0
+LalBrew Wit,57.4713,,ALE,0.0
+Prise de Mousse Wine Yeast,74.7127,,ALE,18
+Sourvisiae,68.9655,,ALE,0.0
+WildBrew Philly Sour,74.7127,,ALE,0.0
+Bavarian Wheat,70,75,ALE,23.0769
+Belgian Ale,82,88,ALE,0.0
+Belgian Wit,70,75,ALE,0.0
+Bohemian Lager,72,76,ALE,0.0
+California Lager,77,82,ALE,0.0
+Empire Ale,70,75,ALE,0.0
+French Saison Ale,85,90,ALE,14
+Liberty Bell Ale,74,78,ALE,0.0
+New World Strong Ale,77,82,ALE,0.0
+US West Coast,74.7127,,ALE,11
+Workhorse,74.7127,,ALE,0.0
+Muntons Premium Gold,72,75,ALE,8
+Muntons Standard Ale,72,75,ALE,8
+ABBEY ALE C,74,78,ALE,12
+ALL THE BRETTS,85,,ALE,11
+ALT,73,77,ALE,11
+AMERICAN LAGER,73,77,ALE,9
+AMERICAN PILSNER,71,75,ALE,9
+AMERICAN WHEAT,74,78,ALE,10
+Bavarian Wheat I,72,78,ALE,10
+Bavarian Wheat II,70,76,ALE,10
+BAYERN LAGER,72,76,ALE,9
+BELGIAN ALE A,72,85,ALE,12
+BELGIAN ALE D,74,78,ALE,11
+BELGIAN ALE DK,73,80,ALE,10
+BELGIAN ALE O,74,80,ALE,12
+BELGIAN ALE R,73,82,ALE,12
+BELGIAN ALE W,74,78,ALE,11
+BELGIAN GOLDEN STRONG,90,95,ALE,14
+BELGIAN SAISON I,76,80,ALE,12
+BELGIAN SAISON II,74,79,ALE,12
+Belgian Wheat,72,76,ALE,12
+BIERE DE GARDE,74,79,ALE,9
+BRETT BLEND #1 WHERE DA FUNK?,78,88,ALE,11
+BRETT BLEND #2 BIT O'FUNK,85,,ALE,11
+BRETT BLEND #3 BRING ON DA FUNK,85,,ALE,11
+BRETTANOMYCES BRUXELLENSIS,70,85,ALE,10
+BRETTANOMYCES CLAUSSENII,70,85,ALE,10
+BRETTANOMYCES LAMBICUS,70,85,ALE,10
+BRITISH ALE I,70,80,ALE,10
+BRITISH ALE II,68,72,ALE,10
+BRITISH ALE III,67,74,ALE,10
+BRITISH ALE IV,69,76,ALE,10
+BRITISH ALE V,71,75,ALE,10
+BRITISH ALE VI,73,76,ALE,10
+BRITISH ALE VII,67,71,ALE,9
+BRITISH ALE VIII,67,71,ALE,9
+C2C AMERICAN FARMHOUSE,70,85,ALE,10
+CL-50 ALE,74,76,ALE,10
+DANISH LAGER,73,77,ALE,9
+DIPA ALE,72,80,ALE,11
+EAST COAST ALE,70,75,ALE,10
+ESPE KVEIK,75,80,KVEIK,12
+FRENCH SAISON,80,90,ALE,12
+GERMAN BOCK,70,76,ALE,10
+GERMAN LAGER I,73,77,ALE,9
+GERMAN LAGER II,68,76,ALE,9
+GRAND CRU,72,76,ALE,12
+GULO ALE,85,90,ALE,12
+Hefeweizen Ale I,73,77,ALE,10
+Hefeweizen Ale II,70,76,ALE,10
+Hornindal Kveik,75,82,KVEIK,16
+HOTHEAD ALE,75,85,KVEIK,11
+IRISH ALE,69,75,ALE,12
+JOVARU LITHUANIAN FARMHOUSE,80,85,ALE,10
+KOLSCH I,73,77,ALE,10
+KOLSCH II,72,78,ALE,10
+LACTOBACILLUS BLEND,,,ALE,0.0
+LAGER I,71,75,ALE,9
+LONDON ALE,67,77,ALE,11
+Lutra Kveik,75,82,KVEIK,11
+MEXICAN LAGER,70,78,ALE,9
+NORTHWEST FARMHOUSE BRETT,70,85,ALE,10
+Oktoberfest,73,77,ALE,9
+PACIFIC NW ALE,67,71,ALE,10
+PEDIOCOCCUS,,,ALE,0.0
+PILSNER I,72,76,ALE,9
+PILSNER II,70,74,ALE,9
+SAISONSTEIN'S MONSTER,80,90,ALE,11
+SCOTTISH ALE,73,76,ALE,10
+TROPICAL IPA,82,90,ALE,10
+VOSS KVEIK,75,82,KVEIK,12
+West Coast Ale I,73,80,ALE,11
+WEST COAST ALE II,72,76,ALE,10
+WEST COAST ALE III,76,83,ALE,11
+WEST COAST ALE IV,73,80,ALE,10
+WEST COAST LAGER,67,71,ALE,9
+WIT,72,76,ALE,11
+Chico Ale,74,81,ALE,11
+Chiswick Ale,65,72,ALE,8
+Hoptopper Ale,75,80,ALE,11
+Manchester Ale,70,75,ALE,10
+Oktoberfest Lager,65,73,ALE,12
+Pacman Ale,74,78,ALE,12
+Amalgamation - Brett Super Blend,85,95,ALE,53.8462
+Amalgamation II - Brett Super Blend,82,86,ALE,53.8462
+Beersel Brettanomyces Blend,82,85,ALE,53.8462
+Brettanomyces Bruxellenis TYB261,82,85,ALE,53.8462
+BRETTANOMYCES BRUXELLENSIS - STRAIN TYB184,82,88,ALE,53.8462
+Brettanomyces Bruxellensis - Strain TYB207,80,82,ALE,53.8462
+Brettanomyces Bruxellensis - Strain TYB307,80,84,ALE,53.8462
+Brettanomyces bruxellensis - Strain TYB415,82,86,ALE,53.8462
+Brussels Brettanomyces Blend,80,90,ALE,53.8462
+Dark Belgian Cask,80,85,ALE,53.8462
+Dry Belgian Ale,85,100,ALE,53.8462
+Farmhouse Sour Ale,80,100,ALE,38.4615
+Flanders Specialty Ale,78,82,ALE,53.8462
+Framgarden Kveik,78,82,KVEIK,53.8462
+Franconian Dark Lager,74,78,ALE,38.4615
+Funktown Pale Ale,78,85,ALE,38.4615
+Hazy Daze,79,83,ALE,38.4615
+Hazy Daze II,81,85,ALE,38.4615
+Hessian Pils,73,76,ALE,7.69231
+Hornindal Kveik,77,81,KVEIK,53.8462
+Lactobacillus Blend,57.4713,,BACTERIA,0.0
+Lactobacillus brevis - Strain TYB282,4,,BACTERIA,0.0
+Lida Kveik,75,82,KVEIK,53.8462
+Lochristi Brettanomyces Blend,80,88,ALE,53.8462
+Metschnikowia reukaufii ,20,25,ALE,23.0769
+Midtbust Kveik,76,80,KVEIK,53.8462
+Midwestern Ale,76,80,ALE,38.4615
+Northeastern Abbey,77,81,ALE,38.4615
+Pakruojis Lithuanian Farmhouse,90,100,KVEIK,53.8462
+Saison Blend,78,84,ALE,53.8462
+Saison Blend II,85,100,ALE,53.8462
+Saison/Brettanomyces Blend,80,100,ALE,53.8462
+Saison/Brettanomyces Blend II,85,90,ALE,53.8462
+Simonaitis Lithuanian Farmhouse,76,82,KVEIK,53.8462
+Transatlantic Berliner Blend,85,100,ALE,38.4615
+Vermont Ale,78,82,ALE,38.4615
+Wallonian Farmhouse,81,100,ALE,23.0769
+Wallonian Farmhouse II,86,94,ALE,53.8462
+Wallonian III Farmhouse,86,94,ALE,53.8462
+Abbey Ale Yeast,75,80,ALE,53.8462
+Abbey IV Ale Yeast,74,82,ALE,53.8462
+American Ale Yeast Blend,72,80,ALE,38.4615
+American Hefeweizen Ale Yeast,70,75,ALE,23.0769
+American Lager Yeast,75,80,ALE,23.0769
+Bastogne Belgian Ale Yeast,74,80,ALE,53.8462
+Bavarian Weizen Ale Yeast,73,77,ALE,23.0769
+Belgian Ale Yeast,78,85,ALE,38.4615
+Belgian Golden Ale Yeast,73,78,ALE,53.8462
+Belgian Saison I Ale Yeast,65,75,ALE,23.0769
+Belgian Saison II Ale Yeast,78,85,ALE,23.0769
+Belgian Strong Ale Yeast,78,85,ALE,53.8462
+Belgian Wit Ale Yeast,74,78,ALE,23.0769
+Belgian Wit II Ale Yeast,70,75,ALE,23.0769
+Belgian-Style Ale Yeast Blend,74,80,ALE,38.4615
+Belgian-Style Saison Ale Yeast Blend,70,80,ALE,23.0769
+Brettanomyces Claussenii,70,85,ALE,10
+British Ale Yeast,67,74,ALE,23.0769
+Burlington Ale Yeast,73,78,ALE,38.4615
+Burton Ale Yeast,69,75,ALE,23.0769
+California Ale Yeast,73,80,ALE,53.8462
+California V Ale Yeast,70,75,ALE,38.4615
+Charlie's Fist Bump Yeast,66,70,ALE,23.0769
+Coastal Haze Ale Yeast Blend,70,75,ALE,38.4615
+Copenhagen Lager Yeast,72,78,ALE,23.0769
+Cream Ale Yeast Blend,75,80,ALE,38.4615
+Czech Budejovice Lager Yeast,75,80,ALE,23.0769
+Dry English Ale Yeast,70,80,ALE,38.4615
+East Coast Ale Yeast,70,75,ALE,23.0769
+Edinburgh Scottish Ale Yeast,70,75,ALE,38.4615
+English Ale Yeast,63,70,ALE,23.0769
+French Saison Ale Yeast,73,80,ALE,23.0769
+German Bock Lager Yeast,70,76,ALE,38.4615
+German Lager Yeast,74,79,ALE,23.0769
+German/Kolsch Ale Yeast,72,78,ALE,23.0769
+Hefeweizen Ale Yeast,72,76,ALE,23.0769
+Hefeweizen IV Ale Yeast,73,80,ALE,23.0769
+High Pressure Lager Yeast,73,82,ALE,23.0769
+Hornindal Kveik,75,82,KVEIK,12.5
+Irish Ale Yeast,69,74,ALE,38.4615
+London Ale Yeast,67,75,ALE,23.0769
+London Fog Ale Yeast,75,82,ALE,38.4615
+Mexican Lager Yeast,70,78,ALE,23.0769
+Monastery Ale Yeast,75,80,ALE,53.8462
+Oktoberfest/Märzen Lager Yeast,65,73,ALE,38.4615
+Old Bavarian Lager Yeast,66,73,ALE,38.4615
+Opshaug Kveik Ale Yeast,70,80,KVEIK,38.4615
+Pacific Ale Yeast,65,70,ALE,23.0769
+Pilsner Lager Yeast,72,77,ALE,23.0769
+Saccharomyces Bruxellensis Trois,85,,ALE,38.4615
+San Diego Super Ale Yeast,76,83,ALE,53.8462
+San Francisco Lager Yeast,65,70,ALE,38.4615
+Southern German Lager Yeast,68,76,ALE,23.0769
+Super High Gravity Ale Yeast,80,100,ALE,76.9231
+American Ale,73,77,ALE,11
+American Ale II,72,76,ALE,10
+American Lager,73,77,ALE,9
+American Wheat,74,78,ALE,10
+Bavarian Lager,73,77,ALE,9
+Bavarian Wheat Blend,73,77,ALE,10
+Belgian Abbey Style Ale,74,78,ALE,12
+Belgian Abbey Style Ale II,73,77,ALE,12
+Belgian Ardennes,72,76,ALE,12
+Belgian Dark Ale,74,79,ALE,12
+Belgian High Gravity,74,78,ALE,11
+Belgian Lambic Blend,70,80,ALE,11
+Belgian Saison,76,80,ALE,12
+Belgian Schelde Ale,73,77,ALE,11
+Belgian Stout,70,85,ALE,12
+Belgian Strong Ale,74,78,ALE,12
+Belgian Style Blend,75,80,ALE,12
+Belgian Wheat,72,76,ALE,12
+Belgian Witbier,72,76,ALE,11
+Berliner Weisse Blend,73,77,ALE,6
+Bohemian Lager,73,77,ALE,9
+British Ale,73,75,ALE,10
+British Ale II,73,76,ALE,10
+British Cask Ale,74,77,ALE,9
+Budvar Lager,71,75,ALE,9
+Burton IPA Blend,71,74,ALE,10
+California Lager,67,71,ALE,9
+Canadian/Belgian Ale,75,79,ALE,12
+Czech Pils,70,74,ALE,9
+Danish Lager,73,77,ALE,9
+Denny's Favorite 50 Ale,74,76,ALE,10
+English Special Bitter,68,72,ALE,9
+European Lager,73,77,ALE,10
+Farmhouse Ale,74,79,ALE,12
+Flanders Golden Ale,74,78,ALE,12
+Forbidden Fruit,72,76,ALE,12
+French Saison,77,83,ALE,12
+Gambrinus Style Lager,71,75,ALE,9
+German Ale,73,77,ALE,11
+German Wheat,70,76,ALE,10
+Hella Bock Lager,70,74,ALE,12
+Irish Ale,71,75,ALE,12
+Kolsch,73,77,ALE,10
+Kolsch II,73,77,ALE,10
+London Ale,73,77,ALE,11
+London Ale III,71,75,ALE,10
+London ESB Ale,67,71,ALE,9
+Munich Lager,70,74,ALE,9
+Munich Lager II,72,74,ALE,10
+North American Lager,70,76,ALE,9
+Northwest Ale,67,71,ALE,10
+Octoberfest Lager Blend,73,77,ALE,9
+Old Ale Blend,75,80,ALE,14
+Oud Bruin Ale Blend,70,80,ALE,10
+Pacman,72,78,ALE,12
+Pilsen Lager,71,75,ALE,9
+Pilsner Urquell H-Strain,72,76,ALE,9
+Ringwood Ale,68,72,ALE,10
+Rocky Mountain Lager,70,74,ALE,9
+Roeselare Ale Blend,80,,ALE,11
+Saison-Brett Blend,80,90,ALE,12
+Scottish Ale,69,73,ALE,12
+Staro Prague Lager,70,74,ALE,11
+Thames Valley Ale,72,76,ALE,10
+Thames Valley Ale II,72,78,ALE,10
+Weihenstephan Weizen,73,77,ALE,10
+West Coast IPA,73,80,ALE,10
+West Yorkshire Ale,67,71,ALE,9
+Whitbread Ale,68,72,ALE,10
+Wyeast Bohemian Ale Blend,71,75,ALE,11

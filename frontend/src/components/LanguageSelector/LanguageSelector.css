@@ -1,0 +1,31 @@
+.language-selector {
+  display: flex;
+  gap: 4px;
+  background: var(--code-bg);
+  padding: 2px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.language-selector button {
+  background: none;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.language-selector button.active {
+  background: var(--accent);
+  color: white;
+}
+
+.language-selector button:not(.active):hover {
+  background: var(--bg);
+}

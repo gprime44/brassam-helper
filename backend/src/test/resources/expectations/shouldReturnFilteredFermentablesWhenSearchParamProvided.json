@@ -1,10 +1,37 @@
-[
-  {
-    "id": 2,
-    "name": "Maris Otter",
-    "type": "GRAIN",
-    "colorEbc": 6.0,
-    "yieldPercentage": 81.0,
-    "protein": 10.5
-  }
-]
+{
+  "content": [
+    {
+      "colorEbc": 6.0,
+      "id": 2,
+      "name": "Maris Otter",
+      "protein": 10.5,
+      "type": "GRAIN",
+      "yieldPercentage": 81.0
+    }
+  ],
+  "empty": false,
+  "first": true,
+  "last": true,
+  "number": 0,
+  "numberOfElements": 1,
+  "pageable": {
+    "offset": 0,
+    "pageNumber": 0,
+    "pageSize": 20,
+    "paged": true,
+    "sort": {
+      "empty": true,
+      "sorted": false,
+      "unsorted": true
+    },
+    "unpaged": false
+  },
+  "size": 20,
+  "sort": {
+    "empty": true,
+    "sorted": false,
+    "unsorted": true
+  },
+  "totalElements": 1,
+  "totalPages": 1
+}

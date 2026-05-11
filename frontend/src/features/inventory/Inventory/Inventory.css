@@ -1,0 +1,96 @@
+.inventory-screen {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--bg);
+  color: var(--text-h);
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.category-tabs {
+  display: flex;
+  background-color: var(--accent-bg);
+  padding: 4px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.category-tabs button {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  background: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text);
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.category-tabs button.active {
+  background-color: var(--bg);
+  color: var(--accent);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.inventory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inventory-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.inventory-item.selectable {
+  cursor: pointer;
+}
+
+.inventory-item.selectable:hover {
+  background-color: var(--accent-bg);
+  border-color: var(--accent-border);
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.item-name {
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.item-details {
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.item-action .chevron {
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.loading, .empty {
+  padding: 2rem;
+  color: var(--text);
+  font-style: italic;
+}

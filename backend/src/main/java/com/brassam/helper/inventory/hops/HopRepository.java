@@ -1,8 +1,9 @@
 package com.brassam.helper.brew.hops;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
-import java.util.List;
 
 public interface HopRepository extends JpaRepository<Hop, Long> {
-    List<Hop> findByNameContainingIgnoreCase(String name);
+    Page<Hop> findByNameContainingIgnoreCase(String name, Pageable pageable);
 }

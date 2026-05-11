@@ -1,8 +1,8 @@
 package com.brassam.helper.brew.fermentable;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class FermentableService {
@@ -14,10 +14,14 @@ public class FermentableService {
         this.mapper = mapper;
     }
 
-    public List<FermentableDto> search(String name) {
+    public Page<FermentableDto> search(String name, Pageable pageable) {
         if (name == null || name.isBlank()) {
-            return repository.findAll().stream().map(mapper::toDto).collect(Collectors.toList());
+            return repository.findAll(pageable).map(mapper::toDto);
         }
-        return repository.findByNameContainingIgnoreCase(name).stream().map(mapper::toDto).collect(Collectors.toList());
+        return repository.findByNameContainingIgnoreCase(name, pageable).map(mapper::toDto);
+    }
+
+    public FermentableDto findById(Long id) {
+        return repository.findById(id).map(mapper::toDto).orElseThrow(() -> new RuntimeException("Fermentable not found"));
     }
 }

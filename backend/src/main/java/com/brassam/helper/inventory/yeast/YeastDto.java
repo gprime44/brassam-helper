@@ -8,6 +8,6 @@ public class YeastDto {
     private String name;
     private Double attenuationMin;
     private Double attenuationMax;
-    private String type;
+    private YeastType type;
     private Double alcoholTolerance;
 }

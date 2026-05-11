@@ -13,6 +13,7 @@ public class Yeast {
     private String name;
     private Double attenuationMin;
     private Double attenuationMax;
-    private String type;
+    @Enumerated(EnumType.STRING)
+    private YeastType type;
     private Double alcoholTolerance;
 }

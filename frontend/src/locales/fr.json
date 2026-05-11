@@ -1,0 +1,66 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "loading_details": "Chargement des détails...",
+    "error_not_found": "Élément non trouvé",
+    "back_to_list": "Retour à la liste",
+    "search_placeholder": "Chercher {{category}}...",
+    "no_items_found": "Aucun élément trouvé",
+    "other": "Autre"
+  },
+  "layout": {
+    "title": "Brassam Helper",
+    "tabs": {
+      "home": "Accueil",
+      "inventory": "Inventaire",
+      "recipes": "Recettes",
+      "settings": "Paramètres"
+    }
+  },
+  "dashboard": {
+    "welcome_title": "Bienvenue sur Brassam Helper",
+    "welcome_text": "Votre compagnon de brassage pour la gestion d'inventaire et la création de recettes.",
+    "quick_action": "Test d'action rapide :",
+    "session_count": "Le compteur de session est à {{count}}",
+    "stats": {
+      "hops": "Houblons",
+      "fermentables": "Fermentescibles",
+      "yeasts": "Levures"
+    },
+    "recent_recipes": "Recettes Récentes"
+  },
+  "inventory": {
+    "categories": {
+      "fermentables": "Fermentescibles",
+      "hops": "Houblons",
+      "yeasts": "Levures"
+    },
+    "details": {
+      "fermentable": "Fermentescible",
+      "hop": "Houblon",
+      "yeast": "Levure",
+      "type": "Type",
+      "color": "Couleur",
+      "yield": "Rendement",
+      "protein": "Protéines",
+      "alpha_acid": "Acide Alpha",
+      "origin": "Origine",
+      "attenuation": "Atténuation",
+      "alcohol_tolerance": "Tolérance alcool",
+      "types": {
+        "GRAIN": "Grain",
+        "SUGAR": "Sucre",
+        "EXTRACT": "Extrait",
+        "DRY_EXTRACT": "Extrait sec",
+        "ADJUNCT": "Additif",
+        "ALE": "Haute (Ale)",
+        "LAGER": "Basse (Lager)",
+        "KVEIK": "Kveik",
+        "BACTERIA": "Bactéries",
+        "BRETT": "Brett",
+        "WINE": "Vin",
+        "OTHER": "Autre"
+      }
+    }
+  }
+}

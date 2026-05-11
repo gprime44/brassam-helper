@@ -1,8 +1,9 @@
 package com.brassam.helper.brew.fermentable;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
-import java.util.List;
 
 public interface FermentableRepository extends JpaRepository<Fermentable, Long> {
-    List<Fermentable> findByNameContainingIgnoreCase(String name);
+    Page<Fermentable> findByNameContainingIgnoreCase(String name, Pageable pageable);
 }

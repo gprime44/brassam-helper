@@ -1,0 +1,66 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "loading_details": "Loading details...",
+    "error_not_found": "Item not found",
+    "back_to_list": "Back to list",
+    "search_placeholder": "Search {{category}}...",
+    "no_items_found": "No items found",
+    "other": "Other"
+  },
+  "layout": {
+    "title": "Brassam Helper",
+    "tabs": {
+      "home": "Home",
+      "inventory": "Inventory",
+      "recipes": "Recipes",
+      "settings": "Settings"
+    }
+  },
+  "dashboard": {
+    "welcome_title": "Welcome to Brassam Helper",
+    "welcome_text": "Your brewing companion for inventory management and recipe creation.",
+    "quick_action": "Quick action test:",
+    "session_count": "Session count is {{count}}",
+    "stats": {
+      "hops": "Hops",
+      "fermentables": "Fermentables",
+      "yeasts": "Yeasts"
+    },
+    "recent_recipes": "Recent Recipes"
+  },
+  "inventory": {
+    "categories": {
+      "fermentables": "Fermentables",
+      "hops": "Hops",
+      "yeasts": "Yeast"
+    },
+    "details": {
+      "fermentable": "Fermentable",
+      "hop": "Hop",
+      "yeast": "Yeast",
+      "type": "Type",
+      "color": "Color",
+      "yield": "Yield",
+      "protein": "Protein",
+      "alpha_acid": "Alpha Acid",
+      "origin": "Origin",
+      "attenuation": "Attenuation",
+      "alcohol_tolerance": "Alcohol Tolerance",
+      "types": {
+        "GRAIN": "Grain",
+        "SUGAR": "Sugar",
+        "EXTRACT": "Extract",
+        "DRY_EXTRACT": "Dry Extract",
+        "ADJUNCT": "Adjunct",
+        "ALE": "Ale",
+        "LAGER": "Lager",
+        "KVEIK": "Kveik",
+        "BACTERIA": "Bacteria",
+        "BRETT": "Brett",
+        "WINE": "Wine",
+        "OTHER": "Other"
+      }
+    }
+  }
+}

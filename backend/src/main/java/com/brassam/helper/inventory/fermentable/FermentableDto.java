@@ -6,7 +6,7 @@ import lombok.Data;
 public class FermentableDto {
     private Long id;
     private String name;
-    private String type;
+    private FermentableType type;
     private Double colorEbc;
     private Double yieldPercentage;
     private Double protein;

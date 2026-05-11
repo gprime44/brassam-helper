@@ -23,6 +23,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-liquibase")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
 	implementation("org.springframework.boot:spring-boot-starter-webmvc")
+	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	
 	// Lombok & MapStruct
 	compileOnly("org.projectlombok:lombok")
@@ -41,3 +42,12 @@ dependencies {
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
+
+tasks.register<org.springframework.boot.gradle.tasks.run.BootRun>("bootRunDev") {
+	group = "application"
+	description = "Runs this project as a Spring Boot application with the 'dev' profile"
+	mainClass.set("com.brassam.helper.BrassamHelperApplication")
+	classpath = sourceSets["main"].runtimeClasspath
+	systemProperty("spring.profiles.active", "dev")
+}
+
