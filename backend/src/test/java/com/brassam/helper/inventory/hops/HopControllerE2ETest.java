@@ -1,4 +1,4 @@
-package com.brassam.helper.brew.hops;
+package com.brassam.helper.inventory.hops;
 
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;

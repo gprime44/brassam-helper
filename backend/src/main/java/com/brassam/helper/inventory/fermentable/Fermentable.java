@@ -1,4 +1,4 @@
-package com.brassam.helper.brew.fermentable;
+package com.brassam.helper.inventory.fermentable;
 
 import jakarta.persistence.*;
 import lombok.Data;

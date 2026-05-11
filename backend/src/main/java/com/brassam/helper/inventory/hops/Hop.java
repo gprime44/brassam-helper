@@ -1,4 +1,4 @@
-package com.brassam.helper.brew.hops;
+package com.brassam.helper.inventory.hops;
 
 import jakarta.persistence.*;
 import lombok.Data;

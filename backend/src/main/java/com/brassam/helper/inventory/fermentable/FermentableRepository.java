@@ -1,4 +1,4 @@
-package com.brassam.helper.brew.fermentable;
+package com.brassam.helper.inventory.fermentable;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

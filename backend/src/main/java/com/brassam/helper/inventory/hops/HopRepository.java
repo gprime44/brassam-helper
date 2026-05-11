@@ -1,4 +1,4 @@
-package com.brassam.helper.brew.hops;
+package com.brassam.helper.inventory.hops;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

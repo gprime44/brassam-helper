@@ -1,4 +1,4 @@
-package com.brassam.helper.brew.yeast;
+package com.brassam.helper.inventory.yeast;
 
 import org.mapstruct.Mapper;
 

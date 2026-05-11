@@ -18,7 +18,7 @@ services:
       retries: 5
 
   backend:
-    build: ./backend
+    image: gprime44/helper-backend:latest
     container_name: brassam-backend
     ports:
       - "8080:8080"
@@ -32,7 +32,7 @@ services:
         condition: service_healthy
 
   frontend:
-    build: ./frontend
+    image: gprime44/helper-frontend:latest
     container_name: brassam-frontend
     ports:
       - "80:80"

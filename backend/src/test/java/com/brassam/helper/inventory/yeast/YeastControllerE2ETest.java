@@ -1,4 +1,4 @@
-package com.brassam.helper.brew.yeast;
+package com.brassam.helper.inventory.yeast;
 
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
