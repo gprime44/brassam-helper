@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Saaz",
+    "alphaAcid": 3.5,
+    "origin": "Czech Republic"
+  },
+  {
+    "id": 2,
+    "name": "Cascade",
+    "alphaAcid": 7.0,
+    "origin": "US"
+  }
+]

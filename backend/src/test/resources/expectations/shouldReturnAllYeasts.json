@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "US-05",
+    "attenuationMin": 78.0,
+    "attenuationMax": 82.0,
+    "type": "ALE",
+    "alcoholTolerance": 11.0
+  },
+  {
+    "id": 2,
+    "name": "S-04",
+    "attenuationMin": 72.0,
+    "attenuationMax": 76.0,
+    "type": "ALE",
+    "alcoholTolerance": 10.0
+  }
+]

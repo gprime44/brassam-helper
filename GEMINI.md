@@ -7,7 +7,7 @@ Brassam Helper is a web application designed for homebrewers to manage recipes, 
 
 ### Backend
 - **Language:** Java 25 (configured via toolchain)
-- **Framework:** Spring Boot 4.0
+- **Framework:** Spring Boot 4.0.6
 - **Database:** MariaDB (Default/Production), H2 (Development)
 - **Database Migration:** Liquibase (YAML format)
 - **Dependency Management:** Gradle (Kotlin DSL)
@@ -20,7 +20,8 @@ Brassam Helper is a web application designed for homebrewers to manage recipes, 
 ## Architecture
 The project is structured as a monorepo:
 - `/backend`: Spring Boot application.
-  - **Pattern:** Package by Feature (each package groups entities, repositories, services, and controllers related to a feature).
+  - **Pattern:** Strict **Package by Feature**. All technical layers (Controller, Service, Repository, Model, DTO, Mapper) are co-located within the feature's package.
+  - **Isolation:** Features communicate exclusively through their **Services**.
 - `/frontend`: React application.
   - **Pattern:** Component-based architecture (CSS files and tests co-located with components).
 - `/docs`: Technical and functional documentation.
@@ -38,6 +39,9 @@ The project is structured as a monorepo:
    - Stock tracking for malts, hops, and yeasts.
 
 ## Development Workflow
+
+### Methodology
+The project follows a **TDD (Test Driven Development)** approach. Tests must be implemented in tandem with features. A feature is verified by its tests before being considered "done".
 
 ### Starting the Backend
 A custom Gradle task is available to start the backend with a development profile:
@@ -71,4 +75,4 @@ All schema changes must be implemented via Liquibase changelogs located in `back
   - **Density:** Specific Gravity (SG - ratio) or Plato (°P).
 - **API:** RESTful with OpenAPI/Swagger documentation.
 - **CSS Style:** Use CSS Variables for theming. No external CSS frameworks unless explicitly requested.
-- **Testing:** JUnit 5 for the backend, Vitest for the frontend.
+- **Testing:** JUnit 5 for the backend (see `./backend/GEMINI.md` for standards), Vitest for the frontend.

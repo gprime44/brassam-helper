@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Pilsner",
+    "type": "GRAIN",
+    "colorEbc": 3.0,
+    "yieldPercentage": 80.0,
+    "protein": 11.5
+  },
+  {
+    "id": 2,
+    "name": "Maris Otter",
+    "type": "GRAIN",
+    "colorEbc": 6.0,
+    "yieldPercentage": 81.0,
+    "protein": 10.5
+  },
+  {
+    "id": 3,
+    "name": "Crystal 150",
+    "type": "GRAIN",
+    "colorEbc": 150.0,
+    "yieldPercentage": 75.0,
+    "protein": 12.0
+  }
+]

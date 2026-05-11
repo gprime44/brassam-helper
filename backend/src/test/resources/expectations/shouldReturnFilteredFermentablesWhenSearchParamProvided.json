@@ -1,0 +1,10 @@
+[
+  {
+    "id": 2,
+    "name": "Maris Otter",
+    "type": "GRAIN",
+    "colorEbc": 6.0,
+    "yieldPercentage": 81.0,
+    "protein": 10.5
+  }
+]

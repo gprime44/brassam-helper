@@ -1,4 +1,4 @@
-package com.brassam.helper.common;
+package com.brassam.helper;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

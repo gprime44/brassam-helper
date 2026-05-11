@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "name": "US-05",
+    "attenuationMin": 78.0,
+    "attenuationMax": 82.0,
+    "type": "ALE",
+    "alcoholTolerance": 11.0
+  }
+]

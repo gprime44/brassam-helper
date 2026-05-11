@@ -1,0 +1,839 @@
+name,type,color_ebc,yield_percentage,protein
+Pilsen Malt,GRAIN,7,75.0,11.8
+Pale Ale Malt,GRAIN,7,75.0,11.5
+Vienna Malt,GRAIN,10,75.0,11.5
+Munich Malt,GRAIN,25,75.0,12.5
+Terroir Paulista Vienna,GRAIN,10,75.0,12
+Terroir Paulista Pale Ale,GRAIN,6,75.0,12
+Terroir Paulista Pilsen,GRAIN,3.5,75.0,12
+Terroir Paulista Carapálida ,GRAIN,6.5,75.0,5.4
+Terroir Paulista Munich,GRAIN,20,75.0,12
+Terroir Paulista Biscoito / Melanoidina,GRAIN,55,75.0,12
+Terroir Paulista Caramelo 1,GRAIN,35,75.0,12
+Terroir Paulista Caramelo 2,GRAIN,55,75.0,12
+Terroir Paulista Caramelo 3,GRAIN,100,75.0,12
+Terroir Paulista Caramelo 130 EBC,GRAIN,140,75.0,12
+Terroir Paulista IAC-600 Black Rice Malt,GRAIN,0.0,75.0,9
+White Rice Malt TERROIR PAULISTA,GRAIN,5,75.0,10
+Light Wheat Malt,GRAIN,6,75.0,13.5
+Munich Wheat Malt,GRAIN,25,75.0,13.5
+Pilsener Malt,GRAIN,4,75.0,11
+Pilsener Malt 6 row winter,GRAIN,4,75.0,11.2
+Pilsener Malt 2 row winter,GRAIN,4,75.0,11.5
+Pale Ale Malt,GRAIN,8,75.0,11.5
+Vienna Malt,GRAIN,12,75.0,11.5
+Munich Malt Light,GRAIN,22,75.0,11
+Munich Malt Dark,GRAIN,32,75.0,11
+Light Caramel Malt,GRAIN,25,75.0,11.5
+Medium Caramel Malt,GRAIN,40,75.0,11.5
+Dark Caramel Malt,GRAIN,65,75.0,11.5
+Wheat Malt,GRAIN,5,75.0,13.5
+Lager Malt,GRAIN,4,75.0,10.6
+Pale Ale Malt,GRAIN,7,75.0,10.3
+Pale Ale Low Colour Malt,GRAIN,4,75.0,10.3
+Winter Pale Ale Malt,GRAIN,4,75.0,9.7
+Winter Pale Ale Low Colour Malt,GRAIN,4,75.0,9.7
+Maris Otter Pale Ale Malt,GRAIN,7,75.0,10
+Maris Otter Low Colour Malt,GRAIN,4.5,75.0,10
+Scottish Golden Promise Malt,GRAIN,4.5,75.0,10.3
+Scottish Ale Malt,GRAIN,4.5,75.0,9.7
+Vienna Malt,GRAIN,10,75.0,11.3
+Munich Malt,GRAIN,15,75.0,11.3
+Hi-Dry Malt,GRAIN,50,75.0,11
+Greenwich Crystal Malt,GRAIN,160,75.0,0.0
+1823 London Lager Malt,GRAIN,4,75.0,10.6
+Maris Otter Finest Ale Malt,GRAIN,7,75.0,9.7
+Maris Otter Crystal Malt,GRAIN,160,75.0,0.0
+Pale Malt,GRAIN,4.5,75.0,0.0
+Ale Malt,GRAIN,7,75.0,0.0
+Wheat Malt,GRAIN,5.5,75.0,0.0
+Vienna Malt,GRAIN,12,75.0,0.0
+Munich Malt,GRAIN,20,75.0,0.0
+Dark Munich Malt,GRAIN,28,75.0,0.0
+Caramalt Malt,GRAIN,60,75.0,0.0
+Medium Crystal Malt,GRAIN,180,75.0,0.0
+Dark Crystal Malt,GRAIN,280,75.0,0.0
+Amber Malt,GRAIN,80,75.0,0.0
+Chocolate Malt,GRAIN,500,75.0,0.0
+Roasted Malt,GRAIN,1150,75.0,0.0
+Roasted Barley,GRAIN,1000,75.0,0.0
+Dark Roast Malt,GRAIN,1400,75.0,0.0
+BEST Heidelberg,GRAIN,2.9,75.0,11.5
+BEST Pilsen Malt ,GRAIN,4.9,75.0,11.5
+BEST Organic Pilsen Malt,GRAIN,4.9,75.0,11.5
+BEST Pale Ale,GRAIN,7,75.0,11.5
+BEST Vienna,GRAIN,10,75.0,12
+BEST Munich ,GRAIN,20,75.0,12
+BEST Munich Dark ,GRAIN,35,75.0,12
+BEST Melanoidin Light,GRAIN,60,75.0,12
+BEST Melanoidin,GRAIN,80,75.0,12
+BEST Caramel® Pils,GRAIN,7,75.0,12
+BEST Caramel® Hell,GRAIN,40,75.0,12
+BEST Caramel® Aromatic,GRAIN,60,75.0,12
+BEST Caramel® Munich I ,GRAIN,100,75.0,12
+BEST Caramel® Munich II,GRAIN,130,75.0,12
+BEST Caramel® Munich III ,GRAIN,200,75.0,12
+BEST Caramel® Amber,GRAIN,80,75.0,12
+BEST Red X®,GRAIN,32,75.0,12
+BEST Special X®,GRAIN,400,75.0,0.0
+BEST Biscuit Mal,GRAIN,50,75.0,12
+BEST Chocolate,GRAIN,1000,75.0,0.0
+BEST Black Malt ,GRAIN,1200,75.0,0.0
+BEST Black Malt eXtra ,GRAIN,1400,75.0,0.0
+BEST Roasted Barley,GRAIN,1400,75.0,0.0
+BEST Chit Malt i,GRAIN,3,75.0,12
+BEST Acidulated Malt ,GRAIN,8,75.0,12
+BEST Smoked ,GRAIN,8,75.0,13
+BEST Heidelberg Wheat Malt ,GRAIN,3.5,75.0,13
+BEST Wheat Malt ,GRAIN,6,75.0,13.5
+BEST Wheat Malt Dark,GRAIN,20,75.0,14
+BEST Spelt Malt,GRAIN,6,75.0,14
+Pilsen Malt,GRAIN,4,75.0,0.0
+Pale Ale Malt,GRAIN,7,75.0,0.0
+Wheat Malt,GRAIN,5,75.0,0.0
+Rye Malt,GRAIN,5,75.0,0.0
+Barley Malt Vienna,GRAIN,9,75.0,0.0
+Barley Malt Munich 15,GRAIN,10,75.0,0.0
+Barley Malt Munich 25,GRAIN,25,75.0,0.0
+Caramel Malt Barley Extra Light 10,GRAIN,10,75.0,0.0
+Caramel Malt Barley Light 30,GRAIN,30,75.0,0.0
+Caramel Malt Barley Red 50,GRAIN,50,75.0,0.0
+Caramel Malt Barley Amber 80,GRAIN,80,75.0,0.0
+Caramel Malt Barley Munich 100,GRAIN,100,75.0,0.0
+Caramel Malt Barley Munich Dark 150,GRAIN,150,75.0,0.0
+Caramel Malt Barley Special 300,GRAIN,300,75.0,0.0
+Caramel Malt Barley Extra Dark 500,GRAIN,500,75.0,0.0
+Caramel Malt Wheat 50,GRAIN,60,75.0,0.0
+Caramel Malt Wheat Dark 100,GRAIN,110,75.0,0.0
+Barley Special Biscuit 50,GRAIN,50,75.0,0.0
+Roasted Barley Grain 900,GRAIN,900,75.0,0.0
+Roasted Malt Barley Chocolate 1000,GRAIN,1000,75.0,0.0
+Roasted Malt Wheat 1200,GRAIN,1200,75.0,0.0
+Roasted Malt Barley Extra Dark 1400,GRAIN,1400,75.0,0.0
+Malt Melanoidin,GRAIN,80,75.0,0.0
+Sour Malt,GRAIN,6,75.0,0.0
+Malt C. P.,GRAIN,6,75.0,0.0
+Smoked Malt Plus,GRAIN,6,75.0,0.0
+Brewers Malt,GRAIN,3.5,75.0,11.5
+Full Pint Brewers Malt,GRAIN,3.3,75.0,11.2
+Synergy Select Pilsen Malt,GRAIN,3.5,75.0,10.9
+Synergy Select Pilsen MaltGems™,GRAIN,3.5,75.0,10.9
+Pilsen Malt,GRAIN,2.4,75.0,11.3
+"Wheat Malt, White",GRAIN,5.5,75.0,11.5
+"Wheat Malt, Red ",GRAIN,5.9,75.0,12.5
+Goldpils® Vienna Malt,GRAIN,6.9,75.0,12
+Pale Ale Malt,GRAIN,6.9,75.0,11.7
+Ashburne® Mild Malt,GRAIN,10.4,75.0,11.7
+Bonlander® Munich Malt 10L,GRAIN,19.7,75.0,11.7
+Aromatic Munich Malt 20L,GRAIN,39.4,75.0,11.7
+Dark Munich Malt 30L,GRAIN,59.1,75.0,12
+Carapils® Malt,GRAIN,3,75.0,0.0
+Carapils® Copper Malt,GRAIN,59.1,75.0,0.0
+Blonde RoastOat™ Malt,GRAIN,11.8,75.0,0.0
+American Honey Malt,GRAIN,49.3,75.0,0.0
+Victory® Malt,GRAIN,55.2,75.0,0.0
+Special Roast Malt,GRAIN,78.8,75.0,0.0
+Extra Special Malt,GRAIN,256.1,75.0,0.0
+Rye Malt,GRAIN,7.3,75.0,10
+"Smoked Malt, Apple Wood",GRAIN,11.8,75.0,11
+"Smoked Malt, Cherry Wood",GRAIN,9.9,75.0,11
+"Smoked Malt, Mesquite",GRAIN,9.9,75.0,11
+Caramel Malt 10L,GRAIN,19.7,75.0,0.0
+Caramel Malt 20L,GRAIN,39.4,75.0,0.0
+Caramel Malt 30L,GRAIN,59.1,75.0,0.0
+Caramel Malt 40L,GRAIN,78.8,75.0,0.0
+Caramel Malt 60L,GRAIN,118.2,75.0,0.0
+Caramel Malt 80L,GRAIN,157.6,75.0,0.0
+Caramel Malt 90L,GRAIN,177.3,75.0,0.0
+Caramel Malt 120L,GRAIN,236.4,75.0,0.0
+Caramel Rye Malt,GRAIN,118.2,75.0,0.0
+Caramel Vienne Malt 20L ,GRAIN,39.4,75.0,0.0
+Caramel Munich Malt 60L,GRAIN,118.2,75.0,0.0
+Caracrystal® Wheat Malt,GRAIN,108.4,75.0,0.0
+Carabrown® Malt,GRAIN,108.4,75.0,0.0
+Chocolate Malt,GRAIN,689.5,75.0,0.0
+Dark Chocolate Malt,GRAIN,827.4,75.0,0.0
+Black Malt,GRAIN,985,75.0,0.0
+Black Malted Barley Flour,GRAIN,985,75.0,0.0
+Blackprinz® Malt,GRAIN,985,75.0,0.0
+Midnight Wheat Malt,GRAIN,1083.5,75.0,0.0
+Roasted Barley,GRAIN,591,75.0,0.0
+Black Barley,GRAIN,1083.5,75.0,0.0
+Hook Head Series Ale Malt,GRAIN,6,75.0,10.5
+Hook Head Series Lager Malt ,GRAIN,3.8,75.0,10.5
+Wheat Malt,GRAIN,5,75.0,12
+1914 Spratt Archer Mild Ale Malt,GRAIN,7.3,75.0,12.1
+Organic Malt,GRAIN,3.8,75.0,0.0
+Pre 1898 Old Irish Melanoidin Malt,GRAIN,93.8,75.0,13.1
+Rye Malt,GRAIN,8,75.0,10.2
+1959 Hunter Pale Ale Malt,GRAIN,6,75.0,11.8
+Vienna Malt ,GRAIN,12,75.0,11.5
+Keep Flying – Maris Otter,GRAIN,6,75.0,10.2
+Albino Whale – Extra Pale Ale Malt,GRAIN,3.5,75.0,10.2
+Greedy Goats – Rolled Oats,GRAIN,7.5,75.0,0.0
+Rough Tide – Torrefied Wheat,GRAIN,5,75.0,0.0
+Washy Frothy – Wheat Malt,GRAIN,5,75.0,12
+Angry Angler – Roast Barley,GRAIN,1600,75.0,0.0
+Black Bear – Black Malt,GRAIN,1600,75.0,0.0
+Captains Classic – Cara Malt,GRAIN,35,75.0,0.0
+Dead Straight – Amber Malt,GRAIN,90,75.0,0.0
+Deep Diver – Dark Crystal Malt,GRAIN,250,75.0,0.0
+Lucky Squid – Light Crystal Malt,GRAIN,130,75.0,0.0
+Mark 5 – Medium Crystal,GRAIN,190,75.0,0.0
+Miserable Fish – Melanoidin Malt,GRAIN,50,75.0,11.5
+Muscley – Munich Malt,GRAIN,16,75.0,11.5
+Odd Amphibian – Lager Malt,GRAIN,5,75.0,11.25
+Pale Whale – Pale Malt,GRAIN,6,75.0,10.2
+Reliable Lighthouse – Chocolate Malt,GRAIN,1000,75.0,0.0
+Reliable Lighthouse Light – Light Chocolate Malt,GRAIN,600,75.0,0.0
+Pure Local Pilsen,GRAIN,4.5,75.0,11.5
+Wheat Malt,GRAIN,5.5,75.0,14
+Pale Ale Malt,GRAIN,7,75.0,5
+Pilsen Malt,GRAIN,4.5,75.0,5
+Vienna Malt,GRAIN,12,75.0,11.5
+Munich Malt,GRAIN,35,75.0,5
+CHÂTEAU PILSEN 2RS,GRAIN,3.5,75.0,11.5
+PILSEN 2RS MALTEUROP,GRAIN,3.5,75.0,11.5
+CHÂTEAU PILSEN 6RW,GRAIN,3.5,75.0,11.5
+CHÂTEAU VIENNA®,GRAIN,7,75.0,11.5
+CHÂTEAU PALE ALE®,GRAIN,10,75.0,11.5
+PALE ALE MALTEUROP,GRAIN,7,75.0,11.5
+CHÂTEAU MUNICH LIGHT®,GRAIN,17,75.0,11.5
+CHÂTEAU MUNICH,GRAIN,25,75.0,11.5
+CHÂTEAU MELANO LIGHT,GRAIN,40,75.0,0.0
+CHÂTEAU MELANO LIGHT NATURE,GRAIN,40,75.0,0.0
+CHÂTEAU MELANO,GRAIN,80,75.0,0.0
+CHÂTEAU MELANO NATURE,GRAIN,80,75.0,0.0
+CHÂTEAU ABBEY® (CHÂTEAU MONASTIQUE for the US market),GRAIN,45,75.0,0.0
+CHÂTEAU BISCUIT®,GRAIN,50,75.0,0.0
+CHÂTEAU CARA CLAIR®,GRAIN,9,75.0,11.5
+CHÂTEAU CARA BLOND ®,GRAIN,20,75.0,0.0
+CHÂTEAU CARA BELGA,GRAIN,35,75.0,0.0
+CHÂTEAU CARA RUBY®,GRAIN,50,75.0,0.0
+CHÂTEAU CARA AMBRA,GRAIN,80,75.0,0.0
+CHÂTEAU CARA AROMA,GRAIN,100,75.0,0.0
+CHÂTEAU CARA AROMA NATURE,GRAIN,100,75.0,0.0
+CHÂTEAU CARA GOLD®,GRAIN,120,75.0,0.0
+CHÂTEAU CARA CRYSTAL NATURE,GRAIN,160,75.0,0.0
+CHÂTEAU CARA CRYSTAL,GRAIN,160,75.0,0.0
+CHÂTEAU AROME NATURE,GRAIN,100,75.0,0.0
+CHÂTEAU AROME,GRAIN,100,75.0,0.0
+CHÂTEAU CRYSTAL®,GRAIN,150,75.0,0.0
+CHÂTEAU CAFE LIGHT NATURE,GRAIN,250,75.0,0.0
+CHÂTEAU CAFE NATURE,GRAIN,500,75.0,0.0
+CHÂTEAU CAFE,GRAIN,500,75.0,0.0
+CHÂTEAU SPECIAL Belgium®,GRAIN,300,75.0,0.0
+CHÂTEAU CARA TERRA,GRAIN,220,75.0,0.0
+CHÂTEAU CARA CAFE,GRAIN,450,75.0,0.0
+CHÂTEAU CHOCOLAT LIGHT,GRAIN,650,75.0,0.0
+CHÂTEAU CARA CAFE NATURE,GRAIN,450,75.0,0.0
+CHÂTEAU CHOCOLAT,GRAIN,1000,75.0,0.0
+CHÂTEAU BLACK,GRAIN,1300,75.0,0.0
+CHÂTEAU BLACK OF BLACK,GRAIN,800,75.0,0.0
+CHÂTEAU ROASTED BARLEY,GRAIN,1400,75.0,0.0
+CHÂTEAU WHEAT BLANC,GRAIN,5.5,75.0,14
+CHÂTEAU EMMER MALT,GRAIN,5,75.0,20
+CHÂTEAU WHEAT AROME,GRAIN,100,75.0,0.0
+CHÂTEAU WHEAT CAFE,GRAIN,450,75.0,0.0
+WHEAT BLANC MALTEUROP,GRAIN,5.5,75.0,12.7
+CHÂTEAU WHEAT MUNICH LIGHT 16 EBC,GRAIN,16,75.0,14
+CHÂTEAU WHEAT MUNICH 25,GRAIN,25,75.0,14
+CHÂTEAU WHEAT CRYSTAL,GRAIN,150,75.0,0.0
+CHÂTEAU WHEAT CHOCOLAT,GRAIN,1100,75.0,0.0
+CHÂTEAU WHEAT BLACK,GRAIN,1400,75.0,0.0
+CHÂTEAU DIASTATIC,GRAIN,4.5,75.0,11.5
+CHÂTEAU PEATED,GRAIN,4,75.0,11.7
+CHÂTEAU OAT MALT,GRAIN,2.3,75.0,14
+CHÂTEAU RAW OAT,GRAIN,7,75.0,14
+CHÂTEAU SPELT MALT,GRAIN,7,75.0,17
+CHÂTEAU SMOKED,GRAIN,12,75.0,11.5
+CHÂTEAU ACID,GRAIN,13,75.0,11.5
+CHÂTEAU RYE MALT,GRAIN,8,75.0,11
+CHÂTEAU PILSEN NATURE®,GRAIN,3.5,75.0,12
+CHÂTEAU VIENNA NATURE,GRAIN,7,75.0,12
+CHÂTEAU PALE ALE NATURE,GRAIN,10,75.0,11.7
+CHÂTEAU MUNICH LIGHT NATURE,GRAIN,12,75.0,12
+CHÂTEAU MUNICH NATURE,GRAIN,25,75.0,11.7
+CHÂTEAU ABBEY NATURE® (CHÂTEAU MONASTIQUE NATURE for the US Market),GRAIN,45,75.0,0.0
+CHÂTEAU BISCUIT NATURE,GRAIN,50,75.0,0.0
+CHÂTEAU CARA BLOND NATURE,GRAIN,20,75.0,0.0
+CHÂTEAU CARA CLAIR NATURE,GRAIN,9,75.0,11.7
+CHÂTEAU CARA RUBY NATURE®,GRAIN,50,75.0,0.0
+CHÂTEAU CARA GOLD NATURE®,GRAIN,120,75.0,0.0
+CHÂTEAU CRYSTAL NATURE,GRAIN,150,75.0,0.0
+CHÂTEAU SPECIAL Belgium NATURE,GRAIN,300,75.0,0.0
+CHÂTEAU CHOCOLAT NATURE®,GRAIN,1000,75.0,0.0
+CHÂTEAU BLACK OF BLACK NATURE®,GRAIN,800,75.0,0.0
+CHÂTEAU BLACK NATURE®,GRAIN,1300,75.0,0.0
+CHÂTEAU WHEAT BLANC NATURE,GRAIN,5,75.0,14
+CHÂTEAU CARA WHEAT BLOND NATURE*,GRAIN,15,75.0,0.0
+CHÂTEAU CARA WHEAT RUBY NATURE*,GRAIN,60,75.0,0.0
+CHÂTEAU PEATED NATURE*,GRAIN,5,75.0,12
+CHÂTEAU BUCKWHEAT NATURE® MALT,GRAIN,15,75.0,11
+MALT CHÂTEAU SPELT NATURE®,GRAIN,7,75.0,17
+CHÂTEAU SMOKED NATURE®,GRAIN,12,75.0,11.5
+CHÂTEAU ACID NATURE®,GRAIN,13,75.0,11.5
+MALT CHÂTEAU RYE NATURE®,GRAIN,10,75.0,11
+CHÂTEAU CHIT BARLEY NATURE MALT FLAKES,GRAIN,7,75.0,11.5
+CHÂTEAU CHIT WHEAT NATURE MALT FLAKES,GRAIN,9,75.0,12
+Finest Maris Otter Ale Malt,GRAIN,7.5,75.0,10
+Extra Pale Maris Otter Malt,GRAIN,4,75.0,10
+Chevallier Heritage Malt,GRAIN,7.5,75.0,11.3
+Malts/Best Ale Malt,GRAIN,7.5,75.0,10.3
+Extra Pale Ale Malt,GRAIN,4,75.0,10.3
+Europils Malt,GRAIN,4,75.0,11
+German Pilsen Malt,GRAIN,4.5,75.0,12
+Clear Choice Malt,GRAIN,8.5,75.0,11.3
+Clear Choice Malt Extra Pale,GRAIN,4.5,75.0,11.3
+Vienna Malt,GRAIN,10,75.0,0.0
+Scottish Pale Ale Malt,GRAIN,7.5,75.0,10.3
+Scottish Extra Pale Ale Malt,GRAIN,4,75.0,10.3
+Amber Malt,GRAIN,85,75.0,0.0
+Brown Malt,GRAIN,150,75.0,0.0
+Low Colour Chocolate Malt/,GRAIN,660,75.0,0.0
+Chocolate Malt,GRAIN,1155,75.0,0.0
+Extra Light Crystal Crystal 100,GRAIN,100,75.0,0.0
+Light Crystal Crystal 150,GRAIN,150,75.0,0.0
+Medium Crystal Crystal 240,GRAIN,290,75.0,0.0
+Dark Crystal Crystal 400,GRAIN,480,75.0,0.0
+Black Malt,GRAIN,1540,75.0,0.0
+Roast Barley,GRAIN,1540,75.0,0.0
+Crystal Rye Malt,GRAIN,440,75.0,0.0
+Cara Gold Malt,GRAIN,18,75.0,0.0
+Cara Malt,GRAIN,35,75.0,0.0
+Light Munich Malt,GRAIN,27.5,75.0,0.0
+Dark Munich Malt,GRAIN,50,75.0,11.3
+Dextrin Malt,GRAIN,3.3,75.0,12.5
+Wheat Malt,GRAIN,5.5,75.0,12.5
+Rye Malt,GRAIN,35,75.0,10
+Naked Oat Malt,GRAIN,7.8,75.0,17
+Pilsner malt,GRAIN,4,75.0,11.5
+Munich malt,GRAIN,40,75.0,12
+Vienna malt,GRAIN,9,75.0,11.5
+Wheat malt ,GRAIN,4,75.0,12
+Pilsen MD™,GRAIN,3.5,75.0,11.5
+Wheat MD™,GRAIN,3.5,75.0,12.5
+Pale Ale MD™,GRAIN,10,75.0,12
+Munich MD™,GRAIN,16.5,75.0,12
+Aromatic MD™ / Amber MD™,GRAIN,60,75.0,12
+Aroma 100 MD™,GRAIN,110,75.0,12
+Aroma 150 MD™,GRAIN,170,75.0,12
+Cara 20 MD™,GRAIN,20,75.0,12.5
+Cara 50 MD™,GRAIN,50,75.0,12.5
+Cara 120 MD™,GRAIN,120,75.0,12.5
+Special B® MD™ ,GRAIN,350,75.0,12.5
+Biscuit® MD™ ,GRAIN,70,75.0,12.5
+Mroost 900 MD™ (Chocolate) ,GRAIN,1000,75.0,12.5
+Mroost 1400 MD™ (De-Bittered Black) ,GRAIN,1400,75.0,12.5
+Pealed roasted barley MD™,GRAIN,1200,75.0,12.5
+Toasted wheat MD™ ,GRAIN,30,75.0,12.5
+Organic PILSEN MD™ ,GRAIN,3.5,75.0,11.5
+Organic Ale MD™ ,GRAIN,10,75.0,12
+Organic Munich MD™ ,GRAIN,16.5,75.0,12
+Organic Cara MD™ ,GRAIN,120,75.0,12.5
+Organic Biscuit® MD™ ,GRAIN,3.5,75.0,11.5
+Organic Mroost MD™,GRAIN,1400,75.0,12.5
+Pennypack Pils,GRAIN,3.9,75.0,0.0
+Rustic Ale,GRAIN,6.9,75.0,0.0
+Legacy Wheat,GRAIN,4.9,75.0,0.0
+Heritage Rye,GRAIN,9.9,75.0,0.0
+Pale Oat,GRAIN,5.9,75.0,0.0
+Vienna,GRAIN,11.8,75.0,0.0
+Munich,GRAIN,19.7,75.0,0.0
+Aromunich,GRAIN,78.8,75.0,0.0
+Golden,GRAIN,49.3,75.0,0.0
+Dextrin,GRAIN,23.6,75.0,0.0
+Caramel 70,GRAIN,147.8,75.0,0.0
+Caramel Rye,GRAIN,128.1,75.0,0.0
+Cocoa,GRAIN,443.3,75.0,0.0
+Cocoa Dark,GRAIN,689.5,75.0,0.0
+Black Magic,GRAIN,1083.5,75.0,0.0
+Gambrinus Pale Malt,GRAIN,5.4,75.0,11.5
+Gambrinus Organic Pale Malt,GRAIN,5.4,75.0,11.5
+Gambrinus BC Pale Malt,GRAIN,5.4,75.0,11.5
+Gambrinus ESB Pale Malt,GRAIN,8.1,75.0,13
+Gambrinus Pilsner Malt,GRAIN,3.6,75.0,11.5
+Gambrinus Organic Pilsner Malt,GRAIN,3.6,75.0,11.5
+Gambrinus Vienna Malt,GRAIN,14.8,75.0,13
+Gambrinus Munich Light 10L,GRAIN,32.1,75.0,13
+Gambrinus Organic Munich Light 10L,GRAIN,32.1,75.0,13
+Gambrinus Munich Dark 30L,GRAIN,92.1,75.0,13
+Gambrinus Honey Malt,GRAIN,65.4,75.0,13
+Gambrinus Wheat Malt,GRAIN,5.4,75.0,16
+Gambrinus Organic Wheat Malt,GRAIN,5.4,75.0,14.5
+Gambrinus Rye Malt,GRAIN,8.1,75.0,11
+Ale Malt,GRAIN,5.7,75.0,0.0
+American Ale Malt,GRAIN,5,75.0,0.0
+Aurora Malt,GRAIN,46,75.0,0.0
+Big O – Malted Oats,GRAIN,4.38,75.0,0.0
+Biscuit Malt,GRAIN,80,75.0,0.0
+Black Forest Rye Malt,GRAIN,88,75.0,0.0
+Brown Malt,GRAIN,170,75.0,0.0
+Chit Malt,GRAIN,6,75.0,0.0
+Light Chocolate Malts,GRAIN,950,75.0,0.0
+Dark Chocolate Malt,GRAIN,1300,75.0,0.0
+Light Crystal Malt,GRAIN,50,75.0,0.0
+Medium Crystal Malt,GRAIN,105,75.0,0.0
+Dark Crystal Malt,GRAIN,200,75.0,0.0
+Eclipse Wheat Malt,GRAIN,1400,75.0,0.0
+German Pilsner Malt,GRAIN,4,75.0,0.0
+Gladfield Naked Oats,GRAIN,2.8,75.0,0.0
+Gladiator Malt,GRAIN,8,75.0,0.0
+Go Nutty -Roasted Oats,GRAIN,9.5,75.0,0.0
+Lager Light Malt,GRAIN,2.7,75.0,0.0
+Maize Malt,GRAIN,2.5,75.0,0.0
+Manuka Smoked Malt,GRAIN,3.9,75.0,0.0
+Munich Malt,GRAIN,14.5,75.0,0.0
+Pilsner Malt,GRAIN,3.8,75.0,0.0
+Organic Pilsner Malt,GRAIN,3.75,75.0,0.0
+RedBack Malt,GRAIN,80,75.0,0.0
+Roasted Barley,GRAIN,1350,75.0,0.0
+Roasted Wheat,GRAIN,550,75.0,0.0
+Rye Malt,GRAIN,10,75.0,0.0
+Chocolate Rye Malt,GRAIN,800,75.0,0.0
+Crystal Rye Malt,GRAIN,110,75.0,0.0
+Shepherds Delight Malt,GRAIN,350,75.0,0.0
+Sour Grapes Malt,GRAIN,6,75.0,0.0
+Supernova Malt,GRAIN,135,75.0,0.0
+Toffee Malt,GRAIN,20,75.0,0.0
+Vienna Malt,GRAIN,6.8,75.0,0.0
+Wheat Malt,GRAIN,4.1,75.0,0.0
+Pale High Color,GRAIN,5.9,75.0,11.5
+Premium Two Row,GRAIN,3.9,75.0,11.5
+Superior Pilsen,GRAIN,3.2,75.0,10.7
+White Wheat Malt,GRAIN,5.9,75.0,10
+Crystal 15 Malt,GRAIN,29.6,75.0,11.5
+Crystal 30 Malt,GRAIN,59.1,75.0,11.5
+Crystal 40 Malt,GRAIN,78.8,75.0,11.5
+Crystal 60 Malt,GRAIN,118.2,75.0,11.5
+Crystal 75 Malt,GRAIN,147.8,75.0,11.5
+Crystal 120 Malt,GRAIN,236.4,75.0,11.5
+Crystal 150 Malt,GRAIN,295.5,75.0,11.5
+Crystal Wheat Malt,GRAIN,78.8,75.0,10
+Pure California Malt,GRAIN,3.9,75.0,11.5
+Pure Idaho Malt,GRAIN,3.2,75.0,10.7
+Pure Oregon Malt,GRAIN,3.9,75.0,11.5
+Pure Washington Malt,GRAIN,3.9,75.0,11.5
+Brūmalt,GRAIN,39.4,75.0,12
+Caramel Steam Malt,GRAIN,78.8,75.0,12
+Mela Malt,GRAIN,59.1,75.0,12
+Munich Malt,GRAIN,19.7,75.0,12
+Vienna Malt,GRAIN,7.9,75.0,11.5
+Dark Munich,GRAIN,39.4,75.0,12
+Light Munich Malt,GRAIN,11.8,75.0,11.5
+Biscuit Rye Malt,GRAIN,33.5,75.0,10
+Organic Crystal 15 Malt,GRAIN,29.6,75.0,11.5
+Organic Crystal 40 Malt,GRAIN,78.8,75.0,11.5
+Organic Crystal 60 Malt,GRAIN,118.2,75.0,11.5
+Organic Crystal 120 Malt,GRAIN,236.4,75.0,11.5
+Organic Munich Malt,GRAIN,19.7,75.0,12
+Organic Premium Two Row,GRAIN,3.9,75.0,11.5
+Organic White Wheat Malt,GRAIN,5.9,75.0,10
+Organic Superior Pilsen,GRAIN,3.2,75.0,10.7
+Pilsner Malt,GRAIN,4,75.0,11.5
+Traditional Ale Malt,GRAIN,7,75.0,11.5
+Vienna Malt,GRAIN,10,75.0,11.5
+Light Munich Malt,GRAIN,15,75.0,11.5
+Dark Munich Malt,GRAIN,20,75.0,11.5
+Wheat Malt,GRAIN,5,75.0,13
+Distillers Malt,GRAIN,5,75.0,11.5
+Caramalt,GRAIN,70,75.0,0.0
+Light Crystal Malt,GRAIN,140,75.0,0.0
+Medium Crystal Malt,GRAIN,160,75.0,0.0
+Dark Crystal Malt,GRAIN,300,75.0,0.0
+Extra Dark Crystal Malt,GRAIN,450,75.0,0.0
+Crystal Wheat Malt,GRAIN,150,75.0,0.0
+Amber Malt,GRAIN,70,75.0,0.0
+Chocolate Malt,GRAIN,800,75.0,0.0
+Light Roasted Malt,GRAIN,1000,75.0,0.0
+Dark Roasted Malt,GRAIN,1400,75.0,0.0
+Black Malt,GRAIN,1600,75.0,0.0
+Roasted Wheat Malt,GRAIN,1600,75.0,0.0
+Rosted Barley,GRAIN,1600,75.0,0.0
+Gateway (Under-modified Wind-Malt),GRAIN,2.6,75.0,11.5
+Pelton (Pilsner Style),GRAIN,3.7,75.0,11
+Lamonta (American Pale),GRAIN,6.5,75.0,11
+Vanora (Vienna Style),GRAIN,14.4,75.0,11
+Metolius (Munich Style),GRAIN,24.2,75.0,11
+Opal 22 (Graham & Cocoa),GRAIN,49.3,75.0,11
+Opal 44 (Toasted Toffee),GRAIN,98.5,75.0,11
+Shaniko (White Winter Wheat),GRAIN,8.5,75.0,12
+Rimrock (Vienna-style Spring Rye),GRAIN,12,75.0,12.5
+Wickiup (Hard Red Spring Wheat),GRAIN,6.9,75.0,16.2
+Super Pale Ale Malt,GRAIN,2,75.0,0.0
+Pilsner Malt,GRAIN,3.7,75.0,0.0
+Lager Malt,GRAIN,4,75.0,0.0
+Planet - Pale Ale Malt,GRAIN,6,75.0,0.0
+Planet – Extra Pale Ale Malt,GRAIN,4,75.0,0.0
+Craft - Pale Ale Malt,GRAIN,6,75.0,0.0
+Maris Otter® - Pale Ale Malt,GRAIN,6,75.0,0.0
+Maris Otter® - Extra Pale Ale Malt,GRAIN,4,75.0,0.0
+Maris Otter® - Pale Blend Malt,GRAIN,6,75.0,0.0
+Organic Ale Malt,GRAIN,10,75.0,0.0
+Mild Malt,GRAIN,7,75.0,0.0
+Dextrin Malt,GRAIN,7,75.0,0.0
+Munich Malt,GRAIN,20,75.0,0.0
+Vienna Malt,GRAIN,12,75.0,0.0
+Cara Malts 10,GRAIN,12,75.0,0.0
+Cara Malts 30,GRAIN,43,75.0,0.0
+Crystal Malts 110,GRAIN,110,75.0,0.0
+Crystal Malts 150,GRAIN,150,75.0,0.0
+Crystal Malts 240,GRAIN,240,75.0,0.0
+Crystal Malts 400,GRAIN,400,75.0,0.0
+Amber Malt,GRAIN,75,75.0,0.0
+Brown Malt,GRAIN,170,75.0,0.0
+Light Chocolate Malt,GRAIN,440,75.0,0.0
+Chocolate Malt,GRAIN,1200,75.0,0.0
+Black Malt,GRAIN,1400,75.0,0.0
+Roasted Barley,GRAIN,1500,75.0,0.0
+Wheat Malt ,GRAIN,5,75.0,0.0
+Melanoidin Wheat Malt,GRAIN,120,75.0,0.0
+Rye Malt,GRAIN,7,75.0,0.0
+Oat Malt,GRAIN,10,75.0,0.0
+Torrefied Wheat,GRAIN,6,75.0,0.0
+Dark Crystal Rye Malt,GRAIN,230,75.0,0.0
+Pilsen Malt,GRAIN,5,75.0,0.0
+Extra Pale Malt,GRAIN,0.0,75.0,0.0
+Caramel 15L / 40EBC,GRAIN,40,75.0,0.0
+Caramel 25L / 75EBC ,GRAIN,75,75.0,0.0
+Caramel 35L / 100EBC,GRAIN,100,75.0,0.0
+Caramel 45L / 120EBC ,GRAIN,120,75.0,0.0
+Caramel 55L / 150EBC ,GRAIN,150,75.0,0.0
+Caramel 70L / 190EBC,GRAIN,190,75.0,0.0
+Caramel 90L / 240EBC,GRAIN,240,75.0,0.0
+Caramel 110L / 290EBC ,GRAIN,290,75.0,0.0
+Especial 140L / 370EBC,GRAIN,370,75.0,0.0
+Caramel 170L / 430EBC,GRAIN,430,75.0,0.0
+Caramel 190L / 500EBC ,GRAIN,500,75.0,0.0
+Black Pearl 340L / 900EBC,GRAIN,900,75.0,0.0
+Brown 115L / 300EBC,GRAIN,300,75.0,0.0
+Coffee 230L / 600EBC,GRAIN,600,75.0,0.0
+Chocolate 350L / 900EBC,GRAIN,900,75.0,0.0
+Patagonia Pale Ale,GRAIN,7.5,75.0,0.0
+Patagonia Munich,GRAIN,35,75.0,0.0
+Patagonia Wheat Malt,GRAIN,5,75.0,0.0
+Patagonia Vienna,GRAIN,7.5,75.0,0.0
+Rahr High DP Distillers Malt,GRAIN,5.9,75.0,0.0
+Rahr North Star Pils™,GRAIN,3.7,75.0,12
+Rahr Old World Pilsner,GRAIN,3.9,75.0,11.5
+Rahr Pale Ale,GRAIN,7.9,75.0,12
+Rahr Premium Pilsner,GRAIN,3.9,75.0,11
+Rahr Red Wheat,GRAIN,6.9,75.0,12
+Rahr Standard 2-Row,GRAIN,3.9,75.0,11.5
+Rahr Standard 6-Row,GRAIN,4.9,75.0,12
+Rahr Unmalted Wheat,GRAIN,7.9,75.0,11.5
+Rahr White Wheat,GRAIN,6.9,75.0,12
+Rahr Kilned Caramel 30,GRAIN,69,75.0,13.5
+Rahr Kilned Caramel 47,GRAIN,98.5,75.0,13.5
+Rahr Kilned Caramel 80,GRAIN,177.3,75.0,13.5
+Pilsner malt,GRAIN,3.8,75.0,11.5
+Light wheat malt,GRAIN,5,75.0,13
+Munich malt,GRAIN,27,75.0,12.5
+Pilsen malt,GRAIN,4,75.0,10.9
+Vienna malt,GRAIN,10,75.0,11.3
+Munich malt,GRAIN,25,75.0,11.3
+Wheat malt,GRAIN,5,75.0,13
+Caramel malt light,GRAIN,120,75.0,0.0
+Caramel malt dark,GRAIN,220,75.0,0.0
+Caramel extra dark,GRAIN,460,75.0,0.0
+Chocolate malt,GRAIN,1000,75.0,0.0
+Coloured malt,GRAIN,1500,75.0,0.0
+Finest Pale Ale Golden Promise®™,GRAIN,6.5,75.0,9.69
+Finest Pale Ale Maris Otter,GRAIN,6.5,75.0,9.69
+Low Colour Maris Otter,GRAIN,4.5,75.0,9.69
+Best Pale Ale Malt,GRAIN,6.5,75.0,9.69
+Extra Pale Ale Malt,GRAIN,4.5,75.0,10
+Finest Lager Malt,GRAIN,4.5,75.0,11.25
+Vienna Malt,GRAIN,12,75.0,0.0
+Munich Malt,GRAIN,27,75.0,11.25
+Imperial Malt,GRAIN,55,75.0,0.0
+Aromatic Malt,GRAIN,70,75.0,0.0
+Cornish Gold,GRAIN,27,75.0,11.25
+Caramalt,GRAIN,42,75.0,0.0
+Premium English Caramalt,GRAIN,66,75.0,0.0
+Crystal Light,GRAIN,113,75.0,0.0
+Crystal T50™,GRAIN,145,75.0,0.0
+Crystal Medium,GRAIN,190,75.0,0.0
+Crystal Dark,GRAIN,285,75.0,0.0
+Crystal Extra Dark,GRAIN,500,75.0,0.0
+Simpsons DRC®,GRAIN,320,75.0,0.0
+Heritage Crystal Malt,GRAIN,190,75.0,0.0
+Amber Malt,GRAIN,71,75.0,0.0
+Brown Malt,GRAIN,600,75.0,0.0
+Chocolate Malt,GRAIN,1300,75.0,0.0
+Black Malt,GRAIN,1900,75.0,0.0
+Roasted Barley,GRAIN,1900,75.0,0.0
+Malted Oats,GRAIN,4,75.0,0.0
+Wheat Malt,GRAIN,6,75.0,12.19
+Golden Naked Oats®™,GRAIN,25,75.0,0.0
+Red Rye Crystal,GRAIN,310,75.0,0.0
+Malted Rye,GRAIN,6,75.0,0.0
+Dextrin Malt,GRAIN,1.6,75.0,0.0
+Flaked Barley,GRAIN,1.5,75.0,0.0
+Flaked Wheat,GRAIN,1.5,75.0,0.0
+Flaked Oats,GRAIN,3.5,75.0,0.0
+Pilot Pilsner,GRAIN,3.5,75.0,10.2
+Pilot Pale,GRAIN,4.1,75.0,10.1
+Pilot Pale,GRAIN,13.5,75.0,11
+Fritz Pilsner,GRAIN,3.9,75.0,9.9
+Fritz Pale,GRAIN,3.8,75.0,10.1
+Fritz Ale,GRAIN,4,75.0,9.6
+Skagit Copeland Pilsner ,GRAIN,3.6,75.0,9.6
+Skagit Copeland Pale,GRAIN,4.3,75.0,10
+Skagit Copeland Ale,GRAIN,5.3,75.0,9.5
+Skagit White Club Wheat,GRAIN,5.4,75.0,12
+Talisman Pilsner,GRAIN,3.1,75.0,10.2
+Talisman True British Ale,GRAIN,3.8,75.0,10.4
+Obsidian Malt,GRAIN,5.6,75.0,0.0
+Francin Bohemian Pilsner,GRAIN,3.7,75.0,11.2
+Buckwheat,GRAIN,7.5,75.0,0.0
+Vienna,GRAIN,6.8,75.0,9.6
+Munich,GRAIN,13.2,75.0,9.8
+Super Vienna,GRAIN,17,75.0,10.7
+Caramel 15,GRAIN,33.3,75.0,0.0
+Caramel 30,GRAIN,48.5,75.0,0.0
+Millet,GRAIN,4.3,75.0,0.0
+Pilsner malt,GRAIN,5,75.0,0.0
+Viennese malt,GRAIN,12,75.0,0.0
+Munich malt,GRAIN,26,75.0,0.0
+Wheat malt light,GRAIN,5,75.0,0.0
+Wheat,GRAIN,22,75.0,0.0
+Dutch Pale Ale,GRAIN,9,75.0,11.5
+Swaen©Amber,GRAIN,60,75.0,0.0
+Swaen©Melany,GRAIN,80,75.0,0.0
+Swaen©Vienna,GRAIN,12,75.0,11.5
+Swaen©Pilsner,GRAIN,4.5,75.0,11.5
+Swaen©Munich Dark,GRAIN,25,75.0,11.6
+Swaen©Munich Light,GRAIN,15,75.0,11.7
+Swaen©Lager,GRAIN,4,75.0,11.5
+Swaen©Ale,GRAIN,9,75.0,11.5
+WhiteSwaen©Classic,GRAIN,5,75.0,13.8
+GreenSwaen©Gold Classic,GRAIN,130,75.0,0.0
+GreenSwaen©Gold Red ,GRAIN,60,75.0,0.0
+GreenSwaen©Gold Hell,GRAIN,30,75.0,0.0
+GreenSwaen©Black Extra,GRAIN,1400,75.0,0.0
+GreenSwaen©White Classic,GRAIN,5,75.0,13.8
+GreenSwaen©Vienna,GRAIN,12,75.0,11.5
+GreenSwaen©Pilsner,GRAIN,4.5,75.0,11.5
+GreenSwaen©Ale,GRAIN,9,75.0,11.5
+GoldSwaen©Brown Light,GRAIN,190,75.0,0.0
+GoldSwaen©Wheat Light,GRAIN,120,75.0,0.0
+GoldSwaen©Wheat Dark,GRAIN,200,75.0,0.0
+GoldSwaen©Brown Supreme,GRAIN,320,75.0,0.0
+GoldSwaen©Classic,GRAIN,130,75.0,0.0
+GoldSwaen©Red,GRAIN,60,75.0,0.0
+GoldSwaen©Munich Dark,GRAIN,160,75.0,0.0
+GoldSwaen©Munich Light,GRAIN,110,75.0,0.0
+GoldSwaen©Light,GRAIN,20,75.0,0.0
+GoldSwaen©Hell,GRAIN,30,75.0,0.0
+GoldSwaen©Brown,GRAIN,240,75.0,0.0
+GoldSwaen©Belge,GRAIN,40,75.0,0.0
+GoldSwaen©Aroma,GRAIN,450,75.0,0.0
+GoldSwaen©Amber,GRAIN,80,75.0,0.0
+BlackSwaen©Coffee Light W,GRAIN,500,75.0,0.0
+BlackSwaen©Black Extra,GRAIN,1400,75.0,0.0
+BlackSwaen©Black W,GRAIN,1250,75.0,0.0
+BlackSwaen©Honey Biscuit,GRAIN,90,75.0,0.0
+BlackSwaen©Biscuit,GRAIN,90,75.0,0.0
+BlackSwaen©Coffee,GRAIN,800,75.0,0.0
+BlackSwaen©Chocolate W,GRAIN,1000,75.0,0.0
+BlackSwaen©Chocolate B,GRAIN,1000,75.0,0.0
+BlackSwaen©Black,GRAIN,1250,75.0,0.0
+BlackSwaen©Barley,GRAIN,1250,75.0,0.0
+PlatinumSwaen©Salty Caramel Malt,GRAIN,30,75.0,0.0
+PlatinumSwaen©Smoke,GRAIN,6,75.0,0.0
+PlatinumSwaen©Sauer,GRAIN,14,75.0,0.0
+PlatinumSwaen©Rye,GRAIN,4,75.0,0.0
+PlatinumSwaen©Oat,GRAIN,4.5,75.0,9
+PlatinumSwaen©Spelt,GRAIN,10,75.0,16
+Flaked Maize,GRAIN,0.0,75.0,0.0
+Flaked Barley,GRAIN,0.0,75.0,0.0
+Flaked Oat,GRAIN,0.0,75.0,0.0
+Flaked Wheat,GRAIN,0.0,75.0,0.0
+Maris Otter® Pale Ale Malt,GRAIN,7.5,75.0,10
+Halcyon Pale Ale Malt,GRAIN,7.5,75.0,10.5
+Golden PromiseTM Pale Ale Malt,GRAIN,7.5,75.0,10
+Pearl Pale Ale Malt,GRAIN,7.5,75.0,10.5
+Spring Barley Pale Ale Malt,GRAIN,7.5,75.0,10.5
+Maris Otter® Low Colour Malt,GRAIN,5,75.0,10
+Lager Malt,GRAIN,5,75.0,10.5
+Mild Ale Malt,GRAIN,9,75.0,10.5
+Vienna Malt,GRAIN,15,75.0,10.5
+Munich Malt,GRAIN,30,75.0,10.5
+Wheat Malt,GRAIN,5,75.0,11.9
+Oat Malt,GRAIN,7.5,75.0,11.9
+Rye Malt,GRAIN,10,75.0,10.9
+Pale Caramalt,GRAIN,20,75.0,0.0
+Caramalt,GRAIN,40,75.0,0.0
+Pale Crystal Malt,GRAIN,90,75.0,0.0
+Crystal Malt,GRAIN,175,75.0,0.0
+Dark Crystal Malt,GRAIN,300,75.0,0.0
+Red Crystal Malt,GRAIN,450,75.0,0.0
+Crystal Wheat Malt,GRAIN,190,75.0,0.0
+Crystal Rye Malt,GRAIN,250,75.0,0.0
+Amber Malt,GRAIN,140,75.0,0.0
+Brown Malt,GRAIN,200,75.0,0.0
+Pale Chocolate Malt,GRAIN,690,75.0,0.0
+Chocolate Malt,GRAIN,1250,75.0,0.0
+Black Malt,GRAIN,1600,75.0,0.0
+Roasted Barley,GRAIN,1600,75.0,0.0
+Roasted Wheat,GRAIN,1100,75.0,0.0
+Roasted Rye,GRAIN,850,75.0,0.0
+Okefenokee Pale ,GRAIN,5.3,75.0,12
+Badlands Sunset,GRAIN,3.7,75.0,11.9
+Pronghorn – Brewski Pale,GRAIN,3.5,75.0,11.55
+Dakota,GRAIN,10.4,75.0,11.7
+Denhoff,GRAIN,22.5,75.0,11.3
+Bakken,GRAIN,220.6,75.0,12.4
+Astro White Wheat,GRAIN,4.6,75.0,15.9
+Rye ,GRAIN,5.6,75.0,10.8
+Viking Pilsner Zero Malt,GRAIN,4.3,75.0,11.5
+Viking Wheat Malt,GRAIN,6.5,75.0,13
+Viking Pale Ale Malt,GRAIN,7,75.0,11.5
+Viking Pilsner Malt,GRAIN,4.3,75.0,11.5
+Viking Vienna Malt,GRAIN,10,75.0,12
+Viking Oat Malt,GRAIN,7,75.0,0.0
+Viking CaraBody Malt,GRAIN,8,75.0,0.0
+Viking Red Active Malt,GRAIN,40,75.0,12.5
+Viking Dextrin Malt,GRAIN,16,75.0,10
+Viking Golden Ale Malt,GRAIN,14,75.0,12
+Viking Rye Malt,GRAIN,10,75.0,0.0
+Viking Roasted Barley,GRAIN,1200,75.0,0.0
+Viking Chocolate Light Malt,GRAIN,450,75.0,0.0
+Viking Pearled Black Malt,GRAIN,1000,75.0,0.0
+Viking Caramel 30,GRAIN,30,75.0,0.0
+Viking Caramel 50,GRAIN,50,75.0,0.0
+Viking Caramel 100,GRAIN,100,75.0,0.0
+Viking Caramel 150,GRAIN,150,75.0,0.0
+Viking Caramel 200,GRAIN,200,75.0,0.0
+Viking Caramel 300,GRAIN,300,75.0,0.0
+Viking Caramel 400,GRAIN,400,75.0,0.0
+Viking Caramel 600,GRAIN,600,75.0,0.0
+Viking Cookie Malt,GRAIN,60,75.0,0.0
+Viking Caramel Pale,GRAIN,8,75.0,0.0
+Viking Black Malt,GRAIN,1500,75.0,0.0
+Viking Red Ale Malt,GRAIN,70,75.0,0.0
+Viking Munich Light,GRAIN,18,75.0,12
+Viking Munich Dark,GRAIN,24,75.0,12
+Viking Chocolate Dark Malt,GRAIN,1000,75.0,0.0
+Viking Wheat Malt Organic,GRAIN,6.5,75.0,13.5
+Viking Pilsner Malt Organic,GRAIN,5,75.0,12.5
+Viking Pale Ale Malt Organic,GRAIN,7,75.0,12.5
+Viking Munich Light Organic,GRAIN,20,75.0,12.5
+Viking Caramel Malt 100 Organic,GRAIN,100,75.0,0.0
+Viking Black Malt Organic,GRAIN,1500,75.0,0.0
+Viking Smoked Wheat Malt,GRAIN,10,75.0,13.5
+Viking Smoked Malt,GRAIN,10,75.0,12
+Viking Lightly Peated Malt,GRAIN,10,75.0,12
+Maris Otter Sd Colour,GRAIN,7,75.0,0.0
+Maris Otter Low Colour,GRAIN,3.6,75.0,0.0
+Pale Ale Std Colour ,GRAIN,7,75.0,0.0
+Pale Ale Low Colour,GRAIN,3.6,75.0,0.0
+Lager,GRAIN,3.6,75.0,0.0
+Wheat Malt,GRAIN,5,75.0,0.0
+Rye Malt,GRAIN,7,75.0,0.0
+Mild Ale,GRAIN,14,75.0,0.0
+Munich,GRAIN,20,75.0,0.0
+Vienna,GRAIN,14,75.0,0.0
+Flaked Torrefied Barley,GRAIN,4.5,75.0,0.0
+Flaked Maize,GRAIN,1.3,75.0,0.0
+Flaked Malted Oats ,GRAIN,5.5,75.0,0.0
+Torrefied Wheat,GRAIN,4.5,75.0,0.0
+CaraGold,GRAIN,17,75.0,0.0
+CaraMalt,GRAIN,42,75.0,0.0
+Crystal 100 ,GRAIN,130,75.0,0.0
+Crystal 150,GRAIN,190,75.0,0.0
+Crystal 200,GRAIN,265,75.0,0.0
+Crystal 400,GRAIN,525,75.0,0.0
+Crystal Rye,GRAIN,220,75.0,0.0
+Crystal Wheat,GRAIN,180,75.0,0.0
+Amber,GRAIN,85,75.0,0.0
+Brown,GRAIN,145,75.0,0.0
+Low Colour Chocolate,GRAIN,655,75.0,0.0
+Chocolate,GRAIN,1310,75.0,0.0
+Black,GRAIN,1800,75.0,0.0
+Roasted Barley,GRAIN,1800,75.0,0.0
+Maris Otter Std Colour*,GRAIN,7,75.0,0.0
+Maris Otter Low Colour*,GRAIN,3.6,75.0,0.0
+Plumage Archer Std Colour*,GRAIN,7,75.0,0.0
+Pale Ale Std Colour,GRAIN,7,75.0,0.0
+Pale Ale Low Colour,GRAIN,3.6,75.0,0.0
+Lager,GRAIN,3.6,75.0,0.0
+Wheat Malt,GRAIN,5,75.0,0.0
+Rye Malt,GRAIN,7,75.0,0.0
+CaraMalt,GRAIN,50,75.0,0.0
+Crystal 150,GRAIN,210,75.0,0.0
+Crystal 400,GRAIN,570,75.0,0.0
+Munich,GRAIN,20,75.0,0.0
+Low Colour Chocolate*,GRAIN,715,75.0,0.0
+Chocolate,GRAIN,1450,75.0,0.0
+Roasted Barley,GRAIN,1910,75.0,0.0
+Weyermann® Extra Pale Premium Pilsner Malt,GRAIN,3.5,75.0,0.0
+Weyermann® Pilsner Malt,GRAIN,4.5,75.0,0.0
+Weyermann® Pale Ale Malt,GRAIN,7.5,75.0,0.0
+Weyermann® Vienna Malt,GRAIN,9,75.0,0.0
+Weyermann® Munich Malt,GRAIN,25,75.0,0.0
+Weyermann® Beech Smoked Barley Malt,GRAIN,8,75.0,0.0
+Weyermann® Oak Smoked Wheat Malt,GRAIN,6,75.0,0.0
+Weyermann® Acidulated Malt,GRAIN,12,75.0,0.0
+Weyermann® Melanoidin Malt,GRAIN,80,75.0,0.0
+Weyermann® Pale Wheat Malt,GRAIN,5,75.0,0.0
+Weyermann® Dark Wheat Malt,GRAIN,20,75.0,0.0
+Weyermann® CARAWHEAT® Caramel Wheat Malt,GRAIN,140,75.0,0.0
+Weyermann® Chocolate Wheat Malt,GRAIN,1200,75.0,0.0
+Weyermann® CARAPILS®,GRAIN,6.5,75.0,0.0
+Weyermann® CARAHELL®,GRAIN,30,75.0,0.0
+Weyermann® CARARED®,GRAIN,60,75.0,0.0
+Weyermann® CARAAMBER®,GRAIN,80,75.0,0.0
+Weyermann® CARAMUNICH® I,GRAIN,100,75.0,0.0
+Weyermann® CARAMUNICH® II,GRAIN,130,75.0,0.0
+Weyermann® CARAMUNICH® III,GRAIN,160,75.0,0.0
+Weyermann® CARAAROMA®,GRAIN,450,75.0,0.0
+Weyermann® CARABELGE ®,GRAIN,35,75.0,0.0
+Weyermann® CARABOHEMIAN®,GRAIN,220,75.0,0.0
+Weyermann® CARAWHEAT®,GRAIN,140,75.0,0.0
+Weyermann® CARARYE®,GRAIN,200,75.0,0.0
+Weyermann® Barke® Pilsner Malt,GRAIN,4.5,75.0,0.0
+Weyermann® Barke® Vienna Malt,GRAIN,9,75.0,0.0
+Weyermann® Barke® Munich Malt,GRAIN,22,75.0,0.0
+Weyermann® Eraclea Pilsner Malt,GRAIN,4.5,75.0,0.0
+Weyermann® Bohemian Pilsner Malt,GRAIN,5,75.0,0.0
+Weyermann® Floor-Malted Bohemian Pilsner Malt,GRAIN,5,75.0,0.0
+Weyermann® Floor-Malted Bohemian Dark Malt,GRAIN,20,75.0,0.0
+Weyermann® Floor-Malted Bohemian Wheat Malt,GRAIN,5.5,75.0,0.0
+Weyermann® CARABOHEMIAN®,GRAIN,220,75.0,0.0
+Weyermann® CARABELGE ®,GRAIN,35,75.0,0.0
+Weyermann® Abbey Malt ®,GRAIN,50,75.0,0.0
+Weyermann® Special W®,GRAIN,320,75.0,0.0
+Weyermann® CARAFA® I,GRAIN,1000,75.0,0.0
+Weyermann® CARAFA® II,GRAIN,1200,75.0,0.0
+Weyermann® CARAFA® III,GRAIN,1500,75.0,0.0
+Weyermann® CARAFA® SPECIAL I,GRAIN,1000,75.0,0.0
+Weyermann® CARAFA® SPECIAL II,GRAIN,1200,75.0,0.0
+Weyermann® CARAFA® SPECIAL III,GRAIN,1500,75.0,0.0
+Weyermann® Chocolate Wheat Malt,GRAIN,1200,75.0,0.0
+Weyermann® Chocolate Rye Malt,GRAIN,800,75.0,0.0
+Weyermann® Chocolate Spelt Malt,GRAIN,1000,75.0,0.0
+Weyermann® Roasted Barley,GRAIN,1300,75.0,0.0
+Weyermann® Diastatic Barley Malt,GRAIN,4,75.0,0.0
+Weyermann® Diastatic Wheat Malt,GRAIN,5,75.0,0.0
+Weyermann® Pale Rye Malt,GRAIN,10,75.0,0.0
+Weyermann® CARARYE® Caramel Rye Malt,GRAIN,200,75.0,0.0
+Weyermann® Chocolate Rye Malt,GRAIN,800,75.0,0.0
+Weyermann® Spelt Malt,GRAIN,7,75.0,0.0
+Weyermann® Chocolate Spelt Malt,GRAIN,1000,75.0,0.0
+Colorado Select,GRAIN,4.9,75.0,11.5
+Montana Select,GRAIN,4.5,75.0,12.5
+Wisconsin Select,GRAIN,5.5,75.0,11.5
+2-Row,GRAIN,4.7,75.0,12.2
+Munich,GRAIN,23.6,75.0,12
+Pale Ale Malt,GRAIN,6.7,75.0,11.5
+Pilsen Malt ,GRAIN,3.9,75.0,12
+Vienna Malt,GRAIN,7.1,75.0,12
+Wheat Malt,GRAIN,7.5,75.0,12.5
+Dextrin Malt,GRAIN,3.9,75.0,13
+Kilned C60 Malt,GRAIN,128.1,75.0,0.0
+Steamed C3.5,GRAIN,9.5,75.0,13
+Steamed C40,GRAIN,88.7,75.0,12
+Bavarian Pilsen,GRAIN,4.3,75.0,11.5
+French Pilsen,GRAIN,4.3,75.0,11.5

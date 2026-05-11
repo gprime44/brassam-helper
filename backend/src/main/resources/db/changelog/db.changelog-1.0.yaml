@@ -1,20 +1,44 @@
 databaseChangeLog:
   - changeSet:
-      id: 0
+      id: init-schema
       author: gemini
       changes:
         - createTable:
-            tableName: test_entity
+            tableName: fermentables
             columns:
-              - column:
-                  name: id
-                  type: bigint
-                  autoIncrement: true
-                  constraints:
-                    primaryKey: true
-                    nullable: false
-              - column:
-                  name: name
-                  type: varchar(255)
-                  constraints:
-                    nullable: false
+              - column: {name: id, type: bigint, autoIncrement: true, constraints: {primaryKey: true, nullable: false}}
+              - column: {name: name, type: varchar(255), constraints: {nullable: false}}
+              - column: {name: type, type: varchar(50)}
+              - column: {name: color_ebc, type: double}
+              - column: {name: yield_percentage, type: double}
+              - column: {name: protein, type: double}
+        - createTable:
+            tableName: hops
+            columns:
+              - column: {name: id, type: bigint, autoIncrement: true, constraints: {primaryKey: true, nullable: false}}
+              - column: {name: name, type: varchar(255), constraints: {nullable: false}}
+              - column: {name: alpha_acid, type: double}
+              - column: {name: origin, type: varchar(100)}
+        - createTable:
+            tableName: yeasts
+            columns:
+              - column: {name: id, type: bigint, autoIncrement: true, constraints: {primaryKey: true, nullable: false}}
+              - column: {name: name, type: varchar(255), constraints: {nullable: false}}
+              - column: {name: attenuation_min, type: double}
+              - column: {name: attenuation_max, type: double}
+              - column: {name: type, type: varchar(50)}
+              - column: {name: alcohol_tolerance, type: double}
+
+  - changeSet:
+      id: import-data
+      author: gemini
+      changes:
+        - loadData:
+            file: db/data/fermentables.csv
+            tableName: fermentables
+        - loadData:
+            file: db/data/hops.csv
+            tableName: hops
+        - loadData:
+            file: db/data/yeasts.csv
+            tableName: yeasts
