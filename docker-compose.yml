@@ -1,14 +1,11 @@
 services:
   db:
     image: mariadb:11
-    container_name: brassam-db
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: brassam_helper
       MYSQL_USER: user
       MYSQL_PASSWORD: password
-    ports:
-      - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
     healthcheck:
@@ -19,7 +16,6 @@ services:
 
   backend:
     image: gprime44/helper-backend:latest
-    container_name: brassam-backend
     ports:
       - "8080:8080"
     environment:
@@ -33,9 +29,10 @@ services:
 
   frontend:
     image: gprime44/helper-frontend:latest
-    container_name: brassam-frontend
     ports:
       - "80:80"
+    environment:
+      - VITE_API_URL=http://localhost:8080
     depends_on:
       - backend
 

@@ -37,8 +37,11 @@ export interface Page<T> {
   first: boolean;
 }
 
+// @ts-ignore
+const API_BASE_URL = window.ENV?.API_URL || import.meta.env.VITE_API_URL || window.location.origin;
+
 const fetchApi = async <T>(endpoint: string, params?: Record<string, string>): Promise<Page<T>> => {
-  const url = new URL(endpoint, window.location.origin);
+  const url = new URL(endpoint, API_BASE_URL);
   if (params) {
     Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
   }
@@ -50,7 +53,8 @@ const fetchApi = async <T>(endpoint: string, params?: Record<string, string>): P
 };
 
 const fetchOneApi = async <T>(endpoint: string): Promise<T> => {
-  const response = await fetch(endpoint);
+  const url = new URL(endpoint, API_BASE_URL);
+  const response = await fetch(url.toString());
   if (!response.ok) {
     throw new Error(`API error: ${response.statusText}`);
   }
