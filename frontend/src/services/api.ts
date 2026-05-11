@@ -38,7 +38,7 @@ export interface Page<T> {
 }
 
 // @ts-ignore
-const API_BASE_URL = window.ENV?.API_URL || import.meta.env.VITE_API_URL || window.location.origin;
+const API_BASE_URL = window.ENV?.API_URL || import.meta.env.VITE_API_URL || "";
 
 const fetchApi = async <T>(endpoint: string, params?: Record<string, string>): Promise<Page<T>> => {
   const url = new URL(endpoint, API_BASE_URL);
