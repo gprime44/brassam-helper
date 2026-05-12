@@ -17,6 +17,29 @@
       "settings": "Paramètres"
     }
   },
+  "recipe": {
+    "list_title": "Mes Recettes",
+    "create_button": "Nouvelle Recette",
+    "form": {
+      "name": "Nom de la recette",
+      "batch_volume": "Volume final (L)",
+      "efficiency": "Efficacité (%)",
+      "ingredients": "Ingrédients",
+      "add_fermentable": "Ajouter un malt",
+      "add_hop": "Ajouter du houblon",
+      "add_yeast": "Ajouter une levure",
+      "amount": "Quantité (g)",
+      "phase": "Phase",
+      "duration": "Durée (min)"
+    },
+    "stats": {
+      "og": "Densité Initiale",
+      "fg": "Densité Finale",
+      "abv": "Alcool (% vol)",
+      "ibu": "Amertume (IBU)",
+      "ebc": "Couleur (EBC)"
+    }
+  },
   "dashboard": {
     "welcome_title": "Bienvenue sur Brassam Helper",
     "welcome_text": "Votre compagnon de brassage pour la gestion d'inventaire et la création de recettes.",

@@ -85,13 +85,94 @@ const fetchApi = async <T>(
   return response.json();
 };
 
-const fetchOneApi = async <T>(endpoint: string): Promise<T> => {
+const fetchOneApi = async <T>(endpoint: string, options?: RequestInit): Promise<T> => {
   const url = new URL(endpoint, API_BASE_URL);
-  const response = await fetch(url.toString());
+  const response = await fetch(url.toString(), {
+    ...options,
+    headers: {
+      'Content-Type': 'application/json',
+      ...options?.headers,
+    },
+  });
   if (!response.ok) {
     throw new Error(`API error: ${response.statusText}`);
   }
   return response.json();
+};
+
+export interface Recipe {
+  externalId?: string;
+  name: string;
+  description?: string;
+  batchVolume: number;
+  efficiency: number;
+  og?: number;
+  fg?: number;
+  abv?: number;
+  ibu?: number;
+  ebc?: number;
+  fermentables: RecipeFermentable[];
+  hops: RecipeHop[];
+  yeast?: RecipeYeast;
+}
+
+export interface RecipeFermentable {
+  id?: number;
+  fermentableId: number;
+  amount: number;
+}
+
+export interface RecipeHop {
+  id?: number;
+  hopId: number;
+  amount: number;
+  phase: "BOIL" | "HOPSTAND" | "DRY_HOP";
+  duration: number;
+}
+
+export interface RecipeYeast {
+  id?: number;
+  yeastId: number;
+  amount: number;
+}
+
+export const recipeApi = {
+  getRecipes: () => {
+    const url = new URL("/api/recipes", API_BASE_URL);
+    return fetch(url.toString()).then(res => {
+      if (!res.ok) throw new Error(res.statusText);
+      return res.json() as Promise<Recipe[]>;
+    });
+  },
+  getRecipe: (externalId: string) => fetchOneApi<Recipe>(`/api/recipes/${externalId}`),
+  createRecipe: async (recipe: Partial<Recipe>): Promise<Recipe> => {
+    return fetchOneApi<Recipe>("/api/recipes", {
+      method: 'POST',
+      body: JSON.stringify(recipe),
+    });
+  },
+  updateRecipe: async (externalId: string, recipe: Partial<Recipe>): Promise<Recipe> => {
+    return fetchOneApi<Recipe>(`/api/recipes/${externalId}`, {
+      method: 'PUT',
+      body: JSON.stringify(recipe),
+    });
+  },
+  addFermentable: (externalId: string, f: RecipeFermentable) => 
+    fetchOneApi<Recipe>(`/api/recipes/${externalId}/fermentables`, { method: 'POST', body: JSON.stringify(f) }),
+  updateFermentable: (externalId: string, id: number, f: Partial<RecipeFermentable>) => 
+    fetchOneApi<Recipe>(`/api/recipes/${externalId}/fermentables/${id}`, { method: 'PUT', body: JSON.stringify(f) }),
+  deleteFermentable: (externalId: string, id: number) => 
+    fetchOneApi<Recipe>(`/api/recipes/${externalId}/fermentables/${id}`, { method: 'DELETE' }),
+  
+  addHop: (externalId: string, h: RecipeHop) => 
+    fetchOneApi<Recipe>(`/api/recipes/${externalId}/hops`, { method: 'POST', body: JSON.stringify(h) }),
+  updateHop: (externalId: string, id: number, h: Partial<RecipeHop>) => 
+    fetchOneApi<Recipe>(`/api/recipes/${externalId}/hops/${id}`, { method: 'PUT', body: JSON.stringify(h) }),
+  deleteHop: (externalId: string, id: number) => 
+    fetchOneApi<Recipe>(`/api/recipes/${externalId}/hops/${id}`, { method: 'DELETE' }),
+    
+  updateYeast: (externalId: string, y: RecipeYeast) => 
+    fetchOneApi<Recipe>(`/api/recipes/${externalId}/yeast`, { method: 'PUT', body: JSON.stringify(y) }),
 };
 
 export const inventoryApi = {

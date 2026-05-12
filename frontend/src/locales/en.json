@@ -17,6 +17,29 @@
       "settings": "Settings"
     }
   },
+  "recipe": {
+    "list_title": "My Recipes",
+    "create_button": "New Recipe",
+    "form": {
+      "name": "Recipe Name",
+      "batch_volume": "Batch Volume (L)",
+      "efficiency": "Efficiency (%)",
+      "ingredients": "Ingredients",
+      "add_fermentable": "Add Malt",
+      "add_hop": "Add Hop",
+      "add_yeast": "Add Yeast",
+      "amount": "Amount (g)",
+      "phase": "Phase",
+      "duration": "Duration (min)"
+    },
+    "stats": {
+      "og": "Original Gravity",
+      "fg": "Final Gravity",
+      "abv": "ABV (%)",
+      "ibu": "Bitterness (IBU)",
+      "ebc": "Color (EBC)"
+    }
+  },
   "dashboard": {
     "welcome_title": "Welcome to Brassam Helper",
     "welcome_text": "Your brewing companion for inventory management and recipe creation.",

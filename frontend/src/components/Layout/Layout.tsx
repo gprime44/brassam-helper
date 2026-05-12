@@ -38,7 +38,10 @@ const Layout: React.FC<LayoutProps> = ({ children, activeTab, onTabChange }) => 
           <span className="nav-icon">📦</span>
           <span className="nav-label">{t('layout.tabs.inventory')}</span>
         </button>
-        <button className="nav-item">
+        <button 
+          className={`nav-item ${activeTab === 'recipes' ? 'active' : ''}`}
+          onClick={() => onTabChange('recipes')}
+        >
           <span className="nav-icon">📝</span>
           <span className="nav-label">{t('layout.tabs.recipes')}</span>
         </button>
