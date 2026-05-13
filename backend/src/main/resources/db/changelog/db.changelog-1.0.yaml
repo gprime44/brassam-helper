@@ -6,7 +6,7 @@ databaseChangeLog:
         - createTable:
             tableName: fermentables
             columns:
-              - column: {name: id, type: bigint, autoIncrement: true, constraints: {primaryKey: true, nullable: false}}
+              - column: {name: id, type: integer, autoIncrement: true, constraints: {primaryKey: true, nullable: false}}
               - column: {name: name, type: varchar(255), constraints: {nullable: false}}
               - column: {name: type, type: varchar(50)}
               - column: {name: color_ebc, type: double}
@@ -15,14 +15,14 @@ databaseChangeLog:
         - createTable:
             tableName: hops
             columns:
-              - column: {name: id, type: bigint, autoIncrement: true, constraints: {primaryKey: true, nullable: false}}
+              - column: {name: id, type: integer, autoIncrement: true, constraints: {primaryKey: true, nullable: false}}
               - column: {name: name, type: varchar(255), constraints: {nullable: false}}
               - column: {name: alpha_acid, type: double}
               - column: {name: origin, type: varchar(100)}
         - createTable:
             tableName: yeasts
             columns:
-              - column: {name: id, type: bigint, autoIncrement: true, constraints: {primaryKey: true, nullable: false}}
+              - column: {name: id, type: integer, autoIncrement: true, constraints: {primaryKey: true, nullable: false}}
               - column: {name: name, type: varchar(255), constraints: {nullable: false}}
               - column: {name: attenuation_min, type: double}
               - column: {name: attenuation_max, type: double}

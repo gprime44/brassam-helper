@@ -8,7 +8,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: BIGINT
+                  type: INTEGER
                   autoIncrement: true
                   constraints:
                     primaryKey: true
@@ -39,14 +39,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: BIGINT
+                  type: INTEGER
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: recipe_id
-                  type: BIGINT
+                  type: INTEGER
                   constraints:
                     nullable: false
                     foreignKeyName: fk_rf_recipe
@@ -54,7 +54,7 @@ databaseChangeLog:
                     referencedColumnNames: id
               - column:
                   name: fermentable_id
-                  type: BIGINT
+                  type: INTEGER
                   constraints:
                     nullable: false
               - column:
@@ -66,14 +66,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: BIGINT
+                  type: INTEGER
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: recipe_id
-                  type: BIGINT
+                  type: INTEGER
                   constraints:
                     nullable: false
                     foreignKeyName: fk_rh_recipe
@@ -81,7 +81,7 @@ databaseChangeLog:
                     referencedColumnNames: id
               - column:
                   name: hop_id
-                  type: BIGINT
+                  type: INTEGER
                   constraints:
                     nullable: false
               - column:
@@ -99,14 +99,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: BIGINT
+                  type: INTEGER
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: recipe_id
-                  type: BIGINT
+                  type: INTEGER
                   constraints:
                     nullable: false
                     foreignKeyName: fk_ry_recipe
@@ -115,7 +115,7 @@ databaseChangeLog:
                     unique: true
               - column:
                   name: yeast_id
-                  type: BIGINT
+                  type: INTEGER
                   constraints:
                     nullable: false
               - column:
