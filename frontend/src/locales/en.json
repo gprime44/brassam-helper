@@ -5,6 +5,8 @@
     "error_not_found": "Item not found",
     "back_to_list": "Back to list",
     "search_placeholder": "Search {{category}}...",
+    "search_placeholder_generic": "Search...",
+    "select_item": "Select an item...",
     "no_items_found": "No items found",
     "other": "Other"
   },

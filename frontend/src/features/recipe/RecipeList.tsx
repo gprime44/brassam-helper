@@ -40,7 +40,7 @@ const RecipeList: React.FC<RecipeListProps> = ({ onSelect, onCreate }) => {
           <h1>{t('recipe.list_title')}</h1>
           <p className="subtitle">Gérez vos créations et ajustez vos formules.</p>
         </div>
-        <button className="primary-button create-btn" onClick={handleCreate}>
+        <button className="btn btn-primary create-btn" onClick={handleCreate}>
           <span className="icon">➕</span> {t('recipe.create_button')}
         </button>
       </header>

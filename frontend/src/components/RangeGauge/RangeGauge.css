@@ -1,0 +1,83 @@
+.range-gauge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.gauge-abbr {
+  min-width: 32px;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--text-h);
+  text-align: left;
+}
+
+.gauge-track-wrapper {
+  flex: 1;
+}
+
+.gauge-track-large {
+  position: relative;
+  height: 18px; /* Hauteur divisée par deux */
+  background: var(--code-bg);
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.gauge-target-zone {
+  position: absolute;
+  height: 100%;
+  background: var(--accent-bg);
+  border-left: 1px solid var(--accent-border);
+  border-right: 1px solid var(--accent-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 4px;
+}
+
+.limit-label {
+  font-size: 7px;
+  font-family: var(--mono);
+  color: var(--accent);
+  font-weight: 600;
+  line-height: 1;
+  padding-bottom: 1px;
+}
+
+.gauge-value-marker {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 10;
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.marker-line-full {
+  position: absolute;
+  height: 100%;
+  width: 1.5px;
+  background: var(--text-h);
+  opacity: 0.6;
+}
+
+.current-value-label {
+  font-size: 9px;
+  font-weight: 800;
+  font-family: var(--mono);
+  color: var(--text-h);
+  white-space: nowrap;
+  line-height: 1;
+  padding-top: 1px;
+  z-index: 11;
+  text-shadow: 0 0 2px var(--bg); /* Pour lisibilité sur la barre */
+}

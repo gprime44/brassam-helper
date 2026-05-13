@@ -4,8 +4,11 @@ import {
   recipeApi, inventoryApi 
 } from '../../services/api';
 import type { 
-  Recipe, Fermentable, Hop, Yeast 
+  Recipe, Fermentable, Hop, Yeast, RecipeFermentable, RecipeHop 
 } from '../../services/api';
+import RangeGauge from '../../components/RangeGauge/RangeGauge';
+import SearchableSelect from '../../components/SearchableSelect/SearchableSelect';
+import { getFermentableIcon, getYeastIcon } from '../../utils/typeIcons';
 
 interface RecipeDetailProps {
   externalId: string;
@@ -27,30 +30,26 @@ const RecipeDetail: React.FC<RecipeDetailProps> = ({ externalId, onBack }) => {
   const [showAddHop, setShowAddHop] = useState(false);
   const [showAddYeast, setShowAddYeast] = useState(false);
 
-  const [allFerm, setAllFerm] = useState<Fermentable[]>([]);
-  const [allHops, setAllHops] = useState<Hop[]>([]);
-  const [allYeasts, setAllYeasts] = useState<Yeast[]>([]);
+  const [editingFermentable, setEditingFermentable] = useState<RecipeFermentable | null>(null);
+  const [editingHop, setEditingHop] = useState<RecipeHop | null>(null);
 
   useEffect(() => {
     recipeApi.getRecipe(externalId).then(setRecipe).finally(() => setLoading(false));
     
-    Promise.all([
-      inventoryApi.getFermentables('', 0, 1000),
-      inventoryApi.getHops('', 0, 1000),
-      inventoryApi.getYeasts('', 0, 1000)
-    ]).then(([f, h, y]) => {
-      setAllFerm(f.content);
-      setAllHops(h.content);
-      setAllYeasts(y.content);
-      
+    inventoryApi.getFermentables('', 0, 1000).then(f => {
       const fMap: Record<number, string> = {};
       f.content.forEach(i => fMap[i.id] = i.name);
+      setInventory(prev => ({ ...prev, fermentables: fMap }));
+    });
+    inventoryApi.getHops('', 0, 1000).then(h => {
       const hMap: Record<number, string> = {};
       h.content.forEach(i => hMap[i.id] = i.name);
+      setInventory(prev => ({ ...prev, hops: hMap }));
+    });
+    inventoryApi.getYeasts('', 0, 1000).then(y => {
       const yMap: Record<number, string> = {};
       y.content.forEach(i => yMap[i.id] = i.name);
-      
-      setInventory({ fermentables: fMap, hops: hMap, yeasts: yMap });
+      setInventory(prev => ({ ...prev, yeasts: yMap }));
     });
   }, [externalId]);
 
@@ -63,11 +62,23 @@ const RecipeDetail: React.FC<RecipeDetailProps> = ({ externalId, onBack }) => {
   const handleAddFermentable = (fermentableId: number, amount: number) => {
     recipeApi.addFermentable(externalId, { fermentableId, amount }).then(setRecipe);
     setShowAddFerm(false);
+    setEditingFermentable(null);
+  };
+
+  const handleUpdateFermentable = (id: number, fermentableId: number, amount: number) => {
+    recipeApi.updateFermentable(externalId, id, { fermentableId, amount }).then(setRecipe);
+    setEditingFermentable(null);
   };
 
   const handleAddHop = (hopId: number, amount: number, phase: any, duration: number) => {
     recipeApi.addHop(externalId, { hopId, amount, phase, duration }).then(setRecipe);
     setShowAddHop(false);
+    setEditingHop(null);
+  };
+
+  const handleUpdateHop = (id: number, hopId: number, amount: number, phase: any, duration: number) => {
+    recipeApi.updateHop(externalId, id, { hopId, amount, phase, duration }).then(setRecipe);
+    setEditingHop(null);
   };
 
   const handleUpdateYeast = (yeastId: number, amount: number) => {
@@ -78,166 +89,198 @@ const RecipeDetail: React.FC<RecipeDetailProps> = ({ externalId, onBack }) => {
   if (loading || !recipe) return <div className="loading">{t('common.loading')}</div>;
 
   return (
-    <div className="recipe-detail-container">
-      <button className="back-link" onClick={onBack}>
-        <span>←</span> {t('common.back_to_list')}
-      </button>
+    <div className="recipe-detail">
+      <button className="back-button" onClick={onBack}>← {t('common.back_to_list')}</button>
 
       <header className="feature-header">
         <h1>{recipe.name}</h1>
-        <p className="subtitle">Configuration et ajustement des ingrédients.</p>
       </header>
 
-      <div className="recipe-stats-banner">
-        <div className="stat-item">
-          <label>{t('recipe.stats.og')}</label>
-          <span>{recipe.og?.toFixed(3)}</span>
-        </div>
-        <div className="stat-item">
-          <label>{t('recipe.stats.fg')}</label>
-          <span>{recipe.fg?.toFixed(3)}</span>
-        </div>
-        <div className="stat-item">
-          <label>{t('recipe.stats.abv')}</label>
-          <span>{recipe.abv?.toFixed(1)}%</span>
-        </div>
-        <div className="stat-item">
-          <label>{t('recipe.stats.ibu')}</label>
-          <span>{recipe.ibu?.toFixed(0)}</span>
-        </div>
-        <div className="stat-item">
-          <label>{t('recipe.stats.ebc')}</label>
-          <span>{recipe.ebc?.toFixed(0)}</span>
-        </div>
+      <div className="recipe-stats-gauges">
+        <RangeGauge label="OG" value={recipe.og || 1.000} min={1.040} max={1.060} decimals={3} />
+        <RangeGauge label="FG" value={recipe.fg || 1.000} min={1.008} max={1.015} decimals={3} />
+        <RangeGauge label="ABV" value={recipe.abv || 0} min={4.5} max={6.5} unit="%" />
+        <RangeGauge label="IBU" value={recipe.ibu || 0} min={20} max={40} decimals={0} />
+        <RangeGauge label="EBC" value={recipe.ebc || 0} min={10} max={30} decimals={0} />
       </div>
 
       <div className="recipe-sections">
-        {/* CONFIGURATION */}
-        <section className="detail-section">
-          <h3>⚙️ Configuration</h3>
-          <div className="form-group">
-            <label>{t('recipe.form.name')}</label>
-            <input 
-              value={recipe.name} 
-              onBlur={(e) => handleUpdateHeader('name', e.target.value)}
-              onChange={(e) => setRecipe({...recipe, name: e.target.value})}
-            />
-          </div>
-          <div className="form-row">
+        <div className="detail-card">
+          <header className="detail-header">
+            <span className="category-badge">Configuration</span>
+            <h3>Paramètres de brassage</h3>
+          </header>
+          <div className="detail-content">
             <div className="form-group">
-              <label>{t('recipe.form.batch_volume')}</label>
+              <label>{t('recipe.form.name')}</label>
               <input 
-                type="number" 
-                value={recipe.batchVolume} 
-                onBlur={(e) => handleUpdateHeader('batchVolume', Number(e.target.value))}
-                onChange={(e) => setRecipe({...recipe, batchVolume: Number(e.target.value)})}
+                className="input-styled"
+                value={recipe.name} 
+                onBlur={(e) => handleUpdateHeader('name', e.target.value)}
+                onChange={(e) => setRecipe({...recipe, name: e.target.value})}
               />
             </div>
-            <div className="form-group">
-              <label>{t('recipe.form.efficiency')}</label>
-              <input 
-                type="number" 
-                value={recipe.efficiency} 
-                onBlur={(e) => handleUpdateHeader('efficiency', Number(e.target.value))}
-                onChange={(e) => setRecipe({...recipe, efficiency: Number(e.target.value)})}
-              />
+            <div className="form-row">
+              <div className="form-group">
+                <label>{t('recipe.form.batch_volume')}</label>
+                <input 
+                  type="number" 
+                  className="input-styled"
+                  value={recipe.batchVolume} 
+                  onBlur={(e) => handleUpdateHeader('batchVolume', Number(e.target.value))}
+                  onChange={(e) => setRecipe({...recipe, batchVolume: Number(e.target.value)})}
+                />
+              </div>
+              <div className="form-group">
+                <label>{t('recipe.form.efficiency')}</label>
+                <input 
+                  type="number" 
+                  className="input-styled"
+                  value={recipe.efficiency} 
+                  onBlur={(e) => handleUpdateHeader('efficiency', Number(e.target.value))}
+                  onChange={(e) => setRecipe({...recipe, efficiency: Number(e.target.value)})}
+                />
+              </div>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* FERMENTABLES */}
         <section className="detail-section">
           <h3>🌾 {t('inventory.categories.fermentables')}</h3>
-          <div className="table-responsive">
-            <table className="ingredient-table">
-              <thead>
-                <tr>
-                  <th>Nom</th>
-                  <th>Quantité</th>
-                  <th style={{ width: '50px' }}></th>
-                </tr>
-              </thead>
-              <tbody>
-                {recipe.fermentables.map(f => (
-                  <tr key={f.id}>
-                    <td>{inventory.fermentables[f.fermentableId] || '...'}</td>
-                    <td>{f.amount} g</td>
-                    <td>
-                      <button className="delete-btn" onClick={() => f.id && recipeApi.deleteFermentable(externalId, f.id).then(setRecipe)}>🗑️</button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="ingredient-list">
+            {recipe.fermentables.map(f => (
+              editingFermentable?.id === f.id ? (
+                <AddIngredientForm 
+                  key={f.id}
+                  category="fermentable"
+                  initialValues={{ 
+                    id: f.fermentableId, 
+                    name: inventory.fermentables[f.fermentableId] || '...',
+                    amount: f.amount 
+                  }}
+                  onAdd={(id, qty) => f.id && handleUpdateFermentable(f.id, id, qty)} 
+                  onCancel={() => setEditingFermentable(null)} 
+                />
+              ) : (
+                <div key={f.id} className="ingredient-item-card">
+                  <span className="ing-name">{inventory.fermentables[f.fermentableId] || '...'}</span>
+                  <div className="ing-details">
+                    <div className="ing-detail-item">
+                      <span className="ing-label">{t('recipe.form.amount')}:</span>
+                      <span>{f.amount} g</span>
+                    </div>
+                  </div>
+                  <div className="ing-action">
+                    <button className="btn btn-sm btn-outline" onClick={() => setEditingFermentable(f)}>Modifier</button>
+                    <button className="btn btn-sm btn-danger" onClick={() => f.id && recipeApi.deleteFermentable(externalId, f.id).then(setRecipe)}>🗑️</button>
+                  </div>
+                </div>
+              )
+            ))}
           </div>
-          {showAddFerm ? (
+          {showAddFerm && !editingFermentable ? (
             <AddIngredientForm 
-              items={allFerm} 
+              category="fermentable"
               onAdd={(id, qty) => handleAddFermentable(id, qty)} 
               onCancel={() => setShowAddFerm(false)} 
             />
           ) : (
-            <button className="add-btn" onClick={() => setShowAddFerm(true)}>+ {t('recipe.form.add_fermentable')}</button>
+            !editingFermentable && <button className="add-btn" onClick={() => setShowAddFerm(true)}>+ {t('recipe.form.add_fermentable')}</button>
           )}
         </section>
 
         {/* HOPS */}
         <section className="detail-section">
           <h3>🌿 {t('inventory.categories.hops')}</h3>
-          <div className="table-responsive">
-            <table className="ingredient-table">
-              <thead>
-                <tr>
-                  <th>Nom</th>
-                  <th>Quantité</th>
-                  <th>Phase</th>
-                  <th>Durée</th>
-                  <th style={{ width: '50px' }}></th>
-                </tr>
-              </thead>
-              <tbody>
-                {recipe.hops.map(h => (
-                  <tr key={h.id}>
-                    <td>{inventory.hops[h.hopId] || '...'}</td>
-                    <td>{h.amount} g</td>
-                    <td><span className="stat-badge ibu">{h.phase}</span></td>
-                    <td>{h.duration} min</td>
-                    <td>
-                      <button className="delete-btn" onClick={() => h.id && recipeApi.deleteHop(externalId, h.id).then(setRecipe)}>🗑️</button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="ingredient-list">
+            {recipe.hops.map(h => (
+              editingHop?.id === h.id ? (
+                <AddHopForm 
+                  key={h.id}
+                  initialValues={{
+                    id: h.hopId,
+                    name: inventory.hops[h.hopId] || '...',
+                    amount: h.amount,
+                    phase: h.phase,
+                    duration: h.duration
+                  }}
+                  onAdd={(id, qty, phase, dur) => h.id && handleUpdateHop(h.id, id, qty, phase, dur)} 
+                  onCancel={() => setEditingHop(null)} 
+                />
+              ) : (
+                <div key={h.id} className="ingredient-item-card">
+                  <span className="ing-name">{inventory.hops[h.hopId] || '...'}</span>
+                  <div className="ing-details">
+                    <div className="ing-detail-item">
+                      <span className="ing-label">{t('recipe.form.amount')}:</span>
+                      <span>{h.amount} g</span>
+                    </div>
+                    <div className="ing-detail-item">
+                      <span className="ing-label">{t('recipe.form.phase')}:</span>
+                      <span className="phase-badge">{h.phase}</span>
+                    </div>
+                    <div className="ing-detail-item">
+                      <span className="ing-label">{t('recipe.form.duration')}:</span>
+                      <span>{h.duration} min</span>
+                    </div>
+                  </div>
+                  <div className="ing-action">
+                    <button className="btn btn-sm btn-outline" onClick={() => setEditingHop(h)}>Modifier</button>
+                    <button className="btn btn-sm btn-danger" onClick={() => h.id && recipeApi.deleteHop(externalId, h.id).then(setRecipe)}>🗑️</button>
+                  </div>
+                </div>
+              )
+            ))}
           </div>
-          {showAddHop ? (
+          {showAddHop && !editingHop ? (
             <AddHopForm 
-              items={allHops} 
               onAdd={(id, qty, phase, dur) => handleAddHop(id, qty, phase, dur)} 
               onCancel={() => setShowAddHop(false)} 
             />
           ) : (
-            <button className="add-btn" onClick={() => setShowAddHop(true)}>+ {t('recipe.form.add_hop')}</button>
+            !editingHop && <button className="add-btn" onClick={() => setShowAddHop(true)}>+ {t('recipe.form.add_hop')}</button>
           )}
         </section>
 
         {/* YEAST */}
         <section className="detail-section">
           <h3>🧪 {t('inventory.categories.yeasts')}</h3>
-          {recipe.yeast ? (
-            <div className="yeast-info-card">
-              <div className="yeast-details">
-                <strong>{inventory.yeasts[recipe.yeast.yeastId] || '...'}</strong>
-                <span>{recipe.yeast.amount} g</span>
-              </div>
-              <button className="primary-button" onClick={() => setShowAddYeast(true)}>Modifier</button>
-            </div>
-          ) : (
+          <div className="ingredient-list">
+            {recipe.yeast && (
+              showAddYeast ? (
+                <AddIngredientForm 
+                  category="yeast"
+                  initialValues={{
+                    id: recipe.yeast.yeastId,
+                    name: inventory.yeasts[recipe.yeast.yeastId] || '...',
+                    amount: recipe.yeast.amount
+                  }}
+                  onAdd={(id, qty) => handleUpdateYeast(id, qty)} 
+                  onCancel={() => setShowAddYeast(false)} 
+                />
+              ) : (
+                <div className="ingredient-item-card">
+                  <span className="ing-name">{inventory.yeasts[recipe.yeast.yeastId] || '...'}</span>
+                  <div className="ing-details">
+                    <div className="ing-detail-item">
+                      <span className="ing-label">{t('recipe.form.amount')}:</span>
+                      <span>{recipe.yeast.amount} g</span>
+                    </div>
+                  </div>
+                  <div className="ing-action">
+                    <button className="btn btn-sm btn-outline" onClick={() => setShowAddYeast(true)}>Modifier</button>
+                  </div>
+                </div>
+              )
+            )}
+          </div>
+          {!recipe.yeast && !showAddYeast && (
             <button className="add-btn" onClick={() => setShowAddYeast(true)}>+ {t('recipe.form.add_yeast')}</button>
           )}
-          {showAddYeast && (
+          {showAddYeast && !recipe.yeast && (
             <AddIngredientForm 
-              items={allYeasts} 
+              category="yeast"
               onAdd={(id, qty) => handleUpdateYeast(id, qty)} 
               onCancel={() => setShowAddYeast(false)} 
             />
@@ -248,61 +291,141 @@ const RecipeDetail: React.FC<RecipeDetailProps> = ({ externalId, onBack }) => {
   );
 };
 
-const AddIngredientForm: React.FC<{ items: any[], onAdd: (id: number, qty: number) => void, onCancel: () => void }> = ({ items, onAdd, onCancel }) => {
-  const [id, setId] = useState(items[0]?.id || 0);
-  const [qty, setQty] = useState(1000);
+const AddIngredientForm: React.FC<{ 
+  category: 'fermentable' | 'yeast', 
+  initialValues?: { id: number, name: string, amount: number },
+  onAdd: (id: number, qty: number) => void, 
+  onCancel: () => void 
+}> = ({ category, initialValues, onAdd, onCancel }) => {
+  const [selectedItem, setSelectedItem] = useState<any | null>(initialValues || null);
+  const [qty, setQty] = useState(initialValues?.amount || (category === 'fermentable' ? 1000 : 11));
+  const { t } = useTranslation();
+
+  const fetchFn = category === 'fermentable' 
+    ? inventoryApi.getFermentables 
+    : inventoryApi.getYeasts;
+
+  const renderItem = (item: any) => (
+    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+      <span>{category === 'fermentable' ? getFermentableIcon(item.type) : getYeastIcon(item.type)}</span>
+      <span>{item.name}</span>
+    </div>
+  );
+
   return (
-    <div className="inline-form">
-      <div className="form-group">
-        <label>Ingrédient</label>
-        <select value={id} onChange={e => setId(Number(e.target.value))}>
-          {items.map(i => <option key={i.id} value={i.id}>{i.name}</option>)}
-        </select>
+    <div className="ingredient-add-form">
+      <div className="form-row">
+        <div className="form-group">
+          <SearchableSelect 
+            label={category === 'fermentable' ? t('inventory.categories.fermentables') : t('inventory.categories.yeasts')}
+            fetchFn={fetchFn}
+            initialItem={selectedItem}
+            onSelect={setSelectedItem}
+            renderItem={renderItem}
+            placeholder={category === 'fermentable' ? "Choisir un malt..." : "Choisir une levure..."}
+          />
+        </div>
+        <div className="form-group">
+          <label>Quantité (g)</label>
+          <input 
+            type="number" 
+            className="input-styled"
+            value={qty} 
+            onChange={e => setQty(Number(e.target.value))} 
+          />
+        </div>
       </div>
-      <div className="form-group">
-        <label>Quantité (g)</label>
-        <input type="number" value={qty} onChange={e => setQty(Number(e.target.value))} />
-      </div>
-      <div style={{ display: 'flex', gap: '8px' }}>
-        <button className="primary-button" onClick={() => onAdd(id, qty)}>Ajouter</button>
-        <button className="secondary-button" onClick={onCancel}>Annuler</button>
+      <div className="form-actions">
+        <button className="btn btn-outline" onClick={onCancel}>
+          Annuler
+        </button>
+        <button 
+          className="btn btn-primary" 
+          disabled={!selectedItem}
+          onClick={() => selectedItem && onAdd(selectedItem.id, qty)}
+        >
+          {initialValues ? 'Modifier' : 'Ajouter'}
+        </button>
       </div>
     </div>
   );
 };
 
-const AddHopForm: React.FC<{ items: any[], onAdd: (id: number, qty: number, phase: string, dur: number) => void, onCancel: () => void }> = ({ items, onAdd, onCancel }) => {
-  const [id, setId] = useState(items[0]?.id || 0);
-  const [qty, setQty] = useState(20);
-  const [phase, setPhase] = useState('BOIL');
-  const [dur, setDur] = useState(60);
+const AddHopForm: React.FC<{ 
+  initialValues?: { id: number, name: string, amount: number, phase: string, duration: number },
+  onAdd: (id: number, qty: number, phase: string, dur: number) => void, 
+  onCancel: () => void 
+}> = ({ initialValues, onAdd, onCancel }) => {
+  const [selectedItem, setSelectedItem] = useState<any | null>(initialValues || null);
+  const [qty, setQty] = useState(initialValues?.amount || 20);
+  const [phase, setPhase] = useState(initialValues?.phase || 'BOIL');
+  const [dur, setDur] = useState(initialValues?.duration || 60);
+  const { t } = useTranslation();
+
+  const renderItem = (item: any) => (
+    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+      <span>🌿</span>
+      <span>{item.name}</span>
+    </div>
+  );
+
   return (
-    <div className="inline-form">
-      <div className="form-group">
-        <label>Houblon</label>
-        <select value={id} onChange={e => setId(Number(e.target.value))}>
-          {items.map(i => <option key={i.id} value={i.id}>{i.name}</option>)}
-        </select>
+    <div className="ingredient-add-form">
+      <div className="form-row">
+        <div className="form-group">
+          <SearchableSelect 
+            label={t('inventory.categories.hops')}
+            fetchFn={inventoryApi.getHops}
+            initialItem={selectedItem}
+            onSelect={setSelectedItem}
+            renderItem={renderItem}
+            placeholder="Choisir un houblon..."
+          />
+        </div>
+        <div className="form-group">
+          <label>Quantité (g)</label>
+          <input 
+            type="number" 
+            className="input-styled"
+            value={qty} 
+            onChange={e => setQty(Number(e.target.value))} 
+          />
+        </div>
       </div>
-      <div className="form-group">
-        <label>Quantité (g)</label>
-        <input type="number" value={qty} onChange={e => setQty(Number(e.target.value))} />
+      <div className="form-row" style={{ marginTop: '16px' }}>
+        <div className="form-group">
+          <label>Phase</label>
+          <select 
+            className="input-styled"
+            value={phase} 
+            onChange={e => setPhase(e.target.value)}
+          >
+            <option value="BOIL">BOIL</option>
+            <option value="HOPSTAND">HOPSTAND</option>
+            <option value="DRY_HOP">DRY_HOP</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label>Durée (min)</label>
+          <input 
+            type="number" 
+            className="input-styled"
+            value={dur} 
+            onChange={e => setDur(Number(e.target.value))} 
+          />
+        </div>
       </div>
-      <div className="form-group">
-        <label>Phase</label>
-        <select value={phase} onChange={e => setPhase(e.target.value)}>
-          <option value="BOIL">BOIL</option>
-          <option value="HOPSTAND">HOPSTAND</option>
-          <option value="DRY_HOP">DRY_HOP</option>
-        </select>
-      </div>
-      <div className="form-group">
-        <label>Durée (min)</label>
-        <input type="number" value={dur} onChange={e => setDur(Number(e.target.value))} />
-      </div>
-      <div style={{ display: 'flex', gap: '8px' }}>
-        <button className="primary-button" onClick={() => onAdd(id, qty, phase, dur)}>Ajouter</button>
-        <button className="secondary-button" onClick={onCancel}>Annuler</button>
+      <div className="form-actions">
+        <button className="btn btn-outline" onClick={onCancel}>
+          Annuler
+        </button>
+        <button 
+          className="btn btn-primary" 
+          disabled={!selectedItem}
+          onClick={() => selectedItem && onAdd(selectedItem.id, qty, phase, dur)}
+        >
+          {initialValues ? 'Modifier' : 'Ajouter'}
+        </button>
       </div>
     </div>
   );

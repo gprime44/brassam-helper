@@ -5,6 +5,8 @@
     "error_not_found": "Élément non trouvé",
     "back_to_list": "Retour à la liste",
     "search_placeholder": "Chercher {{category}}...",
+    "search_placeholder_generic": "Rechercher...",
+    "select_item": "Choisir un élément...",
     "no_items_found": "Aucun élément trouvé",
     "other": "Autre"
   },
