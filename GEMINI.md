@@ -1,78 +1,28 @@
-# Brassam Helper - Brewing Management Project
+# Brassam Helper - AI Context & Guidelines
 
-## Project Overview
-Brassam Helper is a web application designed for homebrewers to manage recipes, batches, and inventory. It provides tools for calculating key indicators (IBU, EBC, ABV) and features a step-by-step brewing assistant.
+## 🏗️ Architecture & Domain Isolation
+- **Database:** SQLite is used for persistence. The database file is stored in `data/brassam.db` (mapped to a volume in Docker).
+- **Domain Decoupling:** Every domain (Inventory, Recipe, etc.) must remain strictly isolated. 
+- **Entity Relationships:** Avoid JPA relationships (`@ManyToOne`, `@OneToMany`) across domains and even within a domain aggregate if it increases complexity. Prefer storing simple Foreign Keys (IDs).
+- **DTO Standards:** DTOs must never duplicate data from other domains. A `RecipeDto` contains only references (IDs) to `Inventory` items. Data enrichment (names, technical specs) must be handled by the Service layer for calculations or by the Frontend for display.
+- **Service Validation:** When adding a reference to another domain (e.g., adding a Hop to a Recipe), existence must be verified using the dedicated Service of the target domain.
 
-## Tech Stack
+## 🚀 DevOps & Automation
+- **Build Strategy:** Use the local Python script `scripts/build_and_push.py` for consistent builds. It leverages local Gradle/NPM to bypass corporate SSL proxy issues inside Docker containers.
+- **Docker Images:** 
+  - Backend: `gprime44/helper-backend:latest`
+  - Frontend: `gprime44/helper-frontend:latest`
+- **Push Protocol:** **CRITICAL:** Never execute the push script automatically. Only push to Docker Hub upon explicit user request.
 
-### Backend
-- **Language:** Java 25 (configured via toolchain)
-- **Framework:** Spring Boot 4.0.6
-- **Database:** MariaDB (Default/Production), H2 (Development)
-- **Database Migration:** Liquibase (YAML format)
-- **Dependency Management:** Gradle (Kotlin DSL)
+## 🎨 UI & UX Standards
+- **Responsiveness:** All features (especially complex forms like Recipe edition) must be fully responsive (Mobile First). Use horizontal scrolling for large tables on small screens.
+- **Visual Identity:** Follow the established style:
+  - Modern cards with shadows.
+  - Color-coded badges for stats (ABV, IBU, EBC).
+  - Use of emojis/icons for category identification.
+  - Consistent use of CSS variables defined in `index.css`.
 
-### Frontend
-- **Framework:** React 19 (via Vite)
-- **Language:** TypeScript
-- **Styling:** Vanilla CSS (Prioritizing simplicity and performance)
-
-## Architecture
-The project is structured as a monorepo:
-- `/backend`: Spring Boot application.
-  - **Pattern:** Strict **Package by Feature**. All technical layers (Controller, Service, Repository, Model, DTO, Mapper) are co-located within the feature's package.
-  - **Isolation:** Features communicate exclusively through their **Services**.
-- `/frontend`: React application.
-  - **Pattern:** Component-based architecture (CSS files and tests co-located with components).
-- `/docs`: Technical and functional documentation.
-  - `/docs/features`: Detailed specifications for each feature.
-
-## Key Features
-1. **Recipe Management:** Detailed specs in [RECIPE_MANAGEMENT.md](docs/features/RECIPE_MANAGEMENT.md).
-2. **Brewing Assistant:**
-
-   - Planning and scheduling.
-   - Mashing / Sparging / Boiling phases.
-   - Fermentation / Dry Hopping.
-   - Priming / Bottling.
-3. **Inventory:**
-   - Stock tracking for malts, hops, and yeasts.
-
-## Development Workflow
-
-### Methodology
-The project follows a **TDD (Test Driven Development)** approach. Tests must be implemented in tandem with features. A feature is verified by its tests before being considered "done".
-
-### Starting the Backend
-A custom Gradle task is available to start the backend with a development profile:
-```bash
-# From /backend directory
-./gradlew start
-```
-This command activates the `dev` Spring profile, which uses an in-memory **H2 database** and enables the H2 console at `/h2-console`.
-
-For production or local testing with **MariaDB**, use the standard Spring Boot run task:
-```bash
-./gradlew bootRun
-```
-
-### Configuration
-All configuration files use the **YAML** format:
-- `application.yml`: Main configuration (MariaDB).
-- `application-dev.yml`: Development overrides (H2).
-
-### Database Migrations
-All schema changes must be implemented via Liquibase changelogs located in `backend/src/main/resources/db/changelog/`.
-- `db.changelog-master.yaml`: Entry point for all changelogs.
-- `db.changelog-X.Y.yaml`: Versioned changelog files.
-
-## Conventions and Standards
-- **Units:** Systematic use of the International System of Units (SI) or accepted derived units:
-  - **Volume:** Liters (L).
-  - **Mass:** Kilograms (kg) for grains, Grams (g) for hops and additives.
-  - **Temperature:** Celsius (°C).
-  - **Pressure:** Bar or Pascal (Pa).
-  - **Density:** Specific Gravity (SG - ratio) or Plato (°P).
-- **API:** RESTful with OpenAPI/Swagger documentation.
-- **CSS Style:** Use CSS Variables for theming. No external CSS frameworks unless explicitly requested.
-- **Testing:** JUnit 5 for the backend (see `./backend/GEMINI.md` for standards), Vitest for the frontend.
+## 🧪 Testing Strategy
+- **Testing Trophy:** Follow the Static > Unit > Integration > E2E hierarchy.
+- **E2E Coverage:** Every REST endpoint must be covered by at least one E2E test in the Controller layer.
+- **Calculations:** Sensitive brewing formulas (Tinseth, Morey) must have dedicated unit tests.

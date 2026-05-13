@@ -1,31 +1,13 @@
 services:
-  db:
-    image: mariadb:11
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: brassam_helper
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
-    volumes:
-      - db_data:/var/lib/mysql
-    healthcheck:
-      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-
   backend:
     image: gprime44/helper-backend:latest
     ports:
       - "8080:8080"
+    volumes:
+      - backend_data:/app/data
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mariadb://db:3306/brassam_helper
-      SPRING_DATASOURCE_USERNAME: user
-      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_DATASOURCE_URL: jdbc:sqlite:data/brassam.db
       SPRING_LIQUIBASE_ENABLED: "true"
-    depends_on:
-      db:
-        condition: service_healthy
 
   frontend:
     image: gprime44/helper-frontend:latest
@@ -37,4 +19,4 @@ services:
       - backend
 
 volumes:
-  db_data:
+  backend_data:

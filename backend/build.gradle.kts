@@ -31,7 +31,8 @@ dependencies {
 	implementation("org.mapstruct:mapstruct:1.6.3")
 	annotationProcessor("org.mapstruct:mapstruct-processor:1.6.3")
 	
-	runtimeOnly("org.mariadb.jdbc:mariadb-java-client")
+	implementation("org.xerial:sqlite-jdbc:3.49.1.0")
+	implementation("org.hibernate.orm:hibernate-community-dialects:6.6.1.Final")
 	runtimeOnly("com.h2database:h2")
 	
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
