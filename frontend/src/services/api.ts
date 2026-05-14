@@ -72,6 +72,31 @@ export interface YeastDetail extends Yeast {
   bestFor: string;
 }
 
+export interface Style {
+  id: number;
+  name: string;
+  category: string;
+  styleId: string;
+  ogMin: number;
+  ogMax: number;
+  fgMin: number;
+  fgMax: number;
+  ibuMin: number;
+  ibuMax: number;
+  ebcMin: number;
+  ebcMax: number;
+  abvMin: number;
+  abvMax: number;
+}
+
+export interface StyleDetail extends Style {
+  notes: string;
+  aroma: string;
+  appearance: string;
+  flavor: string;
+  mouthfeel: string;
+}
+
 export interface Page<T> {
   content: T[];
   totalPages: number;
@@ -146,6 +171,7 @@ export interface Recipe {
   fermentables: RecipeFermentable[];
   hops: RecipeHop[];
   yeast?: RecipeYeast;
+  styleId?: number;
 }
 
 export interface RecipeFermentable {
@@ -230,4 +256,14 @@ export const inventoryApi = {
       size: String(size),
     }),
   getYeastById: (id: number) => fetchOneApi<YeastDetail>(`/api/yeasts/${id}`),
+};
+
+export const styleApi = {
+  getStyles: (name?: string, page = 0, size = 20) =>
+    fetchApi<Style>("/api/styles", {
+      ...(name && { name }),
+      page: String(page),
+      size: String(size),
+    }),
+  getStyleById: (id: number) => fetchOneApi<StyleDetail>(`/api/styles/${id}`),
 };

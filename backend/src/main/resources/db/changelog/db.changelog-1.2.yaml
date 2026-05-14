@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: add-detail-columns-v4
+      id: add-detail-columns-inventory
       author: gemini
       changes:
         # Fermentables
@@ -40,7 +40,7 @@ databaseChangeLog:
               - column: {name: best_for, type: text}
 
   - changeSet:
-      id: clean-and-import-data-v4
+      id: reload-enriched-inventory-data
       author: gemini
       context: "prod,dev"
       changes:
@@ -48,11 +48,11 @@ databaseChangeLog:
         - delete: {tableName: hops}
         - delete: {tableName: yeasts}
         - sqlFile:
-            path: db/data/inventory_import.sql
+            path: db/data/inventory_import_v2.sql
             relativeToChangelogFile: false
 
   - changeSet:
-      id: clean-and-import-test-data-v4
+      id: reload-test-inventory-data
       author: gemini
       context: "test"
       changes:

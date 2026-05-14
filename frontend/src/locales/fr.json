@@ -15,8 +15,8 @@
     "tabs": {
       "home": "Accueil",
       "inventory": "Inventaire",
-      "recipes": "Recettes",
-      "settings": "Paramètres"
+      "styles": "Styles",
+      "recipes": "Recettes"
     }
   },
   "recipe": {
@@ -57,11 +57,9 @@
   "inventory": {
     "categories": {
       "fermentables": "Fermentescibles",
-      "hop": "Houblon",
-      "yeast": "Levure",
-      "fermentable": "Fermentescible",
       "hops": "Houblons",
-      "yeasts": "Levures"
+      "yeasts": "Levures",
+      "styles": "Styles"
     },
     "details": {
       "type": "Type",

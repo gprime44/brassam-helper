@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { recipeApi } from '../../services/api';
 import type { Recipe } from '../../services/api';
+import { getEbcColor } from '../../utils/colors';
 import './Recipe.css';
 
 interface RecipeListProps {
@@ -53,7 +54,7 @@ const RecipeList: React.FC<RecipeListProps> = ({ onSelect, onCreate }) => {
               <h3>{recipe.name}</h3>
             </div>
             <div className="recipe-card-body">
-              <div className="stat-badge abv">{recipe.abv?.toFixed(1)}%</div>
+              <div className="stat-badge abv">{recipe.abv?.toFixed(1)}% ABV</div>
               <div className="stat-badge ibu">{recipe.ibu?.toFixed(0)} IBU</div>
               <div className="stat-badge ebc" style={{ backgroundColor: getEbcColor(recipe.ebc) }}>{recipe.ebc?.toFixed(0)} EBC</div>
             </div>
@@ -71,16 +72,6 @@ const RecipeList: React.FC<RecipeListProps> = ({ onSelect, onCreate }) => {
       </div>
     </div>
   );
-};
-
-// Utilitaire pour la couleur EBC (approximative)
-const getEbcColor = (ebc?: number) => {
-  if (!ebc) return '#ccc';
-  if (ebc < 10) return '#F3F999';
-  if (ebc < 20) return '#E5E100';
-  if (ebc < 40) return '#C47200';
-  if (ebc < 60) return '#723400';
-  return '#311000';
 };
 
 export default RecipeList;

@@ -6,6 +6,10 @@
 - **Entity Relationships:** Avoid JPA relationships (`@ManyToOne`, `@OneToMany`) across domains and even within a domain aggregate if it increases complexity. Prefer storing simple Foreign Keys (IDs).
 - **DTO Standards:** DTOs must never duplicate data from other domains. A `RecipeDto` contains only references (IDs) to `Inventory` items. Data enrichment (names, technical specs) must be handled by the Service layer for calculations or by the Frontend for display.
 - **Service Validation:** When adding a reference to another domain (e.g., adding a Hop to a Recipe), existence must be verified using the dedicated Service of the target domain.
+- **Liquibase & Migrations:** 
+  - **IMMUTABILITY:** Existing Liquibase changelogs (e.g., `1.0`, `1.1`) are **READ-ONLY**. Never modify them as it breaks checksums and prevents the application from booting.
+  - **INCREMENTAL CHANGES:** All schema evolutions (new columns, tables, or data reloads) must be done in a **new** changelog file (e.g., `1.3`, `1.4`).
+  - **DATA INTEGRITY:** If source data (CSVs) changes, handle the reload in the latest incremental changelog using `delete` and `sqlFile` or `loadData` to avoid unique constraint violations.
 
 ## 🚀 DevOps & Automation
 - **Git & Push Protocol:** **CRITICAL:** Never `git commit`, `git push`, or push Docker images to the hub without an explicit request from the user. Every external action must be validated by a direct directive.

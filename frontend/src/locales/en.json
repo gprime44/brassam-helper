@@ -15,8 +15,8 @@
     "tabs": {
       "home": "Home",
       "inventory": "Inventory",
-      "recipes": "Recipes",
-      "settings": "Settings"
+      "styles": "Styles",
+      "recipes": "Recipes"
     }
   },
   "recipe": {
@@ -57,11 +57,9 @@
   "inventory": {
     "categories": {
       "fermentables": "Fermentables",
-      "hop": "Hop",
-      "yeast": "Yeast",
-      "fermentable": "Fermentable",
       "hops": "Hops",
-      "yeasts": "Yeast"
+      "yeasts": "Yeast",
+      "styles": "Styles"
     },
     "details": {
       "type": "Type",

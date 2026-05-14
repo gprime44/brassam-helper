@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { 
-  recipeApi, inventoryApi 
+  recipeApi, inventoryApi, styleApi 
 } from '../../services/api';
 import type { 
-  Recipe, RecipeFermentable, RecipeHop 
+  Recipe, RecipeFermentable, RecipeHop, Style 
 } from '../../services/api';
 import RangeGauge from '../../components/RangeGauge/RangeGauge';
 import SearchableSelect from '../../components/SearchableSelect/SearchableSelect';
@@ -19,6 +19,7 @@ const RecipeDetail: React.FC<RecipeDetailProps> = ({ externalId, onBack }) => {
   const { t } = useTranslation();
   const [recipe, setRecipe] = useState<Recipe | null>(null);
   const [loading, setLoading] = useState(true);
+  const [selectedStyle, setSelectedStyle] = useState<Style | null>(null);
 
   const [inventory, setInventory] = useState<{
     fermentables: Record<number, string>;
@@ -34,7 +35,12 @@ const RecipeDetail: React.FC<RecipeDetailProps> = ({ externalId, onBack }) => {
   const [editingHop, setEditingHop] = useState<RecipeHop | null>(null);
 
   useEffect(() => {
-    recipeApi.getRecipe(externalId).then(setRecipe).finally(() => setLoading(false));
+    recipeApi.getRecipe(externalId).then(r => {
+      setRecipe(r);
+      if (r.styleId) {
+        styleApi.getStyleById(r.styleId).then(setSelectedStyle);
+      }
+    }).finally(() => setLoading(false));
     
     inventoryApi.getFermentables('', 0, 1000).then(f => {
       const fMap: Record<number, string> = {};
@@ -53,10 +59,15 @@ const RecipeDetail: React.FC<RecipeDetailProps> = ({ externalId, onBack }) => {
     });
   }, [externalId]);
 
-  const handleUpdateHeader = (field: keyof Recipe, value: string | number) => {
+  const handleUpdateHeader = (field: keyof Recipe, value: any) => {
     if (!recipe) return;
     const updated = { ...recipe, [field]: value };
     recipeApi.updateRecipe(externalId, updated).then(setRecipe);
+  };
+
+  const handleStyleSelect = (style: Style) => {
+    setSelectedStyle(style);
+    handleUpdateHeader('styleId', style.id);
   };
 
   const handleAddFermentable = (fermentableId: number, amount: number) => {
@@ -97,11 +108,11 @@ const RecipeDetail: React.FC<RecipeDetailProps> = ({ externalId, onBack }) => {
       </header>
 
       <div className="recipe-stats-gauges">
-        <RangeGauge label="OG" value={recipe.og || 1.000} min={1.040} max={1.060} decimals={3} />
-        <RangeGauge label="FG" value={recipe.fg || 1.000} min={1.008} max={1.015} decimals={3} />
-        <RangeGauge label="ABV" value={recipe.abv || 0} min={4.5} max={6.5} unit="%" />
-        <RangeGauge label="IBU" value={recipe.ibu || 0} min={20} max={40} decimals={0} />
-        <RangeGauge label="EBC" value={recipe.ebc || 0} min={10} max={30} decimals={0} />
+        <RangeGauge label="OG" value={recipe.og || 1.000} min={selectedStyle?.ogMin || 1.040} max={selectedStyle?.ogMax || 1.060} decimals={3} />
+        <RangeGauge label="FG" value={recipe.fg || 1.000} min={selectedStyle?.fgMin || 1.008} max={selectedStyle?.fgMax || 1.015} decimals={3} />
+        <RangeGauge label="ABV" value={recipe.abv || 0} min={selectedStyle?.abvMin || 4.5} max={selectedStyle?.abvMax || 6.5} unit="%" />
+        <RangeGauge label="IBU" value={recipe.ibu || 0} min={selectedStyle?.ibuMin || 20} max={selectedStyle?.ibuMax || 40} decimals={0} />
+        <RangeGauge label="EBC" value={recipe.ebc || 0} min={selectedStyle?.ebcMin || 10} max={selectedStyle?.ebcMax || 30} decimals={0} />
       </div>
 
       <div className="recipe-sections">
@@ -111,16 +122,28 @@ const RecipeDetail: React.FC<RecipeDetailProps> = ({ externalId, onBack }) => {
             <h3>Paramètres de brassage</h3>
           </header>
           <div className="detail-content">
-            <div className="form-group">
-              <label>{t('recipe.form.name')}</label>
-              <input 
-                className="input-styled"
-                value={recipe.name} 
-                onBlur={(e) => handleUpdateHeader('name', e.target.value)}
-                onChange={(e) => setRecipe({...recipe, name: e.target.value})}
-              />
-            </div>
             <div className="form-row">
+              <div className="form-group">
+                <label>{t('recipe.form.name')}</label>
+                <input 
+                  className="input-styled"
+                  value={recipe.name} 
+                  onBlur={(e) => handleUpdateHeader('name', e.target.value)}
+                  onChange={(e) => setRecipe({...recipe, name: e.target.value})}
+                />
+              </div>
+              <div className="form-group">
+                <SearchableSelect 
+                  label="Style BJCP"
+                  fetchFn={styleApi.getStyles}
+                  initialItem={selectedStyle}
+                  onSelect={handleStyleSelect}
+                  renderItem={(s) => <span>{s.name}</span>}
+                  placeholder="Rechercher un style..."
+                />
+              </div>
+            </div>
+            <div className="form-row" style={{ marginTop: '16px' }}>
               <div className="form-group">
                 <label>{t('recipe.form.batch_volume')}</label>
                 <input 
