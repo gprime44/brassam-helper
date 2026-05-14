@@ -9,13 +9,32 @@ public class BrewingCalculator {
     public record FermentableCalc(Double amount, Double colorEbc, Double yieldPercentage) {}
     public record HopCalc(Double amount, Double alphaAcid, String phase, Integer duration) {}
 
-    public double calculateEbc(List<FermentableCalc> fermentables, double volume) {
-        if (volume <= 0) return 0;
+    /**
+     * Calcule l'EBC final d'une recette en utilisant la formule de Morey.
+     * SRM = 1.4922 * (MCU ^ 0.6859)
+     * MCU = (Poids_lbs * SRM_grain) / Volume_gal
+     */
+    public double calculateEbc(List<FermentableCalc> fermentables, double volumeLiters) {
+        if (volumeLiters <= 0) return 0;
+        
+        // Conversion du volume en Gallons
+        double volumeGallons = volumeLiters * 0.264172;
+        
+        // Calcul du MCU (Malt Color Units)
         double mcu = fermentables.stream()
-                .mapToDouble(f -> f.colorEbc() * (f.amount() / 1000.0))
-                .sum() / volume;
-        double srmMcu = mcu / 1.97;
-        double srm = 1.4922 * Math.pow(srmMcu, 0.6859);
+                .mapToDouble(f -> {
+                    double weightLbs = (f.amount() / 1000.0) * 2.20462;
+                    double srmGrain = f.colorEbc() / 1.97;
+                    return (weightLbs * srmGrain);
+                })
+                .sum() / volumeGallons;
+        
+        if (mcu <= 0) return 0;
+
+        // Formule de Morey (valide jusqu'à ~50 SRM)
+        double srm = 1.4922 * Math.pow(mcu, 0.6859);
+        
+        // Conversion finale en EBC
         return srm * 1.97;
     }
 

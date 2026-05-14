@@ -65,9 +65,7 @@ const RecipeList: React.FC<RecipeListProps> = ({ onSelect, onCreate }) => {
         ))}
         {recipes.length === 0 && (
           <div className="empty-state">
-            <span className="empty-icon">📝</span>
             <p>{t('common.no_items_found')}</p>
-            <button className="secondary-button" onClick={handleCreate}>Créer votre première recette</button>
           </div>
         )}
       </div>
