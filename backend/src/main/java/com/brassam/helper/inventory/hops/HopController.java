@@ -22,7 +22,7 @@ public class HopController {
     }
 
     @GetMapping("/{id}")
-    public HopDto getById(@PathVariable Long id) {
+    public HopDetailDto getById(@PathVariable Long id) {
         return service.findById(id);
     }
 }

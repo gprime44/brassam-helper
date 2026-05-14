@@ -1,0 +1,64 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-detail-columns-v4
+      author: gemini
+      changes:
+        # Fermentables
+        - addColumn:
+            tableName: fermentables
+            columns:
+              - column: {name: producer, type: varchar(255)}
+              - column: {name: origin, type: varchar(255)}
+              - column: {name: notes, type: text}
+              - column: {name: moisture, type: double}
+              - column: {name: diastatic_power, type: double}
+              - column: {name: fan, type: double}
+              - column: {name: beta_glucan, type: double}
+        # Hops
+        - addColumn:
+            tableName: hops
+            columns:
+              - column: {name: beta_acid, type: double}
+              - column: {name: notes, type: text}
+              - column: {name: substitutes, type: text}
+              - column: {name: total_oil, type: double}
+              - column: {name: myrcene, type: double}
+              - column: {name: humulene, type: double}
+              - column: {name: cohumulone, type: double}
+              - column: {name: caryophyllene, type: double}
+              - column: {name: farnesene, type: double}
+        # Yeasts
+        - addColumn:
+            tableName: yeasts
+            columns:
+              - column: {name: producer, type: varchar(255)}
+              - column: {name: product_id, type: varchar(100)}
+              - column: {name: flocculation, type: varchar(50)}
+              - column: {name: temp_min, type: double}
+              - column: {name: temp_max, type: double}
+              - column: {name: notes, type: text}
+              - column: {name: best_for, type: text}
+
+  - changeSet:
+      id: clean-and-import-data-v4
+      author: gemini
+      context: "prod,dev"
+      changes:
+        - delete: {tableName: fermentables}
+        - delete: {tableName: hops}
+        - delete: {tableName: yeasts}
+        - sqlFile:
+            path: db/data/inventory_import.sql
+            relativeToChangelogFile: false
+
+  - changeSet:
+      id: clean-and-import-test-data-v4
+      author: gemini
+      context: "test"
+      changes:
+        - delete: {tableName: fermentables}
+        - delete: {tableName: hops}
+        - delete: {tableName: yeasts}
+        - sqlFile:
+            path: db/data/inventory_test.sql
+            relativeToChangelogFile: false

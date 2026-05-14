@@ -1,0 +1,4 @@
+name,type,color_ebc,yield_percentage,protein,producer,origin,notes,moisture,diastatic_power,fan,beta_glucan
+Pilsner,GRAIN,3.0,80.0,11.5,,,,0,0,0,0
+Maris Otter,GRAIN,6.0,81.0,10.5,,,,0,0,0,0
+Crystal 150,GRAIN,150.0,75.0,12.0,,,,0,0,0,0

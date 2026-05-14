@@ -16,4 +16,14 @@ public class Fermentable {
     private Double colorEbc;
     private Double yieldPercentage;
     private Double protein;
+    
+    // Nouveaux champs pour le détail
+    private String producer;
+    private String origin;
+    @Column(columnDefinition = "TEXT")
+    private String notes;
+    private Double moisture;
+    private Double diastaticPower;
+    private Double fan;
+    private Double betaGlucan;
 }

@@ -21,7 +21,11 @@ public class YeastService {
         return repository.findByNameContainingIgnoreCase(name, pageable).map(mapper::toDto);
     }
 
-    public YeastDto findById(Long id) {
-        return repository.findById(id).map(mapper::toDto).orElseThrow(() -> new RuntimeException("Yeast not found"));
+    public YeastDetailDto findById(Long id) {
+        return repository.findById(id).map(mapper::toDetailDto).orElseThrow(() -> new RuntimeException("Yeast not found"));
+    }
+
+    public Yeast findByIdEntity(Long id) {
+        return repository.findById(id).orElseThrow(() -> new RuntimeException("Yeast not found"));
     }
 }

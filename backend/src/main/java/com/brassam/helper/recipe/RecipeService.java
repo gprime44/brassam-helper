@@ -43,10 +43,10 @@ public class RecipeService {
     @Transactional
     public RecipeDto createRecipeHeader(RecipeDto recipeDto) {
         Recipe recipe = Recipe.builder()
-                .name(recipeDto.getName())
-                .description(recipeDto.getDescription())
-                .batchVolume(recipeDto.getBatchVolume())
-                .efficiency(recipeDto.getEfficiency())
+                .name(recipeDto.name())
+                .description(recipeDto.description())
+                .batchVolume(recipeDto.batchVolume())
+                .efficiency(recipeDto.efficiency())
                 .build();
         
         return enrichAndMap(recipeRepository.save(recipe));
@@ -56,10 +56,10 @@ public class RecipeService {
     public RecipeDto updateRecipeHeader(UUID externalId, RecipeDto dto) {
         Recipe recipe = findEntityByExternalId(externalId);
         
-        recipe.setName(dto.getName());
-        recipe.setDescription(dto.getDescription());
-        recipe.setBatchVolume(dto.getBatchVolume());
-        recipe.setEfficiency(dto.getEfficiency());
+        recipe.setName(dto.name());
+        recipe.setDescription(dto.description());
+        recipe.setBatchVolume(dto.batchVolume());
+        recipe.setEfficiency(dto.efficiency());
         
         return enrichAndMap(recipeRepository.save(recipe));
     }
@@ -70,12 +70,12 @@ public class RecipeService {
         Recipe recipe = findEntityByExternalId(recipeExternalId);
         
         // Validation d'existence dans l'inventaire
-        fermentableService.findById(dto.getFermentableId());
+        fermentableService.findById(dto.fermentableId());
         
         fermentableRepository.save(RecipeFermentable.builder()
                 .recipeId(recipe.getId())
-                .fermentableId(dto.getFermentableId())
-                .amount(dto.getAmount())
+                .fermentableId(dto.fermentableId())
+                .amount(dto.amount())
                 .build());
         return enrichAndMap(recipe);
     }
@@ -86,7 +86,7 @@ public class RecipeService {
         RecipeFermentable fermentable = fermentableRepository.findById(ingredientId)
                 .orElseThrow(() -> new RuntimeException("Ingredient not found"));
         
-        fermentable.setAmount(dto.getAmount());
+        fermentable.setAmount(dto.amount());
         fermentableRepository.save(fermentable);
         
         return enrichAndMap(recipe);
@@ -105,14 +105,14 @@ public class RecipeService {
         Recipe recipe = findEntityByExternalId(recipeExternalId);
         
         // Validation d'existence dans l'inventaire
-        hopService.findById(dto.getHopId());
+        hopService.findById(dto.hopId());
         
         hopRepository.save(RecipeHop.builder()
                 .recipeId(recipe.getId())
-                .hopId(dto.getHopId())
-                .amount(dto.getAmount())
-                .phase(RecipeHop.HopPhase.valueOf(dto.getPhase()))
-                .duration(dto.getDuration())
+                .hopId(dto.hopId())
+                .amount(dto.amount())
+                .phase(RecipeHop.HopPhase.valueOf(dto.phase()))
+                .duration(dto.duration())
                 .build());
         return enrichAndMap(recipe);
     }
@@ -123,9 +123,9 @@ public class RecipeService {
         RecipeHop hop = hopRepository.findById(ingredientId)
                 .orElseThrow(() -> new RuntimeException("Ingredient not found"));
         
-        hop.setAmount(dto.getAmount());
-        hop.setPhase(RecipeHop.HopPhase.valueOf(dto.getPhase()));
-        hop.setDuration(dto.getDuration());
+        hop.setAmount(dto.amount());
+        hop.setPhase(RecipeHop.HopPhase.valueOf(dto.phase()));
+        hop.setDuration(dto.duration());
         hopRepository.save(hop);
         
         return enrichAndMap(recipe);
@@ -143,18 +143,16 @@ public class RecipeService {
     public RecipeDto updateYeast(UUID recipeExternalId, RecipeDto.RecipeYeastDto dto) {
         Recipe recipe = findEntityByExternalId(recipeExternalId);
         
-        // On supprime et on flush pour être sûr que la contrainte d'unicité ne bloque pas l'insertion suivante
         yeastRepository.deleteByRecipeId(recipe.getId());
         yeastRepository.flush();
         
         if (dto != null) {
-            // Validation d'existence dans l'inventaire
-            yeastService.findById(dto.getYeastId());
+            yeastService.findById(dto.yeastId());
             
             yeastRepository.save(RecipeYeast.builder()
                     .recipeId(recipe.getId())
-                    .yeastId(dto.getYeastId())
-                    .amount(dto.getAmount())
+                    .yeastId(dto.yeastId())
+                    .amount(dto.amount())
                     .build());
         }
         return enrichAndMap(recipe);
@@ -166,53 +164,53 @@ public class RecipeService {
     }
 
     private RecipeDto enrichAndMap(Recipe recipe) {
-        RecipeDto dto = RecipeDto.builder()
-                .externalId(recipe.getExternalId())
-                .name(recipe.getName())
-                .description(recipe.getDescription())
-                .batchVolume(recipe.getBatchVolume())
-                .efficiency(recipe.getEfficiency())
-                .build();
-        
         List<RecipeFermentable> fermentables = fermentableRepository.findAllByRecipeId(recipe.getId());
         List<RecipeHop> hops = hopRepository.findAllByRecipeId(recipe.getId());
         RecipeYeast yeast = yeastRepository.findByRecipeId(recipe.getId()).orElse(null);
 
-        dto.setFermentables(fermentables.stream()
+        List<RecipeDto.RecipeFermentableDto> fermentableDtos = fermentables.stream()
                 .map(f -> new RecipeDto.RecipeFermentableDto(f.getId(), f.getFermentableId(), f.getAmount()))
-                .collect(Collectors.toList()));
+                .collect(Collectors.toList());
         
-        dto.setHops(hops.stream()
+        List<RecipeDto.RecipeHopDto> hopDtos = hops.stream()
                 .map(h -> new RecipeDto.RecipeHopDto(h.getId(), h.getHopId(), h.getAmount(), h.getPhase().name(), h.getDuration()))
-                .collect(Collectors.toList()));
+                .collect(Collectors.toList());
         
-        if (yeast != null) {
-            dto.setYeast(new RecipeDto.RecipeYeastDto(yeast.getYeastId(), yeast.getAmount()));
-        }
+        RecipeDto.RecipeYeastDto yeastDto = yeast != null ? new RecipeDto.RecipeYeastDto(yeast.getYeastId(), yeast.getAmount()) : null;
 
         // Moteur de calcul
         List<BrewingCalculator.FermentableCalc> fermentableCalcs = fermentables.stream().map(f -> {
             var inv = fermentableService.findById(f.getFermentableId());
-            return new BrewingCalculator.FermentableCalc(f.getAmount(), inv.getColorEbc(), inv.getYieldPercentage());
+            return new BrewingCalculator.FermentableCalc(f.getAmount(), inv.colorEbc(), inv.yieldPercentage());
         }).collect(Collectors.toList());
 
         List<BrewingCalculator.HopCalc> hopCalcs = hops.stream().map(h -> {
             var inv = hopService.findById(h.getHopId());
-            return new BrewingCalculator.HopCalc(h.getAmount(), inv.getAlphaAcid(), h.getPhase().name(), h.getDuration());
+            return new BrewingCalculator.HopCalc(h.getAmount(), inv.alphaAcid(), h.getPhase().name(), h.getDuration());
         }).collect(Collectors.toList());
 
         Double attenuation = 75.0;
         if (yeast != null) {
             var inv = yeastService.findById(yeast.getYeastId());
-            attenuation = inv.getAttenuationMax();
+            attenuation = inv.attenuationMax();
         }
 
-        dto.setOg(brewingCalculator.calculateOg(fermentableCalcs, dto.getBatchVolume(), dto.getEfficiency()));
-        dto.setFg(brewingCalculator.calculateFg(dto.getOg(), attenuation));
-        dto.setAbv((dto.getOg() - dto.getFg()) * 131.25);
-        dto.setIbu(brewingCalculator.calculateIbu(hopCalcs, dto.getOg(), dto.getBatchVolume()));
-        dto.setEbc(brewingCalculator.calculateEbc(fermentableCalcs, dto.getBatchVolume()));
+        Double og = brewingCalculator.calculateOg(fermentableCalcs, recipe.getBatchVolume(), recipe.getEfficiency());
+        Double fg = brewingCalculator.calculateFg(og, attenuation);
+        Double abv = (og - fg) * 131.25;
+        Double ibu = brewingCalculator.calculateIbu(hopCalcs, og, recipe.getBatchVolume());
+        Double ebc = brewingCalculator.calculateEbc(fermentableCalcs, recipe.getBatchVolume());
 
-        return dto;
+        return new RecipeDto(
+            recipe.getExternalId(),
+            recipe.getName(),
+            recipe.getDescription(),
+            recipe.getBatchVolume(),
+            recipe.getEfficiency(),
+            og, fg, abv, ibu, ebc,
+            fermentableDtos,
+            hopDtos,
+            yeastDto
+        );
     }
 }

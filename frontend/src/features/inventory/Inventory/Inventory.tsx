@@ -6,10 +6,10 @@ import Yeasts from '../Yeasts/Yeasts';
 import InventoryDetail from '../InventoryDetail/InventoryDetail';
 import './Inventory.css';
 
-type Category = 'fermentables' | 'hops' | 'yeasts';
+type Category = 'fermentable' | 'hop' | 'yeast';
 
 const Inventory: React.FC = () => {
-  const [category, setCategory] = useState<Category>('fermentables');
+  const [category, setCategory] = useState<Category>('fermentable');
   const [selectedItemId, setSelectedItemId] = useState<number | null>(null);
   const { t } = useTranslation();
 
@@ -27,29 +27,29 @@ const Inventory: React.FC = () => {
     <div className="inventory-screen">
       <div className="category-tabs">
         <button 
-          className={category === 'fermentables' ? 'active' : ''} 
-          onClick={() => setCategory('fermentables')}
+          className={category === 'fermentable' ? 'active' : ''} 
+          onClick={() => setCategory('fermentable')}
         >
           {t('inventory.categories.fermentables')}
         </button>
         <button 
-          className={category === 'hops' ? 'active' : ''} 
-          onClick={() => setCategory('hops')}
+          className={category === 'hop' ? 'active' : ''} 
+          onClick={() => setCategory('hop')}
         >
           {t('inventory.categories.hops')}
         </button>
         <button 
-          className={category === 'yeasts' ? 'active' : ''} 
-          onClick={() => setCategory('yeasts')}
+          className={category === 'yeast' ? 'active' : ''} 
+          onClick={() => setCategory('yeast')}
         >
           {t('inventory.categories.yeasts')}
         </button>
       </div>
 
       <div className="category-content">
-        {category === 'fermentables' && <Fermentables onSelectItem={setSelectedItemId} />}
-        {category === 'hops' && <Hops onSelectItem={setSelectedItemId} />}
-        {category === 'yeasts' && <Yeasts onSelectItem={setSelectedItemId} />}
+        {category === 'fermentable' && <Fermentables onSelectItem={setSelectedItemId} />}
+        {category === 'hop' && <Hops onSelectItem={setSelectedItemId} />}
+        {category === 'yeast' && <Yeasts onSelectItem={setSelectedItemId} />}
       </div>
     </div>
   );

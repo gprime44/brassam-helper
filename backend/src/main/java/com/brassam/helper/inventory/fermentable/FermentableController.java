@@ -22,7 +22,7 @@ public class FermentableController {
     }
 
     @GetMapping("/{id}")
-    public FermentableDto getById(@PathVariable Long id) {
+    public FermentableDetailDto getById(@PathVariable Long id) {
         return service.findById(id);
     }
 }

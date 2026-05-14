@@ -22,7 +22,7 @@ public class YeastController {
     }
 
     @GetMapping("/{id}")
-    public YeastDto getById(@PathVariable Long id) {
+    public YeastDetailDto getById(@PathVariable Long id) {
         return service.findById(id);
     }
 }

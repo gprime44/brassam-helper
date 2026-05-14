@@ -16,4 +16,14 @@ public class Yeast {
     @Enumerated(EnumType.STRING)
     private YeastType type;
     private Double alcoholTolerance;
+
+    // Nouveaux champs pour le détail
+    private String producer;
+    private String productId;
+    private String flocculation;
+    private Double tempMin;
+    private Double tempMax;
+    @Column(columnDefinition = "TEXT")
+    private String notes;
+    private String bestFor;
 }

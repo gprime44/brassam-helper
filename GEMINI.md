@@ -27,7 +27,12 @@
   - `.btn.btn-sm`: Compact version for list items.
   - Avoid inline styles for button appearance.
 
-## 🧪 Testing Strategy
+## 🧪 Testing Strategy & TDD
+- **TDD is MANDATORY:** Every development or bug fix must follow the Test Driven Development cycle:
+  1. **Research & Reproduction:** Understand the need or reproduce the bug.
+  2. **Test Failure:** Write a new test case (E2E or Unit) that fails.
+  3. **Implementation:** Write the minimum code necessary to make the test pass.
+  4. **Validation:** Ensure all tests pass.
 - **Testing Trophy:** Follow the Static > Unit > Integration > E2E hierarchy.
 - **E2E Coverage:** Every REST endpoint must be covered by at least one E2E test in the Controller layer.
 - **Calculations:** Sensitive brewing formulas (Tinseth, Morey) must have dedicated unit tests.

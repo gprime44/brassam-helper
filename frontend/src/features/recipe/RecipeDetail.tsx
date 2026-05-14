@@ -4,7 +4,7 @@ import {
   recipeApi, inventoryApi 
 } from '../../services/api';
 import type { 
-  Recipe, Fermentable, Hop, Yeast, RecipeFermentable, RecipeHop 
+  Recipe, RecipeFermentable, RecipeHop 
 } from '../../services/api';
 import RangeGauge from '../../components/RangeGauge/RangeGauge';
 import SearchableSelect from '../../components/SearchableSelect/SearchableSelect';

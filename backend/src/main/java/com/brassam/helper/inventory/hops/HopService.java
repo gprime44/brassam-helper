@@ -21,7 +21,11 @@ public class HopService {
         return repository.findByNameContainingIgnoreCase(name, pageable).map(mapper::toDto);
     }
 
-    public HopDto findById(Long id) {
-        return repository.findById(id).map(mapper::toDto).orElseThrow(() -> new RuntimeException("Hop not found"));
+    public HopDetailDto findById(Long id) {
+        return repository.findById(id).map(mapper::toDetailDto).orElseThrow(() -> new RuntimeException("Hop not found"));
+    }
+
+    public Hop findByIdEntity(Long id) {
+        return repository.findById(id).orElseThrow(() -> new RuntimeException("Hop not found"));
     }
 }

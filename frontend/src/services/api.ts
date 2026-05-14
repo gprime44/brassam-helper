@@ -15,11 +15,33 @@ export interface Fermentable {
   protein: number;
 }
 
+export interface FermentableDetail extends Fermentable {
+  producer: string;
+  origin: string;
+  notes: string;
+  moisture: number;
+  diastaticPower: number;
+  fan: number;
+  betaGlucan: number;
+}
+
 export interface Hop {
   id: number;
   name: string;
   alphaAcid: number;
   origin: string;
+}
+
+export interface HopDetail extends Hop {
+  betaAcid: number;
+  notes: string;
+  substitutes: string;
+  totalOil: number;
+  myrcene: number;
+  humulene: number;
+  cohumulone: number;
+  caryophyllene: number;
+  farnesene: number;
 }
 
 export type YeastType =
@@ -38,6 +60,16 @@ export interface Yeast {
   attenuationMax: number;
   type: YeastType;
   alcoholTolerance: number;
+}
+
+export interface YeastDetail extends Yeast {
+  producer: string;
+  productId: string;
+  flocculation: string;
+  tempMin: number;
+  tempMax: number;
+  notes: string;
+  bestFor: string;
 }
 
 export interface Page<T> {
@@ -183,19 +215,19 @@ export const inventoryApi = {
       size: String(size),
     }),
   getFermentableById: (id: number) =>
-    fetchOneApi<Fermentable>(`/api/fermentables/${id}`),
+    fetchOneApi<FermentableDetail>(`/api/fermentables/${id}`),
   getHops: (name?: string, page = 0, size = 20) =>
     fetchApi<Hop>("/api/hops", {
       ...(name && { name }),
       page: String(page),
       size: String(size),
     }),
-  getHopById: (id: number) => fetchOneApi<Hop>(`/api/hops/${id}`),
+  getHopById: (id: number) => fetchOneApi<HopDetail>(`/api/hops/${id}`),
   getYeasts: (name?: string, page = 0, size = 20) =>
     fetchApi<Yeast>("/api/yeasts", {
       ...(name && { name }),
       page: String(page),
       size: String(size),
     }),
-  getYeastById: (id: number) => fetchOneApi<Yeast>(`/api/yeasts/${id}`),
+  getYeastById: (id: number) => fetchOneApi<YeastDetail>(`/api/yeasts/${id}`),
 };

@@ -5,5 +5,5 @@ import org.mapstruct.Mapper;
 @Mapper(componentModel = "spring")
 public interface FermentableMapper {
     FermentableDto toDto(Fermentable entity);
-    Fermentable toEntity(FermentableDto dto);
+    FermentableDetailDto toDetailDto(Fermentable entity);
 }

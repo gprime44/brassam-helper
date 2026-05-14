@@ -21,7 +21,11 @@ public class FermentableService {
         return repository.findByNameContainingIgnoreCase(name, pageable).map(mapper::toDto);
     }
 
-    public FermentableDto findById(Long id) {
-        return repository.findById(id).map(mapper::toDto).orElseThrow(() -> new RuntimeException("Fermentable not found"));
+    public FermentableDetailDto findById(Long id) {
+        return repository.findById(id).map(mapper::toDetailDto).orElseThrow(() -> new RuntimeException("Fermentable not found"));
+    }
+
+    public Fermentable findByIdEntity(Long id) {
+        return repository.findById(id).orElseThrow(() -> new RuntimeException("Fermentable not found"));
     }
 }
