@@ -8,6 +8,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: "autoUpdate",
+      injectRegister: "auto",
       includeAssets: ["favicon.svg", "icons.svg", "robots.txt", "apple-touch-icon.png"],
       manifest: {
         name: "Brassam Helper",
@@ -16,8 +17,10 @@ export default defineConfig({
         theme_color: "#aa3bff",
         background_color: "#ffffff",
         display: "standalone",
+        orientation: "portrait",
         start_url: "/",
         scope: "/",
+        id: "/",
         icons: [
           {
             src: "favicon.svg",
