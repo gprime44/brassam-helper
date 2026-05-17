@@ -1,26 +1,34 @@
 package com.brassam.helper.config;
 
-import org.springframework.beans.factory.annotation.Value;
+import jakarta.annotation.PostConstruct;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import java.util.List;
-
+@Slf4j
 @Configuration
+@RequiredArgsConstructor
 public class WebConfig implements WebMvcConfigurer {
 
-    @Value("${app.security.allowed-origins:}")
-    private List<String> allowedOrigins;
+    private final SecurityProperties securityProperties;
+
+    @PostConstruct
+    public void init() {
+        log.info("CORS allowed origins: {}", securityProperties.getAllowedOrigins());
+    }
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        if (allowedOrigins != null && !allowedOrigins.isEmpty()) {
+        if (securityProperties.getAllowedOrigins() != null && !securityProperties.getAllowedOrigins().isEmpty()) {
             registry.addMapping("/**")
-                    .allowedOrigins(allowedOrigins.toArray(new String[0]))
+                    .allowedOrigins(securityProperties.getAllowedOrigins().toArray(new String[0]))
                     .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                     .allowedHeaders("*")
                     .allowCredentials(true);
+        } else {
+            log.warn("CORS allowed origins list is empty! No CORS mapping added.");
         }
     }
 }
