@@ -8,7 +8,7 @@ RUN addgroup -S spring && adduser -S spring -G spring \
 USER spring:spring
 
 # On s'attend à ce que le JAR soit déjà présent dans build/libs/
-COPY build/libs/helper-0.0.1-SNAPSHOT.jar app.jar
+COPY build/libs/helper-*.jar app.jar
 
 EXPOSE 8080
 VOLUME /app/data

@@ -47,14 +47,21 @@
   "dashboard": {
     "welcome_title": "Welcome, {{name}} !",
     "welcome_text": "Your brewing companion for inventory management and recipe creation.",
-    "quick_action": "Quick action test:",
-    "session_count": "Session count is {{count}}",
+    "no_recipes": "You don't have any recipes yet.",
+    "actions": {
+      "new_recipe": "New Recipe",
+      "explore_styles": "Explore Styles",
+      "view_inventory": "View Full Inventory"
+    },
+    "sections": {
+      "inventory": "Library Overview",
+      "recent_recipes": "Recent Recipes"
+    },
     "stats": {
       "hops": "Hops",
       "fermentables": "Fermentables",
       "yeasts": "Yeasts"
-    },
-    "recent_recipes": "Recent Recipes"
+    }
   },
   "inventory": {
     "categories": {

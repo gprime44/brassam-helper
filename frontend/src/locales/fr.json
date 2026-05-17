@@ -47,14 +47,21 @@
   "dashboard": {
     "welcome_title": "Bienvenue, {{name}} !",
     "welcome_text": "Votre compagnon de brassage pour la gestion d'inventaire et la création de recettes.",
-    "quick_action": "Test d'action rapide :",
-    "session_count": "Le compteur de session est à {{count}}",
+    "no_recipes": "Vous n'avez pas encore de recette.",
+    "actions": {
+      "new_recipe": "Nouvelle Recette",
+      "explore_styles": "Explorer les Styles",
+      "view_inventory": "Voir tout l'inventaire"
+    },
+    "sections": {
+      "inventory": "Aperçu de la Bibliothèque",
+      "recent_recipes": "Dernières Recettes"
+    },
     "stats": {
       "hops": "Houblons",
       "fermentables": "Fermentescibles",
       "yeasts": "Levures"
-    },
-    "recent_recipes": "Recettes Récentes"
+    }
   },
   "inventory": {
     "categories": {

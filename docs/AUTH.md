@@ -28,6 +28,7 @@ L'application utilise une authentification basée sur les **JSON Web Tokens (JWT
 - **LoginView :** Formulaire d'authentification (email/password).
 - **SignupView :** Formulaire de création de compte (username/email/password).
 - **AuthProvider :** Context React pour gérer l'état `user`, le `token` et la persistance locale (localStorage).
+- **UserMenu (Header) :** Menu déroulant affichant le profil, le sélecteur de langue et l'action de déconnexion.
 
 ### Flux d'authentification
 1. L'utilisateur se connecte via `/login`.
