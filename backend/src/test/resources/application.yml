@@ -21,3 +21,6 @@ app:
   security:
     allowed-origins:
       - http://localhost:8080
+    jwt:
+      secret: cle_secrete_de_test_au_moins_32_caracteres_longue
+      expiration: 3600000

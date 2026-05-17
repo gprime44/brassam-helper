@@ -1,5 +1,6 @@
 package com.brassam.helper.inventory.fermentable;
 
+import com.brassam.helper.exception.EntityNotFoundException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -22,10 +23,10 @@ public class FermentableService {
     }
 
     public FermentableDetailDto findById(Long id) {
-        return repository.findById(id).map(mapper::toDetailDto).orElseThrow(() -> new RuntimeException("Fermentable not found"));
+        return repository.findById(id).map(mapper::toDetailDto).orElseThrow(() -> new EntityNotFoundException("Fermentable", id));
     }
 
     public Fermentable findByIdEntity(Long id) {
-        return repository.findById(id).orElseThrow(() -> new RuntimeException("Fermentable not found"));
+        return repository.findById(id).orElseThrow(() -> new EntityNotFoundException("Fermentable", id));
     }
 }

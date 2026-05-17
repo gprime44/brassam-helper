@@ -1,0 +1,124 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-schema-init
+      author: gemini
+      changes:
+        - createTable:
+            tableName: brassam_users
+            columns:
+              - column: {name: id, type: integer, autoIncrement: true, constraints: {primaryKey: true, nullable: false}}
+              - column: {name: external_id, type: varchar(36), constraints: {unique: true, nullable: false}}
+              - column: {name: username, type: varchar(100), constraints: {unique: true, nullable: false}}
+              - column: {name: email, type: varchar(255), constraints: {unique: true, nullable: false}}
+              - column: {name: password, type: varchar(255), constraints: {nullable: false}}
+
+        - createTable:
+            tableName: fermentables
+            columns:
+              - column: {name: id, type: integer, autoIncrement: true, constraints: {primaryKey: true, nullable: false}}
+              - column: {name: name, type: varchar(255), constraints: {nullable: false}}
+              - column: {name: type, type: varchar(50)}
+              - column: {name: color_ebc, type: double}
+              - column: {name: yield_percentage, type: double}
+              - column: {name: protein, type: double}
+              - column: {name: producer, type: varchar(255)}
+              - column: {name: origin, type: varchar(255)}
+              - column: {name: notes, type: text}
+              - column: {name: moisture, type: double}
+              - column: {name: diastatic_power, type: double}
+              - column: {name: fan, type: double}
+              - column: {name: beta_glucan, type: double}
+
+        - createTable:
+            tableName: hops
+            columns:
+              - column: {name: id, type: integer, autoIncrement: true, constraints: {primaryKey: true, nullable: false}}
+              - column: {name: name, type: varchar(255), constraints: {nullable: false}}
+              - column: {name: alpha_acid, type: double}
+              - column: {name: origin, type: varchar(100)}
+              - column: {name: beta_acid, type: double}
+              - column: {name: notes, type: text}
+              - column: {name: substitutes, type: text}
+              - column: {name: total_oil, type: double}
+              - column: {name: myrcene, type: double}
+              - column: {name: humulene, type: double}
+              - column: {name: cohumulone, type: double}
+              - column: {name: caryophyllene, type: double}
+              - column: {name: farnesene, type: double}
+
+        - createTable:
+            tableName: yeasts
+            columns:
+              - column: {name: id, type: integer, autoIncrement: true, constraints: {primaryKey: true, nullable: false}}
+              - column: {name: name, type: varchar(255), constraints: {nullable: false}}
+              - column: {name: attenuation_min, type: double}
+              - column: {name: attenuation_max, type: double}
+              - column: {name: type, type: varchar(50)}
+              - column: {name: alcohol_tolerance, type: double}
+              - column: {name: producer, type: varchar(255)}
+              - column: {name: product_id, type: varchar(100)}
+              - column: {name: flocculation, type: varchar(50)}
+              - column: {name: temp_min, type: double}
+              - column: {name: temp_max, type: double}
+              - column: {name: notes, type: text}
+              - column: {name: best_for, type: text}
+
+        - createTable:
+            tableName: styles
+            columns:
+              - column: {name: id, type: integer, autoIncrement: true, constraints: {primaryKey: true, nullable: false}}
+              - column: {name: name, type: varchar(255), constraints: {nullable: false}}
+              - column: {name: category, type: varchar(255)}
+              - column: {name: style_id, type: varchar(50)}
+              - column: {name: og_min, type: double}
+              - column: {name: og_max, type: double}
+              - column: {name: fg_min, type: double}
+              - column: {name: fg_max, type: double}
+              - column: {name: ibu_min, type: double}
+              - column: {name: ibu_max, type: double}
+              - column: {name: ebc_min, type: double}
+              - column: {name: ebc_max, type: double}
+              - column: {name: abv_min, type: double}
+              - column: {name: abv_max, type: double}
+              - column: {name: notes, type: text}
+              - column: {name: aroma, type: text}
+              - column: {name: appearance, type: text}
+              - column: {name: flavor, type: text}
+              - column: {name: mouthfeel, type: text}
+
+        - createTable:
+            tableName: recipes
+            columns:
+              - column: {name: id, type: integer, autoIncrement: true, constraints: {primaryKey: true, nullable: false}}
+              - column: {name: external_id, type: uuid, constraints: {nullable: false, unique: true}}
+              - column: {name: name, type: varchar(255), constraints: {nullable: false}}
+              - column: {name: description, type: text}
+              - column: {name: batch_volume, type: double}
+              - column: {name: efficiency, type: double}
+              - column: {name: user_id, type: integer, constraints: {foreignKeyName: fk_recipe_user, referencedTableName: brassam_users, referencedColumnNames: id}}
+
+        - createTable:
+            tableName: recipe_fermentables
+            columns:
+              - column: {name: id, type: integer, autoIncrement: true, constraints: {primaryKey: true, nullable: false}}
+              - column: {name: recipe_id, type: integer, constraints: {nullable: false, foreignKeyName: fk_rf_recipe, referencedTableName: recipes, referencedColumnNames: id}}
+              - column: {name: fermentable_id, type: integer, constraints: {nullable: false}}
+              - column: {name: amount, type: double}
+
+        - createTable:
+            tableName: recipe_hops
+            columns:
+              - column: {name: id, type: integer, autoIncrement: true, constraints: {primaryKey: true, nullable: false}}
+              - column: {name: recipe_id, type: integer, constraints: {nullable: false, foreignKeyName: fk_rh_recipe, referencedTableName: recipes, referencedColumnNames: id}}
+              - column: {name: hop_id, type: integer, constraints: {nullable: false}}
+              - column: {name: amount, type: double}
+              - column: {name: phase, type: varchar(50)}
+              - column: {name: duration, type: integer}
+
+        - createTable:
+            tableName: recipe_yeasts
+            columns:
+              - column: {name: id, type: integer, autoIncrement: true, constraints: {primaryKey: true, nullable: false}}
+              - column: {name: recipe_id, type: integer, constraints: {nullable: false, foreignKeyName: fk_ry_recipe, referencedTableName: recipes, referencedColumnNames: id, unique: true}}
+              - column: {name: yeast_id, type: integer, constraints: {nullable: false}}
+              - column: {name: amount, type: double}

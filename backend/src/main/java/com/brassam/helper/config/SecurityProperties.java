@@ -12,4 +12,11 @@ import java.util.List;
 @ConfigurationProperties(prefix = "app.security")
 public class SecurityProperties {
     private List<String> allowedOrigins = new ArrayList<>();
+    private Jwt jwt = new Jwt();
+
+    @Data
+    public static class Jwt {
+        private String secret;
+        private long expiration;
+    }
 }

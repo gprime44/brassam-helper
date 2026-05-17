@@ -125,6 +125,8 @@ const getApiBaseUrl = () => {
 
 const API_BASE_URL = getApiBaseUrl();
 
+const getAuthToken = () => localStorage.getItem('token');
+
 const fetchApi = async <T>(
   endpoint: string,
   params?: Record<string, string>,
@@ -135,7 +137,20 @@ const fetchApi = async <T>(
       url.searchParams.append(key, params[key]),
     );
   }
-  const response = await fetch(url.toString());
+  
+  const token = getAuthToken();
+  const response = await fetch(url.toString(), {
+    headers: {
+      ...(token && { 'Authorization': `Bearer ${token}` }),
+    }
+  });
+  
+  if (response.status === 401) {
+    localStorage.removeItem('token');
+    window.location.href = '/login';
+    throw new Error('Unauthorized');
+  }
+  
   if (!response.ok) {
     throw new Error(`API error: ${response.statusText}`);
   }
@@ -144,17 +159,44 @@ const fetchApi = async <T>(
 
 const fetchOneApi = async <T>(endpoint: string, options?: RequestInit): Promise<T> => {
   const url = new URL(endpoint, API_BASE_URL);
+  const token = getAuthToken();
+  
   const response = await fetch(url.toString(), {
     ...options,
     headers: {
       'Content-Type': 'application/json',
+      ...(token && { 'Authorization': `Bearer ${token}` }),
       ...options?.headers,
     },
   });
+
+  if (response.status === 401) {
+    localStorage.removeItem('token');
+    window.location.href = '/login';
+    throw new Error('Unauthorized');
+  }
+
   if (!response.ok) {
     throw new Error(`API error: ${response.statusText}`);
   }
   return response.json();
+};
+
+export interface AuthResponse {
+  token: string;
+  username: string;
+  email: string;
+}
+
+export const authApi = {
+  signup: (data: any) => fetchOneApi<AuthResponse>("/api/auth/signup", {
+    method: 'POST',
+    body: JSON.stringify(data),
+  }),
+  login: (data: any) => fetchOneApi<AuthResponse>("/api/auth/login", {
+    method: 'POST',
+    body: JSON.stringify(data),
+  }),
 };
 
 export interface Recipe {
@@ -195,13 +237,7 @@ export interface RecipeYeast {
 }
 
 export const recipeApi = {
-  getRecipes: () => {
-    const url = new URL("/api/recipes", API_BASE_URL);
-    return fetch(url.toString()).then(res => {
-      if (!res.ok) throw new Error(res.statusText);
-      return res.json() as Promise<Recipe[]>;
-    });
-  },
+  getRecipes: () => fetchOneApi<Recipe[]>("/api/recipes"),
   getRecipe: (externalId: string) => fetchOneApi<Recipe>(`/api/recipes/${externalId}`),
   createRecipe: async (recipe: Partial<Recipe>): Promise<Recipe> => {
     return fetchOneApi<Recipe>("/api/recipes", {

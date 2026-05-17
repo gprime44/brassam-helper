@@ -1,8 +1,3 @@
-# --- Étape finale (Utilise le JAR buildé localement via ./gradlew build) ---
-# Note: Le build multi-étape est désactivé ici car le proxy SSL Nickel bloque le téléchargement de Gradle 
-# dans le container sans configuration complexe du CA. 
-# Utiliser le script ./scripts/build-and-push.ps1 pour un build fiable.
-
 FROM eclipse-temurin:25-jre-alpine
 WORKDIR /app
 

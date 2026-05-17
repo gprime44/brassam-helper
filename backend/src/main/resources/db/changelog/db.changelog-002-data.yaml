@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002-data-import
+      author: gemini
+      changes:
+        - sqlFile:
+            path: db/data/inventory_import_v2.sql
+            relativeToChangelogFile: false
+        - sqlFile:
+            path: db/data/styles_import.sql
+            relativeToChangelogFile: false

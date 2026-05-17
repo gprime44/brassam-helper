@@ -1,9 +1,14 @@
 package com.brassam.helper.recipe;
 
+import com.brassam.helper.auth.User;
+import com.brassam.helper.auth.UserRepository;
+import com.brassam.helper.exception.EntityNotFoundException;
+import com.brassam.helper.exception.UnauthorizedException;
 import com.brassam.helper.inventory.fermentable.FermentableService;
 import com.brassam.helper.inventory.hops.HopService;
 import com.brassam.helper.inventory.yeast.YeastService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,27 +31,33 @@ public class RecipeService {
     private final HopService hopService;
     private final YeastService yeastService;
 
+    private final UserRepository userRepository;
+
     @Transactional(readOnly = true)
     public List<RecipeDto> getAllRecipes() {
-        return recipeRepository.findAll().stream()
+        User user = getCurrentUser();
+        return recipeRepository.findAllByUserId(user.getId()).stream()
                 .map(this::enrichAndMap)
                 .collect(Collectors.toList());
     }
 
     @Transactional(readOnly = true)
     public RecipeDto getRecipeByExternalId(UUID externalId) {
-        return recipeRepository.findByExternalId(externalId)
+        User user = getCurrentUser();
+        return recipeRepository.findByExternalIdAndUserId(externalId, user.getId())
                 .map(this::enrichAndMap)
-                .orElseThrow(() -> new RuntimeException("Recipe not found"));
+                .orElseThrow(() -> new EntityNotFoundException("Recipe", externalId));
     }
 
     @Transactional
     public RecipeDto createRecipeHeader(RecipeDto recipeDto) {
+        User user = getCurrentUser();
         Recipe recipe = Recipe.builder()
                 .name(recipeDto.name())
                 .description(recipeDto.description())
                 .batchVolume(recipeDto.batchVolume())
                 .efficiency(recipeDto.efficiency())
+                .userId(user.getId())
                 .build();
         
         return enrichAndMap(recipeRepository.save(recipe));
@@ -69,7 +80,6 @@ public class RecipeService {
     public RecipeDto addFermentable(UUID recipeExternalId, RecipeDto.RecipeFermentableDto dto) {
         Recipe recipe = findEntityByExternalId(recipeExternalId);
         
-        // Validation d'existence dans l'inventaire
         fermentableService.findById(dto.fermentableId());
         
         fermentableRepository.save(RecipeFermentable.builder()
@@ -82,10 +92,15 @@ public class RecipeService {
 
     @Transactional
     public RecipeDto updateFermentable(UUID recipeExternalId, Long ingredientId, RecipeDto.RecipeFermentableDto dto) {
-        Recipe recipe = findEntityByExternalId(recipeExternalId);
+        Recipe recipe = findEntityByExternalId(recipeExternalId); // Validation de propriété incluse
         RecipeFermentable fermentable = fermentableRepository.findById(ingredientId)
-                .orElseThrow(() -> new RuntimeException("Ingredient not found"));
+                .orElseThrow(() -> new EntityNotFoundException("Ingredient", ingredientId));
         
+        // On s'assure que l'ingrédient appartient bien à la recette de l'utilisateur
+        if (!fermentable.getRecipeId().equals(recipe.getId())) {
+            throw new UnauthorizedException("Ingredient does not belong to this recipe");
+        }
+
         fermentable.setAmount(dto.amount());
         fermentableRepository.save(fermentable);
         
@@ -95,6 +110,13 @@ public class RecipeService {
     @Transactional
     public RecipeDto deleteFermentable(UUID recipeExternalId, Long ingredientId) {
         Recipe recipe = findEntityByExternalId(recipeExternalId);
+        RecipeFermentable fermentable = fermentableRepository.findById(ingredientId)
+                .orElseThrow(() -> new EntityNotFoundException("Ingredient", ingredientId));
+
+        if (!fermentable.getRecipeId().equals(recipe.getId())) {
+            throw new UnauthorizedException("Ingredient does not belong to this recipe");
+        }
+
         fermentableRepository.deleteById(ingredientId);
         return enrichAndMap(recipe);
     }
@@ -104,7 +126,6 @@ public class RecipeService {
     public RecipeDto addHop(UUID recipeExternalId, RecipeDto.RecipeHopDto dto) {
         Recipe recipe = findEntityByExternalId(recipeExternalId);
         
-        // Validation d'existence dans l'inventaire
         hopService.findById(dto.hopId());
         
         hopRepository.save(RecipeHop.builder()
@@ -121,8 +142,12 @@ public class RecipeService {
     public RecipeDto updateHop(UUID recipeExternalId, Long ingredientId, RecipeDto.RecipeHopDto dto) {
         Recipe recipe = findEntityByExternalId(recipeExternalId);
         RecipeHop hop = hopRepository.findById(ingredientId)
-                .orElseThrow(() -> new RuntimeException("Ingredient not found"));
+                .orElseThrow(() -> new EntityNotFoundException("Ingredient", ingredientId));
         
+        if (!hop.getRecipeId().equals(recipe.getId())) {
+            throw new UnauthorizedException("Ingredient does not belong to this recipe");
+        }
+
         hop.setAmount(dto.amount());
         hop.setPhase(RecipeHop.HopPhase.valueOf(dto.phase()));
         hop.setDuration(dto.duration());
@@ -134,6 +159,13 @@ public class RecipeService {
     @Transactional
     public RecipeDto deleteHop(UUID recipeExternalId, Long ingredientId) {
         Recipe recipe = findEntityByExternalId(recipeExternalId);
+        RecipeHop hop = hopRepository.findById(ingredientId)
+                .orElseThrow(() -> new EntityNotFoundException("Ingredient", ingredientId));
+
+        if (!hop.getRecipeId().equals(recipe.getId())) {
+            throw new UnauthorizedException("Ingredient does not belong to this recipe");
+        }
+
         hopRepository.deleteById(ingredientId);
         return enrichAndMap(recipe);
     }
@@ -158,9 +190,16 @@ public class RecipeService {
         return enrichAndMap(recipe);
     }
 
+    private User getCurrentUser() {
+        String username = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return userRepository.findByUsername(username)
+                .orElseThrow(() -> new UnauthorizedException("User not found"));
+    }
+
     private Recipe findEntityByExternalId(UUID externalId) {
-        return recipeRepository.findByExternalId(externalId)
-                .orElseThrow(() -> new RuntimeException("Recipe not found"));
+        User user = getCurrentUser();
+        return recipeRepository.findByExternalIdAndUserId(externalId, user.getId())
+                .orElseThrow(() -> new EntityNotFoundException("Recipe", externalId));
     }
 
     private RecipeDto enrichAndMap(Recipe recipe) {

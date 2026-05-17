@@ -1,5 +1,6 @@
 package com.brassam.helper.style;
 
+import com.brassam.helper.exception.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -21,6 +22,6 @@ public class StyleService {
     public StyleDetailDto findById(Long id) {
         return repository.findById(id)
                 .map(mapper::toDetailDto)
-                .orElseThrow(() -> new RuntimeException("Style not found"));
+                .orElseThrow(() -> new EntityNotFoundException("Style", id));
     }
 }

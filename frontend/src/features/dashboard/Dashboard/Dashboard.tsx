@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useAuth } from '../../auth/AuthContext';
 import './Dashboard.css';
 
 const Dashboard: React.FC = () => {
   const [count, setCount] = useState(0);
   const { t } = useTranslation();
+  const { user } = useAuth();
 
   return (
     <div className="dashboard">
       <section className="welcome-card">
-        <h2>{t('dashboard.welcome_title')}</h2>
+        <h2>{t('dashboard.welcome_title', { name: user?.username })}</h2>
         <p>{t('dashboard.welcome_text')}</p>
         
         <div className="card">

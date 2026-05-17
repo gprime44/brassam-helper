@@ -8,7 +8,9 @@
     "search_placeholder_generic": "Search...",
     "select_item": "Select an item...",
     "no_items_found": "No items found",
-    "other": "Other"
+    "other": "Other",
+    "language": "Language",
+    "logout": "Log out"
   },
   "layout": {
     "title": "Brassam Helper",
@@ -43,7 +45,7 @@
     }
   },
   "dashboard": {
-    "welcome_title": "Welcome to Brassam Helper",
+    "welcome_title": "Welcome, {{name}} !",
     "welcome_text": "Your brewing companion for inventory management and recipe creation.",
     "quick_action": "Quick action test:",
     "session_count": "Session count is {{count}}",

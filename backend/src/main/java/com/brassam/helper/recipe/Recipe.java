@@ -31,6 +31,9 @@ public class Recipe {
     @Builder.Default
     private Double efficiency = 75.0;
 
+    @Column(name = "user_id", nullable = false)
+    private Long userId;
+
     @PrePersist
     protected void onCreate() {
         if (externalId == null) {

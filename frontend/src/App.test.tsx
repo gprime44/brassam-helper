@@ -1,55 +1,72 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { expect, test, vi } from 'vitest';
-import App from './App';
-import { I18nextProvider } from 'react-i18next';
-import i18n from './i18n';
+import { render, screen, waitFor } from '@testing-library/react';
+import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { MemoryRouter } from 'react-router-dom';
+import { AppRoutes } from './App';
+import { AuthProvider } from './features/auth/AuthContext';
 
-// Mock des services API pour éviter les appels réseau pendant les tests
+// Mock simple pour les APIs
 vi.mock('./services/api', () => ({
-  recipeApi: {
-    getRecipes: vi.fn(() => Promise.resolve([])),
-    getRecipe: vi.fn(() => Promise.resolve({
-      name: 'Test Recipe',
-      batchVolume: 20,
-      efficiency: 75,
-      fermentables: [],
-      hops: [],
-    })),
+  authApi: {
+    login: vi.fn(),
+    signup: vi.fn(),
   },
   inventoryApi: {
-    getFermentables: vi.fn(() => Promise.resolve({ content: [{ id: 1, name: 'Pilsner', type: 'GRAIN', colorEbc: 3 }] })),
-    getFermentableById: vi.fn(() => Promise.resolve({ id: 1, name: 'Pilsner', type: 'GRAIN', colorEbc: 3 })),
-    getHops: vi.fn(() => Promise.resolve({ content: [] })),
-    getYeasts: vi.fn(() => Promise.resolve({ content: [] })),
+    getFermentables: vi.fn().mockResolvedValue({ content: [], totalElements: 0 }),
+    getHops: vi.fn().mockResolvedValue({ content: [], totalElements: 0 }),
+    getYeasts: vi.fn().mockResolvedValue({ content: [], totalElements: 0 }),
   },
   styleApi: {
-    getStyles: vi.fn(() => Promise.resolve({ content: [] })),
-    getStyleById: vi.fn(() => Promise.resolve({ id: 1, name: 'Ordinary Bitter' })),
+    getStyles: vi.fn().mockResolvedValue({ content: [], totalElements: 0 }),
+  },
+  recipeApi: {
+    getRecipes: vi.fn().mockResolvedValue([]),
   }
 }));
 
-test('full app rendering and navigation including details', async () => {
-  render(
-    <I18nextProvider i18n={i18n}>
-      <App />
-    </I18nextProvider>
+const renderWithRouter = (path: string) => {
+  return render(
+    <AuthProvider>
+      <MemoryRouter initialEntries={[path]}>
+        <AppRoutes />
+      </MemoryRouter>
+    </AuthProvider>
   );
+};
 
-  // Dashboard
-  expect(screen.getByText(/Welcome to Brassam Helper/i)).toBeDefined();
+describe('App Routing & ProtectedRoute', () => {
+  beforeEach(() => {
+    localStorage.clear();
+    vi.clearAllMocks();
+  });
 
-  // Navigation vers l'Inventaire
-  const inventoryLink = screen.getByRole('link', { name: /inventory/i });
-  fireEvent.click(inventoryLink);
-  await waitFor(() => expect(window.location.pathname).toBe('/inventory'));
+  it('should redirect to /login when accessing protected route without auth', async () => {
+    renderWithRouter('/');
+    
+    await waitFor(() => {
+      expect(screen.getByText(/heureux de vous revoir/i)).toBeDefined();
+      expect(screen.getByRole('button', { name: /se connecter/i })).toBeDefined();
+    });
+  });
 
-  // Clic sur un item pour voir le détail - Utilisation d'une regex pour être plus flexible
-  const pilsnerItem = await screen.findByText(/Pilsner/i);
-  fireEvent.click(pilsnerItem);
-  await waitFor(() => expect(window.location.pathname).toBe('/inventory/fermentable/1'));
+  it('should show dashboard when authenticated', async () => {
+    localStorage.setItem('token', 'valid-token');
+    localStorage.setItem('user', JSON.stringify({ username: 'tester', email: 'test@test.com' }));
 
-  // Vérifie qu'on est bien sur la fiche détail (bouton retour présent)
-  const backButton = await screen.findByText(/back/i);
-  fireEvent.click(backButton);
-  await waitFor(() => expect(window.location.pathname).toBe('/inventory'));
+    renderWithRouter('/');
+    
+    await waitFor(() => {
+      expect(screen.queryByText(/heureux de vous revoir/i)).toBeNull();
+      // On vérifie qu'on voit un élément du dashboard (via i18n mocké ou texte brut)
+      // Comme i18next n'est pas mocké ici, il affichera les clés ou le texte par défaut
+      expect(screen.getByText(/dashboard.welcome_title/i)).toBeDefined();
+    });
+  });
+
+  it('should render signup page', async () => {
+    renderWithRouter('/signup');
+    
+    await waitFor(() => {
+      expect(screen.getByText(/rejoindre brassam/i)).toBeDefined();
+    });
+  });
 });

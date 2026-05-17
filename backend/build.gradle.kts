@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.brassam"
-version = "0.0.1-SNAPSHOT"
+version = "0.1.0"
 description = "Brassam Helper Backend"
 
 java {
@@ -23,7 +23,13 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-liquibase")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-security")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
+	
+	// JWT
+	implementation("io.jsonwebtoken:jjwt-api:0.12.6")
+	runtimeOnly("io.jsonwebtoken:jjwt-impl:0.12.6")
+	runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.12.6")
 	
 	// Lombok & MapStruct
 	compileOnly("org.projectlombok:lombok")

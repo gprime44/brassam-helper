@@ -8,7 +8,9 @@
     "search_placeholder_generic": "Rechercher...",
     "select_item": "Choisir un élément...",
     "no_items_found": "Aucun élément trouvé",
-    "other": "Autre"
+    "other": "Autre",
+    "language": "Langue",
+    "logout": "Déconnexion"
   },
   "layout": {
     "title": "Brassam Helper",
@@ -43,7 +45,7 @@
     }
   },
   "dashboard": {
-    "welcome_title": "Bienvenue sur Brassam Helper",
+    "welcome_title": "Bienvenue, {{name}} !",
     "welcome_text": "Votre compagnon de brassage pour la gestion d'inventaire et la création de recettes.",
     "quick_action": "Test d'action rapide :",
     "session_count": "Le compteur de session est à {{count}}",
