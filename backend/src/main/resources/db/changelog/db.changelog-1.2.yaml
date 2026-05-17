@@ -42,23 +42,10 @@ databaseChangeLog:
   - changeSet:
       id: reload-enriched-inventory-data
       author: gemini
-      context: "prod,dev"
       changes:
         - delete: {tableName: fermentables}
         - delete: {tableName: hops}
         - delete: {tableName: yeasts}
         - sqlFile:
             path: db/data/inventory_import_v2.sql
-            relativeToChangelogFile: false
-
-  - changeSet:
-      id: reload-test-inventory-data
-      author: gemini
-      context: "test"
-      changes:
-        - delete: {tableName: fermentables}
-        - delete: {tableName: hops}
-        - delete: {tableName: yeasts}
-        - sqlFile:
-            path: db/data/inventory_test.sql
             relativeToChangelogFile: false

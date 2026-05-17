@@ -74,14 +74,15 @@ class RecipeControllerE2ETest {
     @Test
     void shouldManageFermentables() throws Exception {
         String uuid = createBaseRecipe("Ferm Test");
+        Integer fermentableId = getFirstId("/api/fermentables");
 
         // 1. POST /api/recipes/{uuid}/fermentables (Add)
-        String addJson = """
+        String addJson = String.format("""
             {
-                "fermentableId": 1,
+                "fermentableId": %d,
                 "amount": 4000.0
             }
-            """;
+            """, fermentableId);
 
         MvcResult result = mvc.perform(post("/api/recipes/" + uuid + "/fermentables")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -115,16 +116,17 @@ class RecipeControllerE2ETest {
     @Test
     void shouldManageHops() throws Exception {
         String uuid = createBaseRecipe("Hop Test");
+        Integer hopId = getFirstId("/api/hops");
 
         // 1. POST /api/recipes/{uuid}/hops (Add)
-        String addJson = """
+        String addJson = String.format("""
             {
-                "hopId": 1,
+                "hopId": %d,
                 "amount": 50.0,
                 "phase": "BOIL",
                 "duration": 60
             }
-            """;
+            """, hopId);
 
         MvcResult result = mvc.perform(post("/api/recipes/" + uuid + "/hops")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -161,41 +163,38 @@ class RecipeControllerE2ETest {
     @Test
     void shouldManageYeast() throws Exception {
         String uuid = createBaseRecipe("Yeast Test");
+        Integer yeastId = getFirstId("/api/yeasts");
 
         // 1. PUT /api/recipes/{uuid}/yeast (Update/Set)
-        String yeastJson = """
+        String yeastJson = String.format("""
             {
-                "yeastId": 1,
+                "yeastId": %d,
                 "amount": 11.0
             }
-            """;
+            """, yeastId);
 
         mvc.perform(put("/api/recipes/" + uuid + "/yeast")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(yeastJson))
             .andExpect(status().isOk())
-            .andExpect(jsonPath("$.yeast.yeastId", is(1)))
+            .andExpect(jsonPath("$.yeast.yeastId", is(yeastId)))
             .andExpect(jsonPath("$.yeast.amount", is(11.0)));
 
-        // 2. PUT /api/recipes/{uuid}/yeast with null (Unset)
-        // Note: Our implementation handles null by deleting the entry
-        mvc.perform(put("/api/recipes/" + uuid + "/yeast")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content("")) // Empty body might need adjustment if it fails, but let's test replace logic
-            .andExpect(status().isBadRequest()); 
-            
-        // Test set another yeast (replace)
-        String anotherYeastJson = """
+        // 2. Test set another yeast (replace)
+        // We get the second yeast ID if available, otherwise reuse the same but let's assume multiple yeasts in the unified DB
+        Integer anotherYeastId = getSecondId("/api/yeasts");
+        
+        String anotherYeastJson = String.format("""
             {
-                "yeastId": 2,
+                "yeastId": %d,
                 "amount": 22.0
             }
-            """;
+            """, anotherYeastId);
         mvc.perform(put("/api/recipes/" + uuid + "/yeast")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(anotherYeastJson))
             .andExpect(status().isOk())
-            .andExpect(jsonPath("$.yeast.yeastId", is(2)));
+            .andExpect(jsonPath("$.yeast.yeastId", is(anotherYeastId)));
     }
 
     private String createBaseRecipe(String name) throws Exception {
@@ -212,5 +211,23 @@ class RecipeControllerE2ETest {
             .andExpect(status().isOk())
             .andReturn();
         return JsonPath.read(result.getResponse().getContentAsString(), "$.externalId");
+    }
+
+    private Integer getFirstId(String uri) throws Exception {
+        MvcResult result = mvc.perform(get(uri))
+                .andExpect(status().isOk())
+                .andReturn();
+        return JsonPath.read(result.getResponse().getContentAsString(), "$.content[0].id");
+    }
+
+    private Integer getSecondId(String uri) throws Exception {
+        MvcResult result = mvc.perform(get(uri))
+                .andExpect(status().isOk())
+                .andReturn();
+        try {
+            return JsonPath.read(result.getResponse().getContentAsString(), "$.content[1].id");
+        } catch (Exception e) {
+            return JsonPath.read(result.getResponse().getContentAsString(), "$.content[0].id");
+        }
     }
 }

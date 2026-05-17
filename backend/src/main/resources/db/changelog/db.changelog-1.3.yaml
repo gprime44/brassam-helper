@@ -29,22 +29,7 @@ databaseChangeLog:
   - changeSet:
       id: import-styles-data
       author: gemini
-      context: "prod,dev"
       changes:
         - sqlFile:
             path: db/data/styles_import.sql
             relativeToChangelogFile: false
-
-  - changeSet:
-      id: import-test-styles-data
-      author: gemini
-      context: "test"
-      changes:
-        - insert:
-            tableName: styles
-            columns:
-              - column: {name: id, valueNumeric: 1}
-              - column: {name: name, value: "Ordinary Bitter"}
-              - column: {name: category, value: "British Origin Ale Styles"}
-              - column: {name: og_min, valueNumeric: 1.030}
-              - column: {name: og_max, valueNumeric: 1.038}

@@ -32,22 +32,18 @@ class YeastControllerE2ETest {
 
         @Test
         void shouldReturnAllYeasts(TestInfo testInfo) throws Exception {
-            // when
             assertThat(mvc.get().uri("/api/yeasts").exchange())
-            // then
-            .hasStatusOk()
-            .bodyJson()
-            .isStrictlyEqualTo(getExpectedJson(testInfo));
+                .hasStatusOk()
+                .bodyJson()
+                .isStrictlyEqualTo(getExpectedJson(testInfo));
         }
 
         @Test
         void shouldReturnFilteredYeastsBySearchParam(TestInfo testInfo) throws Exception {
-            // when
             assertThat(mvc.get().uri("/api/yeasts").param("name", "US-05").exchange())
-            // then
-            .hasStatusOk()
-            .bodyJson()
-            .isStrictlyEqualTo(getExpectedJson(testInfo));
+                .hasStatusOk()
+                .bodyJson()
+                .isStrictlyEqualTo(getExpectedJson(testInfo));
         }
     }
 }

@@ -32,22 +32,18 @@ class HopControllerE2ETest {
 
         @Test
         void shouldReturnAllHops(TestInfo testInfo) throws Exception {
-            // when
             assertThat(mvc.get().uri("/api/hops").exchange())
-            // then
-            .hasStatusOk()
-            .bodyJson()
-            .isStrictlyEqualTo(getExpectedJson(testInfo));
+                .hasStatusOk()
+                .bodyJson()
+                .isStrictlyEqualTo(getExpectedJson(testInfo));
         }
 
         @Test
         void shouldReturnFilteredHopsBySearchParam(TestInfo testInfo) throws Exception {
-            // when
             assertThat(mvc.get().uri("/api/hops").param("name", "Cascade").exchange())
-            // then
-            .hasStatusOk()
-            .bodyJson()
-            .isStrictlyEqualTo(getExpectedJson(testInfo));
+                .hasStatusOk()
+                .bodyJson()
+                .isStrictlyEqualTo(getExpectedJson(testInfo));
         }
     }
 }

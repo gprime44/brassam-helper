@@ -32,22 +32,18 @@ class FermentableControllerE2ETest {
 
         @Test
         void shouldReturnAllFermentablesWhenNoSearchParam(TestInfo testInfo) throws Exception {
-            // when
             assertThat(mvc.get().uri("/api/fermentables").exchange())
-            // then
-            .hasStatusOk()
-            .bodyJson()
-            .isStrictlyEqualTo(getExpectedJson(testInfo));
+                .hasStatusOk()
+                .bodyJson()
+                .isStrictlyEqualTo(getExpectedJson(testInfo));
         }
 
         @Test
         void shouldReturnFilteredFermentablesWhenSearchParamProvided(TestInfo testInfo) throws Exception {
-            // when
-            assertThat(mvc.get().uri("/api/fermentables").param("name", "maris").exchange())
-            // then
-            .hasStatusOk()
-            .bodyJson()
-            .isStrictlyEqualTo(getExpectedJson(testInfo));
+            assertThat(mvc.get().uri("/api/fermentables").param("name", "Pilsen Malt").exchange())
+                .hasStatusOk()
+                .bodyJson()
+                .isStrictlyEqualTo(getExpectedJson(testInfo));
         }
     }
 }
