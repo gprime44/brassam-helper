@@ -1,24 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import RecipeList from './RecipeList';
-import RecipeDetail from './RecipeDetail';
 import './Recipe.css';
 
 const Recipe: React.FC = () => {
-  const [selectedRecipeId, setSelectedRecipeId] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   return (
     <div className="recipe-container">
-      {selectedRecipeId ? (
-        <RecipeDetail 
-          externalId={selectedRecipeId} 
-          onBack={() => setSelectedRecipeId(null)} 
-        />
-      ) : (
-        <RecipeList 
-          onSelect={setSelectedRecipeId} 
-          onCreate={(r) => r.externalId && setSelectedRecipeId(r.externalId)} 
-        />
-      )}
+      <RecipeList 
+        onSelect={(id) => navigate(`/recipes/${id}`)} 
+        onCreate={(r) => r.externalId && navigate(`/recipes/${r.externalId}`)} 
+      />
     </div>
   );
 };

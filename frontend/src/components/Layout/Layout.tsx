@@ -1,15 +1,14 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { NavLink } from 'react-router-dom';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
 import './Layout.css';
 
 interface LayoutProps {
   children: React.ReactNode;
-  activeTab: string;
-  onTabChange: (tab: string) => void;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children, activeTab, onTabChange }) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   const { t } = useTranslation();
 
   return (
@@ -24,34 +23,22 @@ const Layout: React.FC<LayoutProps> = ({ children, activeTab, onTabChange }) => 
       </main>
 
       <nav className="layout-nav">
-        <button 
-          className={`nav-item ${activeTab === 'home' ? 'active' : ''}`}
-          onClick={() => onTabChange('home')}
-        >
+        <NavLink to="/" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
           <span className="nav-icon">🏠</span>
           <span className="nav-label">{t('layout.tabs.home')}</span>
-        </button>
-        <button 
-          className={`nav-item ${activeTab === 'inventory' ? 'active' : ''}`}
-          onClick={() => onTabChange('inventory')}
-        >
+        </NavLink>
+        <NavLink to="/inventory" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
           <span className="nav-icon">📦</span>
           <span className="nav-label">{t('layout.tabs.inventory')}</span>
-        </button>
-        <button 
-          className={`nav-item ${activeTab === 'styles' ? 'active' : ''}`}
-          onClick={() => onTabChange('styles')}
-        >
+        </NavLink>
+        <NavLink to="/styles" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
           <span className="nav-icon">📚</span>
           <span className="nav-label">{t('layout.tabs.styles')}</span>
-        </button>
-        <button 
-          className={`nav-item ${activeTab === 'recipes' ? 'active' : ''}`}
-          onClick={() => onTabChange('recipes')}
-        >
+        </NavLink>
+        <NavLink to="/recipes" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
           <span className="nav-icon">📝</span>
           <span className="nav-label">{t('layout.tabs.recipes')}</span>
-        </button>
+        </NavLink>
       </nav>
     </div>
   );

@@ -1,27 +1,21 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import Fermentables from '../Fermentables/Fermentables';
 import Hops from '../Hops/Hops';
 import Yeasts from '../Yeasts/Yeasts';
-import InventoryDetail from '../InventoryDetail/InventoryDetail';
 import './Inventory.css';
 
 type Category = 'fermentable' | 'hop' | 'yeast';
 
 const Inventory: React.FC = () => {
   const [category, setCategory] = useState<Category>('fermentable');
-  const [selectedItemId, setSelectedItemId] = useState<number | null>(null);
+  const navigate = useNavigate();
   const { t } = useTranslation();
 
-  if (selectedItemId !== null) {
-    return (
-      <InventoryDetail 
-        id={selectedItemId} 
-        category={category} 
-        onBack={() => setSelectedItemId(null)} 
-      />
-    );
-  }
+  const handleSelectItem = (id: number) => {
+    navigate(`/inventory/${category}/${id}`);
+  };
 
   return (
     <div className="inventory-screen">
@@ -47,9 +41,9 @@ const Inventory: React.FC = () => {
       </div>
 
       <div className="category-content">
-        {category === 'fermentable' && <Fermentables onSelectItem={setSelectedItemId} />}
-        {category === 'hop' && <Hops onSelectItem={setSelectedItemId} />}
-        {category === 'yeast' && <Yeasts onSelectItem={setSelectedItemId} />}
+        {category === 'fermentable' && <Fermentables onSelectItem={handleSelectItem} />}
+        {category === 'hop' && <Hops onSelectItem={handleSelectItem} />}
+        {category === 'yeast' && <Yeasts onSelectItem={handleSelectItem} />}
       </div>
     </div>
   );

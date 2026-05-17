@@ -60,6 +60,7 @@
   flex: 1;
   gap: 4px;
   transition: color 0.2s;
+  text-decoration: none;
 }
 
 .nav-item.active {
