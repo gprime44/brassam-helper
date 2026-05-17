@@ -12,3 +12,9 @@ spring:
   liquibase:
     enabled: true
     contexts: dev
+
+app:
+  security:
+    allowed-origins: 
+      - http://localhost:5173
+      - http://localhost:3000
