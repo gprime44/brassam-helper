@@ -17,4 +17,4 @@ COPY build/libs/helper-0.0.1-SNAPSHOT.jar app.jar
 
 EXPOSE 8080
 VOLUME /app/data
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "--enable-native-access=ALL-UNNAMED", "-Xshare:off", "-jar", "app.jar"]

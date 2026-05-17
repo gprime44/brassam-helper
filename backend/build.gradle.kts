@@ -41,6 +41,11 @@ dependencies {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+	jvmArgs("--enable-native-access=ALL-UNNAMED", "-Xshare:off")
+}
+
+tasks.withType<org.springframework.boot.gradle.tasks.run.BootRun> {
+	jvmArgs("--enable-native-access=ALL-UNNAMED", "-Xshare:off")
 }
 
 tasks.register<org.springframework.boot.gradle.tasks.run.BootRun>("bootRunDev") {
@@ -50,4 +55,3 @@ tasks.register<org.springframework.boot.gradle.tasks.run.BootRun>("bootRunDev") 
 	classpath = sourceSets["main"].runtimeClasspath
 	systemProperty("spring.profiles.active", "dev")
 }
-

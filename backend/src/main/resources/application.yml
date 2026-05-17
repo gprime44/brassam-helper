@@ -5,6 +5,7 @@ spring:
     url: jdbc:sqlite:data/brassam.db
     driver-class-name: org.sqlite.JDBC
   jpa:
+    open-in-view: false
     hibernate:
       ddl-auto: validate
     properties:
