@@ -9,6 +9,7 @@ public record RecipeDto(
     String description,
     Double batchVolume,
     Double efficiency,
+    Integer boilTime,
     Double og,
     Double fg,
     Double abv,
@@ -16,6 +17,7 @@ public record RecipeDto(
     Double ebc,
     List<RecipeFermentableDto> fermentables,
     List<RecipeHopDto> hops,
+    List<RecipeMashStepDto> mashSteps,
     RecipeYeastDto yeast
 ) {
     public record RecipeFermentableDto(
@@ -30,6 +32,14 @@ public record RecipeDto(
         Double amount,
         String phase,
         Integer duration
+    ) {}
+
+    public record RecipeMashStepDto(
+        Long id,
+        String name,
+        Double temperature,
+        Integer duration,
+        Integer stepOrder
     ) {}
 
     public record RecipeYeastDto(

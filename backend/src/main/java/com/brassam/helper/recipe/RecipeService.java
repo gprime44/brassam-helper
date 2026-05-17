@@ -24,6 +24,7 @@ public class RecipeService {
     private final RecipeFermentableRepository fermentableRepository;
     private final RecipeHopRepository hopRepository;
     private final RecipeYeastRepository yeastRepository;
+    private final RecipeMashStepRepository mashStepRepository;
     
     private final BrewingCalculator brewingCalculator;
     
@@ -57,6 +58,7 @@ public class RecipeService {
                 .description(recipeDto.description())
                 .batchVolume(recipeDto.batchVolume())
                 .efficiency(recipeDto.efficiency())
+                .boilTime(recipeDto.boilTime() != null ? recipeDto.boilTime() : 60)
                 .userId(user.getId())
                 .build();
         
@@ -71,6 +73,7 @@ public class RecipeService {
         recipe.setDescription(dto.description());
         recipe.setBatchVolume(dto.batchVolume());
         recipe.setEfficiency(dto.efficiency());
+        if (dto.boilTime() != null) recipe.setBoilTime(dto.boilTime());
         
         return enrichAndMap(recipeRepository.save(recipe));
     }
@@ -190,6 +193,53 @@ public class RecipeService {
         return enrichAndMap(recipe);
     }
 
+    // Mash Steps
+    @Transactional
+    public RecipeDto addMashStep(UUID recipeExternalId, RecipeDto.RecipeMashStepDto dto) {
+        Recipe recipe = findEntityByExternalId(recipeExternalId);
+        
+        mashStepRepository.save(RecipeMashStep.builder()
+                .recipeId(recipe.getId())
+                .name(dto.name())
+                .temperature(dto.temperature())
+                .duration(dto.duration())
+                .stepOrder(dto.stepOrder())
+                .build());
+        return enrichAndMap(recipe);
+    }
+
+    @Transactional
+    public RecipeDto updateMashStep(UUID recipeExternalId, Long stepId, RecipeDto.RecipeMashStepDto dto) {
+        Recipe recipe = findEntityByExternalId(recipeExternalId);
+        RecipeMashStep step = mashStepRepository.findById(stepId)
+                .orElseThrow(() -> new EntityNotFoundException("Mash Step", stepId));
+
+        if (!step.getRecipeId().equals(recipe.getId())) {
+            throw new UnauthorizedException("Mash Step does not belong to this recipe");
+        }
+
+        step.setName(dto.name());
+        step.setTemperature(dto.temperature());
+        step.setDuration(dto.duration());
+        mashStepRepository.save(step);
+        
+        return enrichAndMap(recipe);
+    }
+
+    @Transactional
+    public RecipeDto deleteMashStep(UUID recipeExternalId, Long stepId) {
+        Recipe recipe = findEntityByExternalId(recipeExternalId);
+        RecipeMashStep step = mashStepRepository.findById(stepId)
+                .orElseThrow(() -> new EntityNotFoundException("Mash Step", stepId));
+
+        if (!step.getRecipeId().equals(recipe.getId())) {
+            throw new UnauthorizedException("Mash Step does not belong to this recipe");
+        }
+
+        mashStepRepository.deleteById(stepId);
+        return enrichAndMap(recipe);
+    }
+
     private User getCurrentUser() {
         String username = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         return userRepository.findByUsername(username)
@@ -240,15 +290,21 @@ public class RecipeService {
         Double ibu = brewingCalculator.calculateIbu(hopCalcs, og, recipe.getBatchVolume());
         Double ebc = brewingCalculator.calculateEbc(fermentableCalcs, recipe.getBatchVolume());
 
+        List<RecipeDto.RecipeMashStepDto> mashStepDtos = mashStepRepository.findAllByRecipeIdOrderByStepOrderAsc(recipe.getId()).stream()
+                .map(m -> new RecipeDto.RecipeMashStepDto(m.getId(), m.getName(), m.getTemperature(), m.getDuration(), m.getStepOrder()))
+                .collect(Collectors.toList());
+
         return new RecipeDto(
             recipe.getExternalId(),
             recipe.getName(),
             recipe.getDescription(),
             recipe.getBatchVolume(),
             recipe.getEfficiency(),
+            recipe.getBoilTime(),
             og, fg, abv, ibu, ebc,
             fermentableDtos,
             hopDtos,
+            mashStepDtos,
             yeastDto
         );
     }

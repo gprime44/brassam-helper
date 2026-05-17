@@ -212,6 +212,7 @@ export interface Recipe {
   ebc?: number;
   fermentables: RecipeFermentable[];
   hops: RecipeHop[];
+  mashSteps: RecipeMashStep[];
   yeast?: RecipeYeast;
   styleId?: number;
 }
@@ -228,6 +229,14 @@ export interface RecipeHop {
   amount: number;
   phase: "BOIL" | "HOPSTAND" | "DRY_HOP";
   duration: number;
+}
+
+export interface RecipeMashStep {
+  id?: number;
+  name: string;
+  temperature: number;
+  duration: number;
+  stepOrder: number;
 }
 
 export interface RecipeYeast {
@@ -264,6 +273,13 @@ export const recipeApi = {
     fetchOneApi<Recipe>(`/api/recipes/${externalId}/hops/${id}`, { method: 'PUT', body: JSON.stringify(h) }),
   deleteHop: (externalId: string, id: number) => 
     fetchOneApi<Recipe>(`/api/recipes/${externalId}/hops/${id}`, { method: 'DELETE' }),
+    
+  addMashStep: (externalId: string, m: RecipeMashStep) => 
+    fetchOneApi<Recipe>(`/api/recipes/${externalId}/mashsteps`, { method: 'POST', body: JSON.stringify(m) }),
+  updateMashStep: (externalId: string, id: number, m: Partial<RecipeMashStep>) => 
+    fetchOneApi<Recipe>(`/api/recipes/${externalId}/mashsteps/${id}`, { method: 'PUT', body: JSON.stringify(m) }),
+  deleteMashStep: (externalId: string, id: number) => 
+    fetchOneApi<Recipe>(`/api/recipes/${externalId}/mashsteps/${id}`, { method: 'DELETE' }),
     
   updateYeast: (externalId: string, y: RecipeYeast) => 
     fetchOneApi<Recipe>(`/api/recipes/${externalId}/yeast`, { method: 'PUT', body: JSON.stringify(y) }),
@@ -302,4 +318,63 @@ export const styleApi = {
       size: String(size),
     }),
   getStyleById: (id: number) => fetchOneApi<StyleDetail>(`/api/styles/${id}`),
+};
+
+export type BrewingStatus = 
+  | "PLANNED" | "MASHING" | "BOILING" | "FERMENTING" | "CONDITIONING" | "FINISHED" | "ABORTED";
+
+export type BrewingTaskCategory = "PREPARATION" | "MASHING" | "BOILING" | "POST_BOIL";
+
+export interface BrewingTask {
+  id: number;
+  label: string;
+  completed: boolean;
+  category: BrewingTaskCategory;
+  orderIndex: number;
+  duration?: number;
+}
+
+export interface FermentationReading {
+  id: number;
+  timestamp: string;
+  gravity: number;
+  temperature: number;
+  notes?: string;
+}
+
+export interface BrewingSessionDetail {
+  id: number;
+  name: string;
+  status: BrewingStatus;
+  recipeId: number;
+  plannedDate: string;
+  brewDate?: string;
+  bottlingDate?: string;
+  preBoilVolume?: number;
+  preBoilGravity?: number;
+  batchVolume?: number;
+  originalGravity?: number;
+  finalGravity?: number;
+  actualEfficiency?: number;
+  actualAbv?: number;
+  actualAttenuation?: number;
+  targetOg?: number;
+  targetFg?: number;
+  targetIbu?: number;
+  targetEbc?: number;
+  targetAbv?: number;
+  targetBatchSize?: number;
+  targetBoilTime?: number;
+  tasks: BrewingTask[];
+  readings: FermentationReading[];
+}
+
+export const brewingApi = {
+  startSession: (recipeExternalId: string) => 
+    fetchOneApi<number>(`/api/brewing/start/${recipeExternalId}`, { method: 'POST' }),
+  getSessions: () => fetchOneApi<any[]>("/api/brewing"),
+  getSessionDetail: (id: number) => fetchOneApi<BrewingSessionDetail>(`/api/brewing/${id}`),
+  toggleTask: (taskId: number) => fetchOneApi<void>(`/api/brewing/tasks/${taskId}/toggle`, { method: 'PATCH' }),
+  addReading: (id: number, reading: Partial<FermentationReading>) => 
+    fetchOneApi<void>(`/api/brewing/${id}/readings`, { method: 'POST', body: JSON.stringify(reading) }),
 };

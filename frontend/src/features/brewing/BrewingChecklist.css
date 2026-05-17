@@ -1,0 +1,35 @@
+.brewing-checklist {
+  margin-top: 20px;
+}
+
+.checklist-category {
+  margin-bottom: 20px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.task-list li.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task-list li label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.duration {
+  font-size: 0.85em;
+  color: #666;
+  margin-left: auto;
+}

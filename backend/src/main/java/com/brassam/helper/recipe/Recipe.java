@@ -31,6 +31,9 @@ public class Recipe {
     @Builder.Default
     private Double efficiency = 75.0;
 
+    @Builder.Default
+    private Integer boilTime = 60;
+
     @Column(name = "user_id", nullable = false)
     private Long userId;
 

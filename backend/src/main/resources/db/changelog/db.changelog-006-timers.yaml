@@ -1,0 +1,62 @@
+databaseChangeLog:
+  - changeSet:
+      id: 006-timers-data
+      author: gemini-cli
+      changes:
+        - addColumn:
+            tableName: recipes
+            columns:
+              - column:
+                  name: boil_time
+                  type: integer
+                  defaultValueNumeric: 60
+        - addColumn:
+            tableName: brewing_tasks
+            columns:
+              - column:
+                  name: duration
+                  type: integer
+        - addColumn:
+            tableName: brewing_sessions
+            columns:
+              - column:
+                  name: target_boil_time
+                  type: integer
+        - createTable:
+            tableName: recipe_mash_steps
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: recipe_id
+                  type: integer
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_mash_recipe
+                    referencedTableName: recipes
+                    referencedColumnNames: id
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: temperature
+                  type: double
+                  constraints:
+                    nullable: false
+              - column:
+                  name: duration
+                  type: integer
+                  constraints:
+                    nullable: false
+              - column:
+                  name: step_order
+                  type: integer
+                  constraints:
+                    nullable: false

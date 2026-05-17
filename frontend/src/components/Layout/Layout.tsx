@@ -90,6 +90,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <span className="nav-icon">📝</span>
           <span className="nav-label">{t('layout.tabs.recipes')}</span>
         </NavLink>
+        <NavLink to="/brewing" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+          <span className="nav-icon">🔥</span>
+          <span className="nav-label">Brassages</span>
+        </NavLink>
       </nav>
     </div>
   );

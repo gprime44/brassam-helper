@@ -3,3 +3,11 @@ databaseChangeLog:
       file: db/changelog/db.changelog-001-schema.yaml
   - include:
       file: db/changelog/db.changelog-002-data.yaml
+  - include:
+      file: db/changelog/db.changelog-003-brewing.yaml
+  - include:
+      file: db/changelog/db.changelog-004-readings.yaml
+  - include:
+      file: db/changelog/db.changelog-005-tasks.yaml
+  - include:
+      file: db/changelog/db.changelog-006-timers.yaml

@@ -7,5 +7,6 @@ import java.util.UUID;
 
 public interface RecipeRepository extends JpaRepository<Recipe, Long> {
     List<Recipe> findAllByUserId(Long userId);
+    Optional<Recipe> findByExternalId(UUID externalId);
     Optional<Recipe> findByExternalIdAndUserId(UUID externalId, Long userId);
 }

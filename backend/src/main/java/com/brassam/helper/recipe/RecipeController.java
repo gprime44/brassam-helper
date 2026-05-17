@@ -69,4 +69,20 @@ public class RecipeController {
     public RecipeDto updateYeast(@PathVariable UUID externalId, @RequestBody RecipeDto.RecipeYeastDto dto) {
         return recipeService.updateYeast(externalId, dto);
     }
+
+    // Mash Steps
+    @PostMapping("/{externalId}/mashsteps")
+    public RecipeDto addMashStep(@PathVariable UUID externalId, @RequestBody RecipeDto.RecipeMashStepDto dto) {
+        return recipeService.addMashStep(externalId, dto);
+    }
+
+    @PutMapping("/{externalId}/mashsteps/{stepId}")
+    public RecipeDto updateMashStep(@PathVariable UUID externalId, @PathVariable Long stepId, @RequestBody RecipeDto.RecipeMashStepDto dto) {
+        return recipeService.updateMashStep(externalId, stepId, dto);
+    }
+
+    @DeleteMapping("/{externalId}/mashsteps/{stepId}")
+    public RecipeDto deleteMashStep(@PathVariable UUID externalId, @PathVariable Long stepId) {
+        return recipeService.deleteMashStep(externalId, stepId);
+    }
 }

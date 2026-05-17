@@ -32,6 +32,7 @@
       "add_fermentable": "Ajouter un malt",
       "add_hop": "Ajouter du houblon",
       "add_yeast": "Ajouter une levure",
+      "mash_steps": "Paliers d'empâtage",
       "amount": "Quantité (g)",
       "phase": "Phase",
       "duration": "Durée (min)"

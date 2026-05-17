@@ -32,6 +32,7 @@
       "add_fermentable": "Add Malt",
       "add_hop": "Add Hop",
       "add_yeast": "Add Yeast",
+      "mash_steps": "Mash Steps",
       "amount": "Amount (g)",
       "phase": "Phase",
       "duration": "Duration (min)"

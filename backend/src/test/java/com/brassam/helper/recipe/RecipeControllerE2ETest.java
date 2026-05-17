@@ -149,6 +149,38 @@ class RecipeControllerE2ETest {
             .andExpect(status().isOk());
     }
 
+    @Test
+    void shouldManageMashSteps() throws Exception {
+        String uuid = createBaseRecipe("Mash Test");
+
+        String stepJson = """
+            {
+                "name": "Saccharification",
+                "temperature": 65.0,
+                "duration": 60,
+                "stepOrder": 0
+            }
+            """;
+
+        MvcResult result = mvc.perform(post("/api/recipes/" + uuid + "/mashsteps")
+                .header("Authorization", token)
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(stepJson))
+            .andExpect(status().isOk())
+            .andReturn();
+
+        Integer stepId = JsonPath.read(result.getResponse().getContentAsString(), "$.mashSteps[0].id");
+
+        mvc.perform(put("/api/recipes/" + uuid + "/mashsteps/" + stepId)
+                .header("Authorization", token)
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{\"name\": \"Mash Out\", \"temperature\": 78.0, \"duration\": 10}"))
+            .andExpect(status().isOk());
+
+        mvc.perform(delete("/api/recipes/" + uuid + "/mashsteps/" + stepId).header("Authorization", token))
+            .andExpect(status().isOk());
+    }
+
     private String createBaseRecipe(String name) throws Exception {
         String json = String.format("""
             {

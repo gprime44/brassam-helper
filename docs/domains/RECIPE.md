@@ -6,6 +6,7 @@ This domain manages the creation, modification, and calculation of brewing recip
 A recipe is managed through a decoupled flow to simplify the edition of complex brewing formulas:
 - **Header:** Basic info (name, volume, efficiency).
 - **Ingredients:** Granular CRUD operations for Hops, Fermentables, and Yeast.
+- **Mash Steps:** Sequence of temperature steps for the mashing process.
 - **Dynamic Calculation:** Every modification triggers a full recalculation of brewing indicators (OG, FG, ABV, IBU, EBC).
 
 ## 2. Technical Architecture

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { 
   recipeApi, inventoryApi, styleApi 
 } from '../../services/api';
 import type { 
-  Recipe, RecipeFermentable, RecipeHop, Style 
+  Recipe, RecipeFermentable, RecipeHop, Style, RecipeMashStep 
 } from '../../services/api';
 import RangeGauge from '../../components/RangeGauge/RangeGauge';
 import SearchableSelect from '../../components/SearchableSelect/SearchableSelect';
@@ -33,6 +34,8 @@ const RecipeDetail: React.FC<RecipeDetailProps> = ({ externalId, onBack }) => {
 
   const [editingFermentable, setEditingFermentable] = useState<RecipeFermentable | null>(null);
   const [editingHop, setEditingHop] = useState<RecipeHop | null>(null);
+  const [editingMashStep, setEditingMashStep] = useState<RecipeMashStep | null>(null);
+  const [showAddMashStep, setShowAddMashStep] = useState(false);
 
   useEffect(() => {
     recipeApi.getRecipe(externalId).then(r => {
@@ -92,6 +95,18 @@ const RecipeDetail: React.FC<RecipeDetailProps> = ({ externalId, onBack }) => {
     setEditingHop(null);
   };
 
+  const handleAddMashStep = (name: string, temperature: number, duration: number) => {
+    const nextOrder = recipe?.mashSteps.length || 0;
+    recipeApi.addMashStep(externalId, { name, temperature, duration, stepOrder: nextOrder }).then(setRecipe);
+    setShowAddMashStep(false);
+    setEditingMashStep(null);
+  };
+
+  const handleUpdateMashStep = (id: number, name: string, temperature: number, duration: number) => {
+    recipeApi.updateMashStep(externalId, id, { name, temperature, duration }).then(setRecipe);
+    setEditingMashStep(null);
+  };
+
   const handleUpdateYeast = (yeastId: number, amount: number) => {
     recipeApi.updateYeast(externalId, { yeastId, amount }).then(setRecipe);
     setShowAddYeast(false);
@@ -105,6 +120,12 @@ const RecipeDetail: React.FC<RecipeDetailProps> = ({ externalId, onBack }) => {
 
       <header className="feature-header">
         <h1>{recipe.name}</h1>
+        <button 
+          className="btn btn-primary" 
+          onClick={() => brewingApi.startSession(externalId).then(id => navigate(`/brewing/${id}`))}
+        >
+          🚀 Lancer ce brassage
+        </button>
       </header>
 
       <div className="recipe-stats-gauges">
@@ -263,6 +284,49 @@ const RecipeDetail: React.FC<RecipeDetailProps> = ({ externalId, onBack }) => {
             />
           ) : (
             !editingHop && <button className="add-btn" onClick={() => setShowAddHop(true)}>+ {t('recipe.form.add_hop')}</button>
+          )}
+        </section>
+
+                      {/* MASH STEPS */}
+        <section className="detail-section">
+          <h3>🔥 {t('recipe.form.mash_steps')}</h3>
+          <div className="ingredient-list">
+            {recipe.mashSteps.map(m => (
+              editingMashStep?.id === m.id ? (
+                <AddMashStepForm
+                  key={m.id}
+                  initialValues={{ id: m.id!, name: m.name, temperature: m.temperature, duration: m.duration }}
+                  onAdd={(name, temp, dur) => m.id && handleUpdateMashStep(m.id, name, temp, dur)}
+                  onCancel={() => setEditingMashStep(null)}
+                />
+              ) : (
+                <div key={m.id} className="ingredient-item-card">
+                  <span className="ing-name">{m.name}</span>
+                  <div className="ing-details">
+                    <div className="ing-detail-item">
+                      <span className="ing-label">Temp:</span>
+                      <span>{m.temperature} °C</span>
+                    </div>
+                    <div className="ing-detail-item">
+                      <span className="ing-label">Durée:</span>
+                      <span>{m.duration} min</span>
+                    </div>
+                  </div>
+                  <div className="ing-action">
+                    <button className="btn btn-sm btn-outline" onClick={() => setEditingMashStep(m)}>Modifier</button>
+                    <button className="btn btn-sm btn-danger" onClick={() => m.id && recipeApi.deleteMashStep(externalId, m.id).then(setRecipe)}>🗑️</button>
+                  </div>
+                </div>
+              )
+            ))}
+          </div>
+          {showAddMashStep && !editingMashStep ? (
+            <AddMashStepForm 
+              onAdd={(name, temp, dur) => handleAddMashStep(name, temp, dur)} 
+              onCancel={() => setShowAddMashStep(false)} 
+            />
+          ) : (
+            !editingMashStep && <button className="add-btn" onClick={() => setShowAddMashStep(true)}>+ Ajouter un palier</button>
           )}
         </section>
 
@@ -447,6 +511,58 @@ const AddHopForm: React.FC<{
           disabled={!selectedItem}
           onClick={() => selectedItem && onAdd(selectedItem.id, qty, phase, dur)}
         >
+          {initialValues ? 'Modifier' : 'Ajouter'}
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const AddMashStepForm: React.FC<{ 
+  initialValues?: { id: number, name: string, temperature: number, duration: number },
+  onAdd: (name: string, temp: number, dur: number) => void, 
+  onCancel: () => void 
+}> = ({ initialValues, onAdd, onCancel }) => {
+  const [name, setName] = useState(initialValues?.name || 'Saccharification');
+  const [temp, setTemp] = useState(initialValues?.temperature || 65);
+  const [dur, setDur] = useState(initialValues?.duration || 60);
+
+  return (
+    <div className="ingredient-add-form">
+      <div className="form-row">
+        <div className="form-group">
+          <label>Nom</label>
+          <input 
+            type="text" 
+            className="input-styled"
+            value={name} 
+            onChange={e => setName(e.target.value)} 
+          />
+        </div>
+      </div>
+      <div className="form-row" style={{ marginTop: '16px' }}>
+        <div className="form-group">
+          <label>Température (°C)</label>
+          <input 
+            type="number" 
+            className="input-styled"
+            value={temp} 
+            onChange={e => setTemp(Number(e.target.value))} 
+          />
+        </div>
+        <div className="form-group">
+          <label>Durée (min)</label>
+          <input 
+            type="number" 
+            className="input-styled"
+            value={dur} 
+            onChange={e => setDur(Number(e.target.value))} 
+          />
+        </div>
+      </div>
+      <div className="form-actions">
+        <button className="btn btn-outline" onClick={onCancel}>Annuler</button>
+        <button className="btn btn-primary" onClick={() => onAdd(name, temp, dur)}>
           {initialValues ? 'Modifier' : 'Ajouter'}
         </button>
       </div>

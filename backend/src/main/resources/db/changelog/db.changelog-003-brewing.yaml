@@ -1,0 +1,89 @@
+databaseChangeLog:
+  - changeSet:
+      id: 003-brewing-domain
+      author: gemini-cli
+      changes:
+        - createTable:
+            tableName: brewing_sessions
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: recipe_id
+                  type: integer
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: integer
+                  constraints:
+                    nullable: false
+              - column:
+                  name: planned_date
+                  type: date
+              - column:
+                  name: brew_date
+                  type: date
+              - column:
+                  name: bottling_date
+                  type: date
+              - column:
+                  name: end_date
+                  type: date
+              - column:
+                  name: pre_boil_volume
+                  type: double
+              - column:
+                  name: pre_boil_gravity
+                  type: double
+              - column:
+                  name: batch_volume
+                  type: double
+              - column:
+                  name: original_gravity
+                  type: double
+              - column:
+                  name: final_gravity
+                  type: double
+              - column:
+                  name: actual_efficiency
+                  type: double
+              - column:
+                  name: actual_abv
+                  type: double
+              - column:
+                  name: actual_attenuation
+                  type: double
+              - column:
+                  name: target_og
+                  type: double
+              - column:
+                  name: target_fg
+                  type: double
+              - column:
+                  name: target_ibu
+                  type: double
+              - column:
+                  name: target_ebc
+                  type: double
+              - column:
+                  name: target_abv
+                  type: double
+              - column:
+                  name: target_batch_size
+                  type: double
