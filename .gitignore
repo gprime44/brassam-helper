@@ -1,0 +1,8 @@
+.vscode/
+node_modules/
+backend/brassam-dev.db
+*.db
+build/
+dist/
+.gradle/
+.idea/
