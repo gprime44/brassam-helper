@@ -12,21 +12,30 @@ export default defineConfig({
       manifest: {
         name: "Brassam Helper",
         short_name: "Brassam",
-        description: "Your brewing companion for inventory and recipes",
-        theme_color: "#f59e0b",
+        description: "Votre compagnon de brassage",
+        theme_color: "#aa3bff",
         background_color: "#ffffff",
         display: "standalone",
+        start_url: "/",
+        scope: "/",
         icons: [
           {
             src: "favicon.svg",
             sizes: "any",
             type: "image/svg+xml",
+            purpose: "any",
+          },
+          {
+            src: "favicon.svg",
+            sizes: "192x192",
+            type: "image/svg+xml",
+            purpose: "any",
           },
           {
             src: "favicon.svg",
             sizes: "512x512",
             type: "image/svg+xml",
-            purpose: "any maskable",
+            purpose: "maskable",
           },
         ],
       },
