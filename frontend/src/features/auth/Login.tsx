@@ -5,7 +5,7 @@ import { authApi } from '../../services/api';
 import './Auth.css';
 
 const Login: React.FC = () => {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -18,11 +18,11 @@ const Login: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await authApi.login({ email, password });
+      const response = await authApi.login({ username, password });
       login(response);
       navigate('/');
     } catch (err) {
-      setError('Email ou mot de passe incorrect.');
+      setError('Pseudo ou mot de passe incorrect.');
       console.error(err);
     } finally {
       setIsSubmitting(false);
@@ -42,15 +42,15 @@ const Login: React.FC = () => {
           {error && <div className="error-message">{error}</div>}
           
           <div className="form-group">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="username">Pseudo</label>
             <input
-              type="email"
-              id="email"
-              placeholder="votre@email.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              type="text"
+              id="username"
+              placeholder="Votre pseudo"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               required
-              autoComplete="email"
+              autoComplete="username"
             />
           </div>
           
