@@ -25,57 +25,68 @@ To optimize the dashboard and batch list performance:
 - `endDate`: Date. When the batch was finished or archived.
 
 ### 📊 Real Measurements (Logs)
+- **Water:** `strikeWaterVolume` (L), `spargeWaterVolume` (L), `mashPh` (Measured).
 - **Pre-Boil:** `preBoilVolume` (L), `preBoilGravity` (SG).
-- **Post-Boil (Kettle):** `batchVolume` (L), `originalGravity` (OG).
-- **Packaging:** `finalGravity` (FG).
+- **Post-Boil (Kettle):** `batchVolume` (L), `originalGravity` (OG), `boilOffRate` (L/h).
+- **Losses:** `trubLoss` (L), `transferLoss` (L).
+- **Packaging:** `finalGravity` (FG), `bottledVolume` (L).
 - **Calculated Metrics:** `actualEfficiency`, `actualAbv`, `actualAttenuation`.
 
-### 🛡️ Recipe Snapshot (Immutability)
-To ensure historical accuracy even if the original recipe is modified later, a batch snapshots key targets at the moment of creation/brewing:
-- `targetOg`, `targetFg`, `targetIbu`, `targetEbc`, `targetAbv`.
-- `targetBatchSize`.
+### 🛡️ Recipe Snapshot & Substitutions
+To ensure historical accuracy, a batch snapshots the recipe. However, real-world constraints often require adjustments:
+- **Snapshot:** `targetOg`, `targetFg`, `targetIbu`, `targetEbc`, `targetAbv`, `targetBatchSize`.
+- **Substitutions:** Ability to log the *actual* ingredient used (e.g., "Citra Lot #2024" instead of generic "Citra") or a replacement (e.g., "Columbus" instead of "Magnum").
+- **Lot Tracking:** Link specific ingredients to inventory lot numbers for traceability.
 
 ---
 
-## 2. Fermentation Monitoring
-A batch contains a collection of **Fermentation Readings** taken after the brew day.
+## 2. Fermentation & Conditioning
 
 ### Reading Fields
 - `id`: Long.
 - `timestamp`: DateTime.
 - `gravity`: Double (SG).
 - `temperature`: Double (°C).
-- `notes`: Text. (e.g., "Active fermentation", "Cold crashing started").
+- `notes`: Text.
+
+### 🌿 Cold Side Events
+- **Dry-Hopping:** Start date, removal date, and actual amount added.
+- **Additions:** Fining agents (Gelatin), fruit additions, or wood aging.
+- **Profile:** Target fermentation schedule (e.g., 18°C for 4 days, then D-Rest at 21°C).
 
 ---
 
 ## 3. Sensory Evaluation (Tasting)
-Once the beer is ready, the brewer evaluates the final result to improve future iterations of the recipe.
+Once the beer is ready, the brewer evaluates the final result.
 
 ### Evaluation Fields
-- **Overall Score:** Integer (0-50). Simplified BJCP-style rating.
-- **Sensory Notes:**
-    - `aroma`: Text. (Malt, hops, esters, phenols).
-    - `appearance`: Text. (Clarity, color, head retention).
-    - `flavor`: Text. (Balance, bitterness, aftertaste).
-    - `mouthfeel`: Text. (Body, carbonation, warmth).
+- **Overall Score:** Integer (0-50).
+- **Off-Flavors Checklist:** (DMS, Diacetyl, Oxidation, Acetaldehyde, Phenolic, etc.).
+- **Sensory Notes:** Aroma, Appearance, Flavor, Mouthfeel.
 - **Conclusion:** Enum (`REPLICATE`, `ADJUST`, `ABANDON`).
-- **Adjustment Tips:** Text. Specific ideas for the next version (e.g., "Increase dry hop by 20%").
+- **Adjustment Tips:** Text.
 
 ---
 
-## 4. Calculations & Logic
+## 4. Carbonation & Packaging
+
+### Packaging Data
+- **Method:** `BOTTLED` or `KEGGED`.
+- **Priming:** Type of sugar (Glucose, Table Sugar, DME), amount added (g), and resulting CO2 volumes.
+- **Temperature:** Conditioning temperature.
+
+---
+
+## 5. Calculations & Logic
 
 ### Actual Efficiency
-Calculated based on real volume and OG vs. the theoretical potential of the grain bill.
 $$Efficiency_{actual} = \frac{Volume_{measured} \times (OG_{measured} - 1) \times ScalingFactor}{\sum (Potential \times Mass_{grain})}$$
 
 ### ABV (Alcohol by Volume)
-Standard formula for alcohol content based on measured gravity drop.
-$$ABV_{actual} = (OG_{measured} - FG_{measured}) \times 131.25$$
+Includes correction for priming sugar if bottled.
+$$ABV_{actual} = ((OG - FG) \times 131.25) + ABV_{priming}$$
 
 ### Apparent Attenuation
-Measures how much of the sugar was converted by the yeast.
 $$Attenuation = \frac{OG - FG}{OG - 1} \times 100$$
 
 ---
@@ -91,8 +102,8 @@ The brewing process is a linear workflow supported by **Interactive Checklists**
 
 ### 🟠 Stage 2: Brew Day (`BREWING`)
 The active process of making the wort. This stage uses a **Live Checklist**:
-1. **Preparation:** [ ] Mill grains, [ ] Heat strike water, [ ] Sanitize fermenter.
-2. **Mashing:** [ ] Dough in, [ ] Check temperature, [ ] Mash-out.
+1. **Preparation:** [ ] Mill grains, [ ] Heat strike water, [ ] Treat water (salts/acid), [ ] Sanitize fermenter.
+2. **Mashing:** [ ] Dough in, [ ] Check temperature, [ ] Check mash pH, [ ] Mash-out.
 3. **Boiling:** [ ] First hop addition, [ ] Fining agents (Irish Moss), [ ] Late hop additions.
 4. **Post-Boil:** [ ] Chill wort, [ ] Aerate, [ ] Pitch yeast.
 

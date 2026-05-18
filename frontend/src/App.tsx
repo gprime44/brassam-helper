@@ -6,6 +6,7 @@ import InventoryDetailWrapper from './features/inventory/InventoryDetail/Invento
 import Recipe from './features/recipe/Recipe'
 import RecipeDetailWrapper from './features/recipe/RecipeDetailWrapper'
 import Brewing from './features/brewing/Brewing'
+import BrewingDetailWrapper from './features/brewing/BrewingDetailWrapper'
 import StyleExplorer from './features/style/StyleExplorer'
 import StyleDetailWrapper from './features/style/StyleDetail/StyleDetailWrapper'
 import Login from './features/auth/Login'
@@ -43,6 +44,7 @@ export function AppRoutes() {
       <Route path="/recipes/:id" element={<ProtectedRoute><Layout><RecipeDetailWrapper /></Layout></ProtectedRoute>} />
       
       <Route path="/brewing" element={<ProtectedRoute><Layout><Brewing /></Layout></ProtectedRoute>} />
+      <Route path="/brewing/:id" element={<ProtectedRoute><Layout><BrewingDetailWrapper /></Layout></ProtectedRoute>} />
       
       <Route path="/styles" element={<ProtectedRoute><Layout><StyleExplorer /></Layout></ProtectedRoute>} />
       <Route path="/styles/:id" element={<ProtectedRoute><Layout><StyleDetailWrapper /></Layout></ProtectedRoute>} />

@@ -28,7 +28,7 @@ describe('Login Component', () => {
 
   it('should render login form', () => {
     renderLogin();
-    expect(screen.getByLabelText(/email/i)).toBeDefined();
+    expect(screen.getByLabelText(/pseudo/i)).toBeDefined();
     expect(screen.getByLabelText(/mot de passe/i)).toBeDefined();
     expect(screen.getByRole('button', { name: /se connecter/i })).toBeDefined();
   });
@@ -39,13 +39,13 @@ describe('Login Component', () => {
 
     renderLogin();
 
-    fireEvent.change(screen.getByLabelText(/email/i), { target: { value: 'test@test.com' } });
+    fireEvent.change(screen.getByLabelText(/pseudo/i), { target: { value: 'tester' } });
     fireEvent.change(screen.getByLabelText(/mot de passe/i), { target: { value: 'password123' } });
     fireEvent.click(screen.getByRole('button', { name: /se connecter/i }));
 
     await waitFor(() => {
       expect(authApi.login).toHaveBeenCalledWith({
-        email: 'test@test.com',
+        username: 'tester',
         password: 'password123',
       });
     });
@@ -56,12 +56,12 @@ describe('Login Component', () => {
 
     renderLogin();
 
-    fireEvent.change(screen.getByLabelText(/email/i), { target: { value: 'wrong@test.com' } });
+    fireEvent.change(screen.getByLabelText(/pseudo/i), { target: { value: 'wronguser' } });
     fireEvent.change(screen.getByLabelText(/mot de passe/i), { target: { value: 'wrongpass' } });
     fireEvent.click(screen.getByRole('button', { name: /se connecter/i }));
 
     await waitFor(() => {
-      expect(screen.getByText(/email ou mot de passe incorrect/i)).toBeDefined();
+      expect(screen.getByText(/pseudo ou mot de passe incorrect/i)).toBeDefined();
     });
   });
 });

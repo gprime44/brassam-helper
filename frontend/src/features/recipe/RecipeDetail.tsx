@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { 
-  recipeApi, inventoryApi, styleApi 
+  recipeApi, inventoryApi, styleApi, brewingApi 
 } from '../../services/api';
 import type { 
   Recipe, RecipeFermentable, RecipeHop, Style, RecipeMashStep 
@@ -18,6 +18,7 @@ interface RecipeDetailProps {
 
 const RecipeDetail: React.FC<RecipeDetailProps> = ({ externalId, onBack }) => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [recipe, setRecipe] = useState<Recipe | null>(null);
   const [loading, setLoading] = useState(true);
   const [selectedStyle, setSelectedStyle] = useState<Style | null>(null);
@@ -122,7 +123,18 @@ const RecipeDetail: React.FC<RecipeDetailProps> = ({ externalId, onBack }) => {
         <h1>{recipe.name}</h1>
         <button 
           className="btn btn-primary" 
-          onClick={() => brewingApi.startSession(externalId).then(id => navigate(`/brewing/${id}`))}
+          onClick={async () => {
+            try {
+              const id = await brewingApi.startSession(externalId);
+              if (id) {
+                navigate(`/brewing/${id}`);
+              } else {
+                console.error("No ID returned from startSession");
+              }
+            } catch (err) {
+              console.error("Failed to start session:", err);
+            }
+          }}
         >
           🚀 Lancer ce brassage
         </button>

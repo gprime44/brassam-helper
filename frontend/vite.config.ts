@@ -43,8 +43,18 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ["**/*.{js,css,html,ico,png,svg}"],
+        globPatterns: ["**/*.{js,css,html,ico,png,svg,webmanifest}"],
         runtimeCaching: [
+          {
+            urlPattern: /env-config\.js$/,
+            handler: "NetworkFirst",
+            options: {
+              cacheName: "config-cache",
+              expiration: {
+                maxEntries: 1,
+              },
+            },
+          },
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
             handler: "CacheFirst",

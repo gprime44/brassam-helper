@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { brewingApi, BrewingSessionDetail as SessionDetailType } from '../../services/api';
 import BrewingChecklist from './BrewingChecklist';
 import FermentationChart from './FermentationChart';
@@ -11,6 +12,7 @@ interface BrewingSessionDetailProps {
 
 const BrewingSessionDetail: React.FC<BrewingSessionDetailProps> = ({ sessionId }) => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [session, setSession] = useState<SessionDetailType | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -35,6 +37,10 @@ const BrewingSessionDetail: React.FC<BrewingSessionDetailProps> = ({ sessionId }
 
   return (
     <div className="brewing-session-detail">
+      <button className="back-button" onClick={() => navigate('/brewing')}>
+        ← {t('common.back_to_list')}
+      </button>
+      
       <h1>{session.name}</h1>
       <p>Status: {session.status}</p>
       

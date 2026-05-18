@@ -25,7 +25,7 @@ L'application utilise une authentification basée sur les **JSON Web Tokens (JWT
 ## 🎨 Spécifications Frontend
 
 ### Composants requis
-- **LoginView :** Formulaire d'authentification (email/password).
+- **LoginView :** Formulaire d'authentification (username/password).
 - **SignupView :** Formulaire de création de compte (username/email/password).
 - **AuthProvider :** Context React pour gérer l'état `user`, le `token` et la persistance locale (localStorage).
 - **UserMenu (Header) :** Menu déroulant affichant le profil, le sélecteur de langue et l'action de déconnexion.
